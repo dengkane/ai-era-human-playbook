@@ -138,9 +138,20 @@ that branch, `pr-create.sh` reports it rather than opening a second one.
 
 ### 7. Merge, then reset
 
-Single-author repo: review your own diff, merge the PR on GitHub, then:
+Single-author repo: read your own diff, then
 
 ```bash
+./scripts/pr-merge.sh draft/ch02-your-slug
+```
+
+That marks the draft PR ready (the API refuses to merge a draft, and there is no REST
+endpoint to un-draft it), waits for GitHub to compute mergeability, squash-merges, and
+deletes the branch locally and on the remote.
+
+Doing it by hand instead:
+
+```bash
+# mark the PR ready for review in the GitHub UI first — drafts cannot be merged
 git checkout main && git pull && git branch -d draft/ch02-....
 ```
 
@@ -158,6 +169,11 @@ A chapter is not shipped until three files agree:
 
 The `Last updated:` footer and the `last_updated:` field should match. If you change one, change both.
 
+`publish-chapter.sh` stages `chapters/en/README.md` and `CHANGELOG.md` alongside the chapter when
+they have uncommitted changes, so edits you made to them do not get left behind. It will not guess at
+anything else — other modified files stay unstaged. For a **new** chapter it warns if `CHANGELOG.md`
+is untouched, since that entry is a judgement call it cannot write for you.
+
 ---
 
 ## Reference
@@ -168,6 +184,7 @@ The `Last updated:` footer and the `last_updated:` field should match. If you ch
 | `scripts/git-ssh.sh` | The SSH wrapper git calls. Resolves the repo-local key, ignores the broken system ssh config. |
 | `scripts/github-token.sh` | Resolve and diagnose the PAT. `--check` reports the source without printing the token. |
 | `scripts/pr-create.sh` | Open (or find) a PR via the REST API. Idempotent. |
+| `scripts/pr-merge.sh` | Mark a draft PR ready, merge it, delete the branch. `--dry-run` to preview. |
 | `scripts/doctor.sh` | Diagnose repo, ssh, key, and token in one shot. Start here when something fails. |
 | `scripts/check-chapter.sh` | Lint one chapter file. Non-zero exit on errors. |
 | `scripts/publish-chapter.sh` | Branch → commit → push → PR for one chapter. |

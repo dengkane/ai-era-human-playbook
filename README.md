@@ -184,6 +184,7 @@ cp templates/chapter-template.md chapters/en/ch02-your-slug.md
 # ...draft it...
 ./scripts/check-chapter.sh  chapters/en/ch02-your-slug.md   # lint
 ./scripts/publish-chapter.sh chapters/en/ch02-your-slug.md  # branch → commit → push → PR
+./scripts/pr-merge.sh draft/ch02-your-slug                  # merge, once it reads right
 ```
 
 One chapter per branch per PR, self-merged. Content is English-first.
