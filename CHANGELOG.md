@@ -34,6 +34,18 @@ and this project uses date-based versioning (YYYY.MM).
   history and a broken token cannot block a push.
 - `.gitignore` — ignore `.git-ssh/` (private key), `.secrets/` (PAT), `.scratch/`
 
+### Changed — writing rules
+- **Chapter length settled at ~1300 words**, replacing the 2500 in the original template.
+  Both published chapters landed at 1250–1400; the old target was never realistic.
+  `check-chapter.sh` warns below 1000 and above 2000, and flags a gap over 400 words
+  between the body and the declared `word_target`.
+- **Chapter shape settled at two or three body sections named after their arguments**,
+  replacing three anonymous `Body section N` placeholders. The comparison table and the
+  taxonomy shape (`###` subsections repeating *model / why it's failing / the tell*) used
+  by Ch. 02 are now documented in the template as first-class components.
+- `templates/chapter-template.md` rewritten to encode the above with worked examples.
+- Ch. 01 and Ch. 02 metadata corrected from `word_target: 2500` to `1300`.
+
 ### Notes
 - Content is English-first. Translations derive from `chapters/en/`.
 - One chapter per branch per PR; self-merged.

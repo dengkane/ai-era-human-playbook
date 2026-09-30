@@ -42,6 +42,9 @@ Want to translate a chapter into another language? Open an Issue first to coordi
 
 ## Content Standards
 
+- **Length:** ~1300 words per chapter (a ten-minute read). Chapters finish one argument and stop
+- **Structure:** two or three body sections named after their arguments, then explicit
+  "The honest caveats" and "Do this today" sections
 - **Tone:** Professional but conversational, like a smart friend explaining something
 - **No fluff:** No "with the development of AI" openings, no filler
 - **Concrete:** Specific tools, prices, scenarios, numbers
