@@ -65,11 +65,12 @@ is a claim that you read the source — and that you noticed when sources contra
 
 Opinion, framing, and prediction need no marker. Mark only what could be falsified.
 
-## Chapter numbers are immutable
+## Chapter numbers are stable once published
 
-Numbers live in filenames, in cross-references inside the book, and in public links. A chapter that
-changes scope changes its **title** and its **placement** — never its number. `ch21` is the newest
-chapter and sits in Part III because that is where it reads, not because it follows `ch20`.
+Numbers live in filenames, in cross-references inside the book, and in public links. A chapter that has
+shipped keeps its number — change its **title** and its **placement** instead. A chapter that has not
+shipped is still a plan, and its number can still change: Ch. 15–21 were renumbered in one pass for
+exactly that reason, while none of them existed yet.
 
 Parts are grouped by what the reader needs next, not by number:
 
@@ -77,9 +78,9 @@ Parts are grouped by what the reader needs next, not by number:
 |---|---|---|
 | I — Face Reality | 01–03 | the cognition argument |
 | II — Secure the Baseline | 04–09 | 04 is the diagnostic; 05–07 already on a path, 08–09 choosing one |
-| III — Amplify Your Leverage | 10–14, 21 | includes the newest chapter |
-| IV — Beyond Survival | 15–17 | |
-| V — Live Happily | 18–20 | |
+| III — Amplify Your Leverage | 10–15 | 15 is how to keep your tooling honest |
+| IV — Beyond Survival | 16–18 | |
+| V — Live Happily | 19–21 | |
 
 Parts I–II are the free tier; III–V and the appendices are paid. See `README.md`.
 

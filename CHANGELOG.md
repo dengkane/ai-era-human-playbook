@@ -27,6 +27,31 @@ in a language that has no spaces — not a short chapter. See "Known limitation"
 The remaining seventeen chapters (05–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
+### Changed — Ch. 15–21 renumbered so the sequence reads in order
+
+Ch. 21 sat after Ch. 14 in Part III, which made the table of contents read 10–14, 21, 15–20. That
+placement was deliberate and documented, but the resulting order was confusing, so the tail was
+renumbered in one pass to run straight through.
+
+| Was | Now | Chapter |
+|---|---|---|
+| 21 | **15** | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) |
+| 15 | **16** | Creativity When AI Can Generate Everything |
+| 16 | **17** | Relationships & Community in a Digital World |
+| 17 | **18** | Rebuilding Meaning |
+| 18 | **19** | The Last Fortress of Being Human: Body, Nature, Art |
+| 19 | **20** | The Courage to Slow Down |
+| 20 | **21** | Designing the Life You Actually Want |
+
+Part III is now **10–15**, Part IV **16–18**, Part V **19–21**. No title, scope or content changed —
+only the numbers, and the filenames of chapters that do not exist yet.
+
+**Nothing broke, because nothing had shipped.** Only Ch. 01–04 exist as files, and they cite nothing
+above Ch. 09, so no filename, in-book cross-reference, or public link pointed at a moved number. The
+one real cost was the repo's own rule: "chapter numbers are immutable" was stated in `AGENTS.md`,
+`chapters/en/README.md`, `chapters/zh/README.md` and this file. All four now say numbers are stable
+*once published*, with this renumbering named as the case that rule leaves room for.
+
 ### Added — Chinese edition (Ch. 01–04)
 
 The book now has a Chinese edition at `chapters/zh/`, derived from `chapters/en/`. All four finished
@@ -256,11 +281,11 @@ avoiding a renumbering: **no chapter number, filename, or published link changed
   Business Playbook" — four chapters (06, 07, 12, 14) sat in the same topical space with no stated
   division of labour. Ch. 06 is retitled *Why Small Beats Big Now* (the strategic why), leaving Ch. 12
   as the operating playbook. A `## Chapter boundaries` section now states what each chapter owns and
-  what it explicitly does not, for the independent-work cluster, for 15-vs-18, and for 17-vs-20.
-- **Ch. 21 added:** *Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong).* The book
+  what it explicitly does not, for the independent-work cluster, for 16-vs-19, and for 18-vs-21.
+- **Ch. 15 added:** *Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong).* The book
   sells a tool matrix in the paid tier but never taught readers to evaluate a tool independently —
-  which contradicts Ch. 01's own advice to invest in judgement rather than interfaces. Ch. 21 closes
-  that gap and is numbered 21 to leave Ch. 01–20 untouched.
+  which contradicts Ch. 01's own advice to invest in judgement rather than interfaces. Ch. 15 closes
+  that gap. (Added as Ch. 21, then renumbered — see "Ch. 15–21 renumbered" above.)
 - Part II's title dropped "(by Persona)", since it now opens with a diagnostic chapter.
 - Book total updated from ~50,000 to ~52,000 words.
 
@@ -268,8 +293,9 @@ avoiding a renumbering: **no chapter number, filename, or published link changed
 - Content is English-first. Translations derive from `chapters/en/`.
 - One chapter per branch per PR; self-merged.
 - Scripts avoid `jq` and `gh` as hard dependencies — `jq` is not installed here.
-- **Chapter numbers are immutable.** A chapter that changes scope changes its title and its placement,
-  never its number — the numbers are in filenames, in cross-references, and in public links.
+- **Chapter numbers are stable once published.** A chapter that has shipped changes its title and its
+  placement, never its number. The number of an *unpublished* chapter can still change — Ch. 15–21 were
+  renumbered as one pass. The numbers are in filenames, in cross-references, and in public links.
 
 ---
 

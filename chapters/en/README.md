@@ -57,7 +57,7 @@ groups, because they answer two different questions.
 ### Part III — Amplify Your Leverage
 
 The skills layer. Chapters 10–13 build the capability; 14 is the decision to use it on your own;
-21 is how to keep your tooling honest.
+15 is how to keep your tooling honest.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
@@ -66,23 +66,23 @@ The skills layer. Chapters 10–13 build the capability; 14 is the decision to u
 | 12 | One-Person Business Playbook | `ch12-one-person-business-playbook.md` | Planned |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy | `ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` | Planned |
 | 14 | From "Employed" to "Self-Employed" | `ch14-from-employed-to-self-employed.md` | Planned |
-| 21 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) | `ch21-judging-ai-tools-for-yourself.md` | Planned |
+| 15 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) | `ch15-judging-ai-tools-for-yourself.md` | Planned |
 
 ### Part IV — Beyond Survival
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 15 | Creativity When AI Can Generate Everything | `ch15-creativity-when-ai-can-generate-everything.md` | Planned |
-| 16 | Relationships & Community in a Digital World | `ch16-relationships-and-community-in-a-digital-world.md` | Planned |
-| 17 | Rebuilding Meaning | `ch17-rebuilding-meaning.md` | Planned |
+| 16 | Creativity When AI Can Generate Everything | `ch16-creativity-when-ai-can-generate-everything.md` | Planned |
+| 17 | Relationships & Community in a Digital World | `ch17-relationships-and-community-in-a-digital-world.md` | Planned |
+| 18 | Rebuilding Meaning | `ch18-rebuilding-meaning.md` | Planned |
 
 ### Part V — Live Happily
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 18 | The Last Fortress of Being Human: Body, Nature, Art | `ch18-the-last-fortress-of-being-human-body-nature-art.md` | Planned |
-| 19 | The Courage to Slow Down | `ch19-the-courage-to-slow-down.md` | Planned |
-| 20 | Designing the Life You Actually Want | `ch20-designing-the-life-you-actually-want.md` | Planned |
+| 19 | The Last Fortress of Being Human: Body, Nature, Art | `ch19-the-last-fortress-of-being-human-body-nature-art.md` | Planned |
+| 20 | The Courage to Slow Down | `ch20-the-courage-to-slow-down.md` | Planned |
+| 21 | Designing the Life You Actually Want | `ch21-designing-the-life-you-actually-want.md` | Planned |
 
 ## Chapter boundaries
 
@@ -100,21 +100,21 @@ chapter twice.
 | **07** The Freelancer | moving from selling hours to selling judgement and reputation | pricing mechanics (that is 12) |
 | **12** One-Person Business Playbook | the concrete operating system: offers, pricing, delivery, tooling | why small works (that is 06), or the life decision (that is 14) |
 | **14** From "Employed" to "Self-Employed" | the transition itself — when to jump, what to keep, how to sequence it | running the business once you are in it (that is 12) |
-| **21** Judging AI Tools for Yourself | how to evaluate *any* tool without trusting a list | which tools to use right now (that is Appendix A) |
+| **15** Judging AI Tools for Yourself | how to evaluate *any* tool without trusting a list | which tools to use right now (that is Appendix A) |
 
-### Creativity and the body — 15 vs 18
-
-| Chapter | Owns |
-|---------|------|
-| **15** Creativity When AI Can Generate Everything | making things *with* the machine in the loop |
-| **18** The Last Fortress: Body, Nature, Art | experience defined by the machine's *absence* — the point is that nothing is generated |
-
-### Meaning and life design — 17 vs 20
+### Creativity and the body — 16 vs 19
 
 | Chapter | Owns |
 |---------|------|
-| **17** Rebuilding Meaning | why the old sources of meaning stopped working, and what can replace them |
-| **20** Designing the Life You Actually Want | turning that into a design: time, money, place, commitments |
+| **16** Creativity When AI Can Generate Everything | making things *with* the machine in the loop |
+| **19** The Last Fortress: Body, Nature, Art | experience defined by the machine's *absence* — the point is that nothing is generated |
+
+### Meaning and life design — 18 vs 21
+
+| Chapter | Owns |
+|---------|------|
+| **18** Rebuilding Meaning | why the old sources of meaning stopped working, and what can replace them |
+| **21** Designing the Life You Actually Want | turning that into a design: time, money, place, commitments |
 
 ## File naming
 
@@ -125,10 +125,10 @@ ch<NN>-<kebab-case-slug>.md
 - Two-digit chapter number, zero-padded (`ch01`, not `ch1`)
 - Lowercase, hyphens only. No spaces, no apostrophes, no em-dashes.
 - Drop articles only when the title is unwieldy (`youre` → keep, `its` → keep).
-- **Numbers are immutable.** Renaming a chapter file breaks every link to it and every cross-reference
-  inside the book. If a chapter's scope changes, change its title and its placement — not its number.
-  (`ch21` is the newest chapter; it sits in Part III because that is where it reads, not because it
-  belongs after `ch20`.)
+- **Numbers are stable once a chapter is published.** They live in filenames, in cross-references inside
+  the book, and in public links, so renaming a shipped chapter breaks every one of them. Before a chapter
+  ships, its number is still a plan and can still change — Ch. 15–21 were renumbered in one pass for
+  exactly that reason, while none of them existed yet. See the changelog.
 
 ## Writing standards
 

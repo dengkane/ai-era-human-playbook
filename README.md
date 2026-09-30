@@ -93,26 +93,27 @@ The skills layer, then the decision to use it on your own, then how to keep your
 | 12 | One-Person Business Playbook |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy |
 | 14 | From "Employed" to "Self-Employed" |
-| 21 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) |
+| 15 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) |
 
 ### Part IV: Beyond Survival
 
 | Chapter | Topic |
 |---------|-------|
-| 15 | Creativity When AI Can Generate Everything |
-| 16 | Relationships & Community in a Digital World |
-| 17 | Rebuilding Meaning |
+| 16 | Creativity When AI Can Generate Everything |
+| 17 | Relationships & Community in a Digital World |
+| 18 | Rebuilding Meaning |
 
 ### Part V: Live Happily
 
 | Chapter | Topic |
 |---------|-------|
-| 18 | The Last Fortress of Being Human: Body, Nature, Art |
-| 19 | The Courage to Slow Down |
-| 20 | Designing the Life You Actually Want |
+| 19 | The Last Fortress of Being Human: Body, Nature, Art |
+| 20 | The Courage to Slow Down |
+| 21 | Designing the Life You Actually Want |
 
-Chapter numbers never change, even when a chapter moves between parts — they are in filenames and in
-every cross-reference. `ch21` sits in Part III because that is where it reads.
+Chapter numbers are stable once a chapter is published — they are in filenames and in every
+cross-reference. Chapters 15–21 were renumbered in one pass before any of them shipped, so the sequence
+now reads in order; see the changelog.
 
 ### Appendices (Updated Monthly)
 
