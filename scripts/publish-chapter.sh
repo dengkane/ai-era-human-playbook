@@ -11,10 +11,8 @@
 # main the first time and reused on later runs, so re-running pushes revisions to
 # the same PR instead of opening a second one.
 #
-# Transport: if a GitHub token is available (see scripts/github-token.sh) the
-# push goes over HTTPS with that token, because a sandboxed session may not be
-# able to read ~/.ssh. Otherwise it falls back to the configured remote, which is
-# what your own terminal will use.
+# Credentials are split by job: `git push` uses SSH (core.sshCommand), and opening
+# the pull request uses the GitHub token. See scripts/doctor.sh.
 #
 # This script never force-pushes and never commits to main.
 
@@ -40,55 +38,22 @@ while [[ $# -gt 0 ]]; do
 done
 
 [[ -n "$file" ]] || { echo "Usage: scripts/publish-chapter.sh [--type T] [--dry-run] [--no-pr] <chapter.md>" >&2; exit 2; }
-[[ -f "$file" ]] || { echo "No such file: $file" >&2; exit 1; }
 
 step() { printf '\n\033[1m%s\033[0m\n' "$1"; }
 ok()   { printf '  \033[32m✓\033[0m %s\n' "$1"; }
 info() { printf '  \033[36m·\033[0m %s\n' "$1"; }
 bad()  { printf '  \033[31m✗\033[0m %s\n' "$1"; }
 
-# --- 1. lint ----------------------------------------------------------------
-step "1. Lint"
-if "$repo_root/scripts/check-chapter.sh" "$file"; then
-  ok "chapter passes checks"
-else
-  bad "chapter failed checks — fix the errors above before publishing"
-  echo
-  echo "    Re-run with: ./scripts/check-chapter.sh $file"
-  exit 1
-fi
-
-# --- 2. derive names --------------------------------------------------------
+# --- 0. resolve the branch before touching the file --------------------------
+# The chapter may already be committed on its draft branch, in which case it does
+# not exist in the working tree while you are on main. Deriving the branch name
+# from the argument and switching first makes both cases work.
 stem="$(basename "$file" .md)"
 chapter_tag="${stem%%-*}"          # ch01
-
-title="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^title:/{sub(/^title: */,"");gsub(/^"|"$/,"");print;exit}' "$file")"
-[[ -n "$title" ]] || title="$stem"
-
-status="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^status:/{sub(/^status: */,"");gsub(/^"|"$/,"");print;exit}' "$file")"
-[[ -n "$status" ]] || status="draft"
-
-if git ls-files --error-unmatch "$file" >/dev/null 2>&1; then
-  default_type="revise"
-else
-  default_type="draft"
-fi
-commit_type="${commit_type:-$default_type}"
-
 branch="draft/${stem}"
 
-remote_url="$(git remote get-url origin)"
-slug="$(sed -E 's#^git@github\.com:##; s#^https://([^@]*@)?github\.com/##; s#\.git$##' <<<"$remote_url")"
-
-step "2. Plan"
-info "file    : $file"
-info "branch  : $branch"
-info "commit  : ${commit_type}(${chapter_tag}): ${title}"
-info "repo    : $slug"
-
-# --- 3. branch --------------------------------------------------------------
 current="$(git rev-parse --abbrev-ref HEAD)"
-step "3. Branch"
+step "1. Branch"
 if [[ "$current" == "$branch" ]]; then
   ok "already on $branch"
 elif [[ "$current" == "main" || "$current" == "master" ]]; then
@@ -99,6 +64,13 @@ elif [[ "$current" == "main" || "$current" == "master" ]]; then
       git checkout "$branch"
       ok "switched to existing branch $branch"
     fi
+  elif [[ ! -f "$file" ]]; then
+    # Don't create a branch for a chapter that would not be on it.
+    bad "$file does not exist, and neither does $branch"
+    echo
+    echo "    Start the chapter first:"
+    echo "        cp templates/chapter-template.md $file"
+    exit 1
   else
     if $dry_run; then
       info "[dry-run] git checkout -b $branch   (from $current)"
@@ -114,6 +86,65 @@ else
   echo "    off a branch you did not create with it."
   exit 1
 fi
+
+# On the branch that owns it, the file must exist.
+#
+# In dry-run we deliberately do not switch branches, so the chapter may live in
+# the branch's tree but not in the current worktree. Materialise a temp copy that
+# keeps the original filename (check-chapter.sh validates the name), and lint that.
+lint_target="$file"
+tmp_dir=""
+if [[ ! -f "$file" ]]; then
+  if $dry_run && git cat-file -e "$branch:$file" 2>/dev/null; then
+    tmp_dir="$(mktemp -d)"
+    lint_target="$tmp_dir/$(basename "$file")"
+    git show "$branch:$file" > "$lint_target"
+    info "[dry-run] $file is committed on $branch — checking that copy"
+  else
+    bad "no such file on $branch: $file"
+    echo
+    echo "    Create it first:"
+    echo "        cp templates/chapter-template.md $file"
+    exit 1
+  fi
+fi
+[[ -z "$tmp_dir" ]] || trap 'rm -rf "$tmp_dir"' EXIT
+
+# --- 1. lint ----------------------------------------------------------------
+step "2. Lint"
+if "$repo_root/scripts/check-chapter.sh" "$lint_target"; then
+  ok "chapter passes checks"
+else
+  bad "chapter failed checks — fix the errors above before publishing"
+  echo
+  echo "    Re-run with: ./scripts/check-chapter.sh $file"
+  exit 1
+fi
+
+# --- 2. derive names --------------------------------------------------------
+# Read front matter from $lint_target: in dry-run the real file may only exist on
+# the branch, which is why the copy was made above.
+title="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^title:/{sub(/^title: */,"");gsub(/^"|"$/,"");print;exit}' "$lint_target")"
+[[ -n "$title" ]] || title="$stem"
+
+status="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^status:/{sub(/^status: */,"");gsub(/^"|"$/,"");print;exit}' "$lint_target")"
+[[ -n "$status" ]] || status="draft"
+
+if git ls-files --error-unmatch "$file" >/dev/null 2>&1; then
+  default_type="revise"
+else
+  default_type="draft"
+fi
+commit_type="${commit_type:-$default_type}"
+
+remote_url="$(git remote get-url origin)"
+slug="$(sed -E 's#^git@github\.com:##; s#^https://([^@]*@)?github\.com/##; s#\.git$##' <<<"$remote_url")"
+
+step "3. Plan"
+info "file    : $file"
+info "branch  : $branch"
+info "commit  : ${commit_type}(${chapter_tag}): ${title}"
+info "repo    : $slug"
 
 # --- 4. stage and commit ----------------------------------------------------
 step "4. Stage and commit"
