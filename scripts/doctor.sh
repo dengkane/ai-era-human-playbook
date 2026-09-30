@@ -41,33 +41,64 @@ head_ "System SSH config"
 if ssh -G github.com >/dev/null 2>/tmp/doctor-ssh-g; then
   ok "ssh can read its system config"
 else
-  bad "ssh refuses to start: $(head -1 /tmp/doctor-ssh-g)"
-  echo "     This breaks SSH pushes and is unrelated to your key. Fix:"
+  # Not counted as blocking: scripts/git-ssh.sh passes -F /dev/null and bypasses
+  # this. It only affects ssh calls made outside the repo.
+  warn "ssh refuses to start: $(head -1 /tmp/doctor-ssh-g)"
+  echo "     Harmless inside this repo (git-ssh.sh bypasses it with -F /dev/null)."
+  echo "     Fix it if you want plain 'ssh'/'git' to work outside the repo:"
   echo "       sudo chown root:root /etc/ssh/ssh_config.d /usr/lib/systemd/ssh_config.d"
   echo "       sudo chown root:root /etc/ssh/ssh_config.d/*.conf /usr/lib/systemd/ssh_config.d/*.conf"
-  problems=$((problems+1))
 fi
 rm -f /tmp/doctor-ssh-g
 
-# --- ssh auth ----------------------------------------------------------------
-head_ "SSH authentication"
-ssh_out="$(ssh -T git@github.com 2>&1 || true)"
-if grep -q "successfully authenticated" <<<"$ssh_out"; then
-  ok "$(grep -o 'Hi [^!]*' <<<"$ssh_out" | head -1) — key accepted"
-elif grep -q "Permission denied" <<<"$ssh_out"; then
-  warn "key not accepted (or no key configured)"
-  info "add one at https://github.com/settings/ssh/new"
+# --- the channel pushes actually use -----------------------------------------
+# This is what matters: git talks to GitHub through core.sshCommand (git-ssh.sh),
+# not through a bare ssh call. Test the real path.
+head_ "Push channel (what git actually uses)"
+ssh_cmd="$(git config --get core.sshCommand || echo "")"
+if [[ -n "$ssh_cmd" ]]; then
+  ok "core.sshCommand -> $(sed "s#$repo_root/##" <<<"$ssh_cmd")"
 else
-  warn "could not determine SSH auth state"
-  head -1 <<<"$ssh_out" | sed 's/^/     /'
+  info "core.sshCommand not set; git uses the system ssh config"
+fi
+
+if remote_refs="$(git ls-remote origin 2>&1)"; then
+  ok "git can reach origin ($(grep -c . <<<"$remote_refs") refs visible)"
+  if grep -q "Permission denied (publickey)" <<<"$remote_refs"; then
+    bad "key rejected"; problems=$((problems+1))
+  fi
+else
+  bad "git cannot reach origin:"
+  head -2 <<<"$remote_refs" | sed 's/^/     /'
+  if grep -q "Permission denied (publickey)" <<<"$remote_refs"; then
+    echo "     The SSH key is not registered. Add it at:"
+    echo "       https://github.com/settings/ssh/new"
+    info "current public key:"
+    [[ -f "$repo_root/.git-ssh/id_ed25519.pub" ]] && \
+      sed 's/^/       /' "$repo_root/.git-ssh/id_ed25519.pub"
+  fi
+  problems=$((problems+1))
 fi
 
 # --- token -------------------------------------------------------------------
-head_ "Token (for push + PR from automated sessions)"
+head_ "Token (for opening pull requests)"
 if token_check="$(./scripts/github-token.sh --check 2>&1)"; then
   echo "$token_check"
+  # Confirm the token is actually accepted, not just present.
+  if api_out="$(curl -s -o /dev/null -w '%{http_code}' \
+                  -H "Authorization: Bearer "$(./scripts/github-token.sh)"" \
+                  https://api.github.com/user 2>/dev/null)"; then
+    case "$api_out" in
+      200) ok "token accepted by the GitHub API" ;;
+      401) bad "token rejected (401) — wrong, expired, or revoked"
+           problems=$((problems+1)) ;;
+      *)   warn "unexpected API response: HTTP $api_out" ;;
+    esac
+  else
+    warn "could not reach api.github.com"
+  fi
 else
-  warn "no token — automatic PR creation will be skipped"
+  warn "no token — pull requests will not be opened automatically"
   echo "     echo '<your-pat>' > .secrets/github-token && chmod 600 .secrets/github-token"
 fi
 
