@@ -30,52 +30,68 @@ Consider the phrase "learn to code." For two decades it was the safest possible 
 presidents and CEOs. It mapped cleanly onto reality: software ate the world, engineers were scarce,
 and the path from "I learned Python" to "I have a good job" was short and well-lit.
 
-That map was correct for its terrain. It is now producing wrong turns.
+That map was correct for its terrain. It is now producing wrong turns — and the way we try to prove
+that is itself an example of the problem.
 
-Junior developer hiring in the US narrowed sharply. By 2025 the unemployment rate for computer science
-graduates had climbed to 6.1% — high for a field that spent two decades unable to hire fast enough.
-AI coding assistants are one factor; the end of the zero-interest era is another, and the two overlap
-too closely to separate cleanly. The work didn't disappear — senior engineers are as busy as ever —
-but the *on-ramp* narrowed. The map said "start here." The terrain said "the start is now a different
-place."
+The proof people reach for is a single number. In 2025, a New York Fed chart put unemployment for
+recent computer science graduates at 6.1%, noticeably above the average across majors, and it was
+shared everywhere as evidence that the advice had finally broken.
 
-<!-- verified 2026-09-30 — source: https://www.softwareseni.com/what-the-data-actually-shows-about-ai-and-junior-developer-employment-decline/ -->
+<!-- verified 2026-09-30 — source: https://www.newyorkfed.org/research/college-labor-market -->
+
+The number is real. It is also unusable at the precision people are using it. Those estimates come
+from a survey sub-sample small enough that the confidence interval for computer science ran from
+roughly 4% to 11% — wide enough to contain both a recession and a boom. On a different measure, the
+share of recent computer science graduates holding *any* job was 90% in 2023: down slightly from the
+year before, and still above the entire decade leading up to the pandemic.
+
+<!-- verified 2026-09-30 — source: https://agglomerations.eig.org/p/a-viral-chart-on-recent-graduate -->
+
+So the popular figure proves less than it is asked to prove. That does not mean nothing changed. A
+better-measured version of the same story came out of Stanford in 2026, using payroll records instead
+of a survey: employment for 22-to-25-year-olds in the most AI-exposed occupations fell about 11%
+between late 2022 and mid-2026, while the same age group in the least-exposed occupations grew about
+10%. The researchers were explicit that this is not economy-wide displacement. It is a gap opening
+between two groups of young workers — one that widened from 15% to 19% over the year they have been
+tracking it.
+
+<!-- verified 2026-09-30 — source: https://digitaleconomy.stanford.edu/news/canariesaug26/ -->
+
+Their explanation is the part worth keeping. What declined was work built on *codified* knowledge:
+formal, documented, teachable from a textbook or a procedure. What held up was work built on *tacit*
+knowledge, the kind that only comes from practice and repeated exposure to real situations. That
+claim is not about a job title or an industry. It is about which half of a profession's knowledge is
+written down — the same line Ch. 01 drew, one level down.
 
 The people who got hurt most badly were not the ones who ignored the advice. They were the ones who
 followed it *precisely*, spent four years and a lot of money, and arrived to find the door moved.
 
-That is the pattern. Not "AI took the job." Something subtler and more disorienting: **the map worked
-until it didn't, and nothing on the map told you when it stopped.**
+That is the pattern. Not "AI took the job." Something subtler: the map said "start here," the terrain
+said the start is now somewhere else, and nothing on the map told you when it changed.
 
 ## Anxiety is a signal, not a verdict
 
-It's worth being explicit about what the anxiety is doing, because most advice about it is either
-dismissive ("just stop worrying") or exploitative ("you're right to panic — buy this course").
+Most advice about anxiety is either dismissive ("just stop worrying") or exploitative ("you're right
+to panic — buy this course"). Neither is right, because anxiety is doing a job.
 
 Anxiety is not a malfunction. It is a detection system, and it fires when your model of the world
-stops predicting what you actually see. That is the whole job. You feel it because something you were
-relying on quietly stopped being reliable and you haven't updated yet. The feeling is information:
-*your map and the terrain have diverged.*
+stops predicting what you actually see. The feeling is information: *your map and the terrain have
+diverged.*
 
-Two things follow from that, and they pull in opposite directions.
+Two things follow, and they pull in opposite directions.
 
 The first is that the anxiety is not evidence about your future. It is evidence about the *gap* between
-what you expected and what you're getting. The gap is real, and worth taking seriously. What the
-feeling predicts about your life is not — that part is your map talking, and your map is the thing
-that's broken.
+what you expected and what you're getting. The gap is real. What the feeling predicts about your life
+is not — that part is your map talking, and your map is the thing that's broken.
 
-The second is that the anxiety is pointing at something useful, if you let it point. The unhelpful
-version of the question is "will AI take my job?" There is no answer to that you can act on, and it is
-the same question everyone is asking, which is why it produces the same paralysis everywhere you
-look. The useful version is much narrower: *which specific belief of mine just stopped working?*
+The second is that it is pointing at something useful, if you let it. "Will AI take my job?" has no
+answer you can act on, which is why it produces the same paralysis everywhere you look. *Which
+specific belief of mine just stopped working?* has an answer this week. Moving from the first question
+to the second is the whole move this chapter is trying to make.
 
-That is a question you can answer this week. Moving from the unanswerable version to the answerable
-one is the whole move this chapter is trying to make.
-
-One caution about where the feeling points. Anxiety is a blunt instrument — it reports "something is
-wrong" without saying what. Most people aim it at the most visible target available, which right now
-is AI itself. But what usually broke is not AI. It's a specific assumption about how your income was
-supposed to arrive. AI is just what exposed it.
+One caution: anxiety is a blunt instrument. It reports "something is wrong" without saying what, so
+people aim it at the most visible target available, which right now is AI. What usually broke was not
+AI. It was a specific assumption about how your income was supposed to arrive.
 
 ## Why old maps are so persuasive
 
@@ -108,15 +124,18 @@ specific, diagnosable way.
 *The model:* you start at the bottom, do the tasks, accumulate skill and seniority, and climb. Each
 rung is a task you've mastered.
 
-*Why it's failing:* AI is very good at rungs. Any role that is honestly describable as "a stack of
-discrete, learnable tasks" is a role whose bottom rungs can be automated cheaply. The ladder still
-exists near the top, where the work becomes judgment, context, and accountability. But the bottom is
-being cut away while everyone is still standing on it.
+*Why it's failing:* The ladder assumed you build judgement by doing the simpler work first. A 2026
+study that broke 923 occupations into individual tasks found AI's exposure concentrating on
+cognitive, non-routine work — engineering, IT, finance, law, administration — while face-to-face,
+craft and manual work stayed below 10% of work content. The tasks being handed over are not the bottom
+of the ladder. They are the practice ground where judgement used to be built.
+
+<!-- verified 2026-09-30 — source: https://www.coface.us/news-economy-and-business-insights/new-study-reveals-which-jobs-are-most-vulnerable-to-ai -->
 
 Take the entry-level analyst. The ladder said: learn the tool, learn the reporting cadence, learn to
 build the deck, and in three years you'll be the one running the analysis. The middle rungs — pulling
 the data, formatting the slides, drafting the summary — were exactly what the ladder required you to
-master first. They are also the rungs that automate most cleanly. The top still needs a person who can
+master first, and they are cognitive work, which is what this wave takes. The top still needs a person who can
 tell a defensible story from a merely convincing one. The distance between rung one and that top just
 got much longer.
 
@@ -222,7 +241,16 @@ owning the decision about the artifact, which is a different job with a longer h
 
 ## The honest caveats
 
-Four limits worth stating plainly.
+Five limits worth stating plainly.
+
+**Exposure is not a verdict.** A task being automatable says nothing by itself about whether the job
+disappears. David Autor's work on automation found occupations that lose routine tasks and gain expert
+ones end up *more* specialised and better paid — proofreading shifted from checking spelling to
+helping people write. The same exposure can mean "this role is finished" or "this role is about to
+become more valuable", and which one you get depends on what is added around it. The three maps above
+describe a direction, not a sentence.
+
+<!-- verified 2026-09-30 — source: https://hai.stanford.edu/news/assessing-the-real-impact-of-automation-on-jobs -->
 
 **Redrawing the map is disorienting, and that's the cost.** A stale map feels safe because it's
 familiar. Updating it means giving up the comfort of knowing where you are. The anxiety does not
