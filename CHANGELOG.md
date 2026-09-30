@@ -11,21 +11,51 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Four of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Five of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–04 | 01–04 |
-| Body length | 2554 / 2812 / 2550 / 2899 words | 16,560 CJK characters, total |
-| Research notes | 4 | 4 |
+| Chapters | 01–05 | 01–05 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 words | 21,067 CJK characters, total |
+| Research notes | 5 | 5 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
-¹ Both warnings are `body is short`, and they are an artefact of counting whitespace-separated words
-in a language that has no spaces — not a short chapter. See "Known limitation" below.
+¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
+has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
+means the translation is short. See "Known limitation" below.
 
-The remaining seventeen chapters (05–21) are outlined in [`README.md`](README.md) and
+The remaining sixteen chapters (06–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
+
+### Added — Ch. 05, *The Employee — From Replaceable Part to Indispensable Node*
+
+The first chapter of the Part II advice arc, and the one that covers the largest group: people who
+already have a job inside an organisation. Both editions and the research notes:
+
+- `chapters/en/ch05-the-employee-from-replaceable-part-to-indispensable-node.md` (2900 words, `draft`)
+- `chapters/zh/ch05-the-employee-from-replaceable-part-to-indispensable-node.md` (translation)
+- `chapters/en/research/ch05-notes.md` — 12 sources kept, 14 rejected (English)
+- `chapters/zh/research/ch05-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws for this chapter: mattering *inside* an
+organisation. Anything about working for yourself belongs to Ch. 06, Ch. 07, Ch. 12 or Ch. 14.
+
+Two research findings shaped the draft, and both are recorded in the notes:
+
+- **The rewrite is not a layoff.** The chapter opens on Salesforce's support function going from 9,000
+  to about 5,000 with no layoffs, and on the Dallas Fed's finding that this adjustment runs through
+  reduced hiring rather than separations. An earlier draft opened on job elimination, which neither
+  source supports.
+- **The people AI helps most are the people it most endangers.** The 34%-for-novices result in
+  Brynjolfsson, Li and Raymond reads as good news until it is paired with the fact that the entry-level
+  rung's training value is exactly what is being absorbed. That pairing is the chapter's spine, and it
+  only appeared when the two results were read side by side.
+
+Sources that were found and **not** used are the part of the notes with the most value — including the
+Dell'Acqua *jagged frontier* experiment, which is precisely on topic but whose full text was
+unreachable on every route, and the widely repeated Gartner middle-management forecast, which arrives
+only through secondary restatements of a paywalled release.
 
 ### Changed — Ch. 15–21 renumbered so the sequence reads in order
 
@@ -313,7 +343,8 @@ avoiding a renumbering: **no chapter number, filename, or published link changed
 - [x] Write Chapter 02: You're Anxious Because You're Using an Old Map
 - [x] Write Chapter 03: What AI Can Never Do Well
 - [x] Write Chapter 04: Where Different People Actually Stand
-- [ ] Write Chapters 05–21
+- [x] Write Chapter 05: The Employee — From Replaceable Part to Indispensable Node
+- [ ] Write Chapters 06–21
 - [ ] Set up DeepSeek + Reasonix automation pipeline
 - [ ] First intel collection script (RSS → summary)
 - [ ] Gumroad / 面包多 product pages (Coming Soon)

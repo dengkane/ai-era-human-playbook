@@ -43,7 +43,7 @@ groups, because they answer two different questions.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 05 | The Employee — From Replaceable Part to Indispensable Node | `ch05-the-employee-from-replaceable-part-to-indispensable-node.md` | Planned |
+| 05 | The Employee — From Replaceable Part to Indispensable Node | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | Draft |
 | 06 | The Entrepreneur — Why Small Beats Big Now | `ch06-the-entrepreneur-why-small-beats-big-now.md` | Planned |
 | 07 | The Freelancer — From Selling Skills to Selling Personality | `ch07-the-freelancer-from-selling-skills-to-selling-personality.md` | Planned |
 
