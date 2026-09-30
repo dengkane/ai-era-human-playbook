@@ -15,7 +15,7 @@
 | # | 章节 | 文件 | 状态 |
 |---|---------|------|--------|
 | 01 | AI不是工具，是物种 | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | 草稿 |
-| 02 | 你焦虑，是因为你在用旧地图 | — | 待翻译 |
+| 02 | 你焦虑，是因为你在用旧地图 | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | 草稿 |
 | 03 | AI永远做不好的事（以及为什么那是你的护城河） | — | 待翻译 |
 | 04 | 不同人群的真实处境 | — | 待翻译 |
 
