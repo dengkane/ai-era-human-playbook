@@ -11,22 +11,55 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Five of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Six of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–05 | 01–05 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 words | 21,067 CJK characters, total |
-| Research notes | 5 | 5 |
+| Chapters | 01–06 | 01–06 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 words | 25,309 CJK characters, total |
+| Research notes | 6 | 6 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-The remaining sixteen chapters (06–21) are outlined in [`README.md`](README.md) and
+The remaining fifteen chapters (07–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
+
+### Added — Ch. 06, *The Entrepreneur — Why Small Beats Big Now*
+
+The second chapter of the Part II advice arc, and the first of three covering people whose income
+depends on something they own. Both editions and the research notes:
+
+- `chapters/en/ch06-the-entrepreneur-why-small-beats-big-now.md` (2849 words, `draft`)
+- `chapters/zh/ch06-the-entrepreneur-why-small-beats-big-now.md` (translation)
+- `chapters/en/research/ch06-notes.md` — 7 sources kept, 13 rejected (English)
+- `chapters/zh/research/ch06-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws: *why small teams are newly viable, and what
+that changes about strategy*. The operating playbook is Ch. 12; the decision to leave employment is
+Ch. 14.
+
+**The research inverted the chapter.** I went looking for evidence that small teams now win, and the
+strongest data found says they are not the ones adopting the tools that would let them:
+
+- Firms with four or fewer employees sit under 20% AI use, against 37% for firms with 250 or more, and
+  adoption rose only among firms above 20 employees over the six months measured (Census BTOS).
+- The Federal Reserve records that in the *previous* survey series the firm-size/adoption relationship
+  was **U-shaped** — largest *and* smallest highest — and that in the new series this has *moderated*,
+  leaving the smallest cohort clearly below the large ones.
+- The Census working paper finds 50–60% adoption in very large Information/Professional Services/Finance
+  firms, and that 66% of AI users only augment tasks while just 2% of firms cut employment over it.
+
+So the chapter argues the option opened and most small firms have not exercised it — a conditional, not
+a triumph. It also separates AI *use* (spreading) from AI *production* (1,246 firms across 32 economies;
+700 US, 250 China, per the BIS), because a chapter that blurs those two is selling something.
+
+Sources found and **not** used are in the notes, including the Cui/Demirer developer field experiments —
+precisely on topic, paywalled, and reported by a summary that warns the headline effect's interval is
+wide enough that quoting the point estimate would misrepresent it.
 
 ### Added — Ch. 05, *The Employee — From Replaceable Part to Indispensable Node*
 
@@ -358,7 +391,8 @@ avoiding a renumbering: **no chapter number, filename, or published link changed
 - [x] Write Chapter 03: What AI Can Never Do Well
 - [x] Write Chapter 04: Where Different People Actually Stand
 - [x] Write Chapter 05: The Employee — From Replaceable Part to Indispensable Node
-- [ ] Write Chapters 06–21
+- [x] Write Chapter 06: The Entrepreneur — Why Small Beats Big Now
+- [ ] Write Chapters 07–21
 - [ ] Set up DeepSeek + Reasonix automation pipeline
 - [ ] First intel collection script (RSS → summary)
 - [ ] Gumroad / 面包多 product pages (Coming Soon)
