@@ -97,9 +97,10 @@ done
 
 # --- template scaffolding / placeholders -------------------------------------
 echo
-if grep '<!--' "$file" | grep -qvE '<!--[[:space:]]*Last verified:'; then
+# 'verified'/'unverified' markers are legitimate content, not leftover scaffolding.
+if grep '<!--' "$file" | grep -qvE '<!--[[:space:]]*(verified|unverified)'; then
   warn "HTML comments still present — template scaffolding or author notes left in?"
-  grep -n '<!--' "$file" | grep -vE '<!--[[:space:]]*Last verified:' | head -5 | sed 's/^/         /'
+  grep -n '<!--' "$file" | grep -vE '<!--[[:space:]]*(verified|unverified)' | head -5 | sed 's/^/         /'
 fi
 
 if grep -qiE '\b(TODO|TBD|FIXME|LOREM IPSUM|XXX)\b' "$file"; then
@@ -107,12 +108,50 @@ if grep -qiE '\b(TODO|TBD|FIXME|LOREM IPSUM|XXX)\b' "$file"; then
   grep -niE '\b(TODO|TBD|FIXME|LOREM IPSUM|XXX)\b' "$file" | head -5 | sed 's/^/         /'
 fi
 
-# --- stale-data hygiene -----------------------------------------------------
+# --- factual claims and sources ---------------------------------------------
+# Strict rule: a concrete, checkable claim (an amount, a percentage, a dated
+# event) must be traceable to a source. See chapters/en/README.md#factual-claims.
+#
+#   <!-- verified YYYY-MM-DD — source: URL -->
+#   <!-- unverified -->
+#
+# 'verified' means someone actually opened the source. It must never be used to
+# mean "this sounds right" — a marker that overstates confidence is worse than
+# no marker, because it tells the reader a check happened when it did not.
 echo
-if grep -qE 'Last verified:' "$file"; then
-  pass "has 'Last verified:' marker(s) for volatile facts"
-else
-  warn "no 'Last verified:' marker — add one wherever prices/versions/legal facts appear"
+verified_n=$(grep -cE '<!--[[:space:]]*verified[[:space:]]+[0-9]{4}-[0-9]{2}-[0-9]{2}' "$file" || true)
+unverified_n=$(grep -cE '<!--[[:space:]]*unverified' "$file" || true)
+
+# 1. A 'verified' marker without a source is a claim of diligence with no evidence.
+nosrc="$(grep -nE '<!--[[:space:]]*verified' "$file" | grep -v 'source:' || true)"
+if [[ -n "$nosrc" ]]; then
+  err "'verified' marker has no source — add '— source: <URL>' or downgrade it:"
+  sed 's/^/         /' <<<"$nosrc"
+elif [[ "$verified_n" -gt 0 ]]; then
+  pass "$verified_n verified claim(s), each with a source"
+fi
+
+# 2. Unverified claims block promotion out of draft.
+status_now="${fm_status:-}"
+if [[ "$unverified_n" -gt 0 ]]; then
+  if [[ "$status_now" == "review" || "$status_now" == "stable" ]]; then
+    err "$unverified_n unverified claim(s) remain, but status is '$status_now' — every claim needs a source"
+  else
+    warn "$unverified_n claim(s) marked unverified — expected in draft, must be resolved before 'review'"
+  fi
+fi
+
+# 3. Figures with no marker anywhere in the file: likely unsourced claims.
+# Heuristic only. It cannot see a year range or a named ranking, so a clean
+# result here is not proof that every claim is sourced.
+if [[ "$verified_n" -eq 0 && "$unverified_n" -eq 0 ]]; then
+  figures="$(grep -nE '\$[0-9]|[0-9]+(\.[0-9]+)?%|[0-9]+,[0-9]{3}' "$file" \
+             | grep -vE '<!--[[:space:]]*(verified|unverified)' \
+             | grep -viE 'word_target|Last updated' || true)"
+  if [[ -n "$figures" ]]; then
+    warn "concrete figures with no verified/unverified marker — confirm each has a source:"
+    head -5 <<<"$figures" | sed 's/^/         /'
+  fi
 fi
 
 # --- length -----------------------------------------------------------------

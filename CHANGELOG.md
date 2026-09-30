@@ -46,6 +46,32 @@ and this project uses date-based versioning (YYYY.MM).
 - `templates/chapter-template.md` rewritten to encode the above with worked examples.
 - Ch. 01 and Ch. 02 metadata corrected from `word_target: 2500` to `1300`.
 
+### Added — source discipline
+- Every concrete, checkable claim now carries a marker:
+
+  ```markdown
+  <!-- verified YYYY-MM-DD — source: <URL> -->   a claim that was actually checked
+  <!-- unverified -->                            a claim that has not been
+  ```
+
+  This replaces `<!-- Last verified: DATE -->`, which asserted a date with no source and no
+  way to tell "I checked this" from "this sounded right".
+- `check-chapter.sh` now **errors** on a `verified` marker with no `source:`, and on any
+  `unverified` claim once `status` is `review` or `stable` — unsourced claims are a visible
+  temporary state instead of a silently plausible sentence.
+- Rationale, and the two failure modes that prompted this, written up in
+  `chapters/en/README.md#factual-claims`.
+
+### Fixed — factual claims in published chapters
+- **Ch. 01** claimed the prompt-engineer title had "largely dissolved" and put the 2023 salary
+  at "above $300,000 at some AI startups". Checked: the standalone title declined roughly 30%
+  from its 2024 peak and still exists, and the $335k posting was Anthropic's specifically, not
+  a general market rate. Rewritten and sourced.
+- **Ch. 02** claimed junior hiring "fell sharply from 2023 through 2025 **as** AI coding
+  assistants moved from autocomplete to something closer to a colleague" — unsourced, and
+  over-attributed. Sources are explicit that AI adoption and the post-ZIRP correction cannot be
+  separated cleanly. Rewritten with NY Fed data and correct attribution.
+
 ### Notes
 - Content is English-first. Translations derive from `chapters/en/`.
 - One chapter per branch per PR; self-merged.

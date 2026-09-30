@@ -86,11 +86,56 @@ Pulled from [CONTRIBUTING.md](../../CONTRIBUTING.md) — the short version:
 - **Ends with action.** "Do this today" gives three things to do: one under 30 minutes, one this week,
   one this quarter.
 - **Cross-references other chapters.** It's a book, not a collection of posts.
-- **Every claim that can go stale** (pricing, model names, legal facts) carries a `Last verified:` note.
+- **Every concrete claim is sourced.** See [Factual claims](#factual-claims) below.
 
 The template in [`templates/chapter-template.md`](../../templates/chapter-template.md) encodes all of
 this, including a worked example of the taxonomy shape (`###` subsections with a repeated
 *model / why it's failing / the tell* structure) that Ch. 02 uses.
+
+## Factual claims
+
+**Every concrete, checkable claim carries a source.** An amount, a percentage, a dated event, a
+ranking — if a reader could look it up and find you wrong, it needs a marker underneath it:
+
+```markdown
+<!-- verified 2026-03-14 — source: https://example.com/the-report -->
+```
+
+- `verified` means **you opened the source and it says what you claim.** It does not mean "this sounds
+  right", "this is widely known", or "the model produced it confidently".
+- Multiple sources, separated by ` ; ` — preferred where a number is contested.
+- The date is when you last checked, not when the claim was written.
+
+If you cannot source a claim yet, say so explicitly instead of dressing it up:
+
+```markdown
+<!-- unverified -->
+```
+
+`unverified` is legitimate in `draft` and **blocks promotion to `review`** — `check-chapter.sh`
+errors on it. That is the point: an unsourced claim should be a visible, temporary state, not a
+silently plausible sentence.
+
+### Why this is strict
+
+Drafting with a model produces two failure modes at once, and both were present in Ch. 01 and Ch. 02
+before this rule existed:
+
+| Failure | Example from this repo |
+|---|---|
+| **Exaggeration** | Ch. 01 said the prompt-engineer title had "largely dissolved". Job boards tracking it reported a decline of roughly a third from its 2024 peak; the role still existed. |
+| **Vagueness as cover** | Ch. 02 said junior hiring "fell sharply" with no figure at all, when hard numbers were available and would have been more persuasive. |
+
+A `Last verified:`-style marker without a source makes both worse, because it signals diligence that
+did not happen. The rule exists so that "we checked" is a claim the repo can actually back up.
+
+### Rules of thumb
+
+- A **specific number** beats an adjective — but only with a source. Otherwise use the adjective.
+- Rounding is fine; misattributing is not. "Anthropic posted a role at up to $335,000" is checkable.
+  "$300k at some AI startups" is not.
+- Opinion, framing, and prediction need no marker. They are not claims about the world; they are your
+  argument about it. Mark only what could be falsified.
 
 ## Front matter and footer
 

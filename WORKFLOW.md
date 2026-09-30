@@ -116,8 +116,18 @@ template encodes it with worked examples. If the argument is done at 1100 words,
 The template is full of `<!-- guidance -->`. Those are for you while drafting. Remove them before you
 publish — the linter warns on any that remain.
 
-One exception: `<!-- Last verified: YYYY-MM-DD -->` is meant to stay. Put it under any fact that goes
-stale — prices, model names, legal claims, salary figures. It tells the reader how old the number is.
+Two comments are content, not scaffolding, and stay:
+
+```markdown
+<!-- verified YYYY-MM-DD — source: <URL> -->   a claim you actually checked
+<!-- unverified -->                            a claim you have not checked yet
+```
+
+Put one under every concrete, checkable claim — an amount, a percentage, a dated event. `verified`
+means you opened the source; never use it to mean "this sounds right". `unverified` is fine in draft
+and becomes an **error** at `review`. See
+[Factual claims](chapters/en/README.md#factual-claims) for the reasoning, and for the two failure
+modes in Ch. 01 and Ch. 02 that made this rule necessary.
 
 ### 5. Check it
 
@@ -126,9 +136,11 @@ stale — prices, model names, legal claims, salary figures. It tells the reader
 ```
 
 Errors block publishing. Warnings are judgement calls. The check covers filename, front matter,
-footer markers, leftover scaffolding, `TODO` markers, `Last verified` presence, and length
-(flags below 1000 and above 2000 words of body, and any large gap between the body and the declared
-`word_target`).
+footer markers, leftover scaffolding, `TODO` markers, source markers, and length (flags below 1000
+and above 2000 words of body, and any large gap between the body and the declared `word_target`).
+
+Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any
+`unverified` claim once `status` is `review` or `stable`.
 
 ### 6. Publish
 

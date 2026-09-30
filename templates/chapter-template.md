@@ -41,9 +41,12 @@ tags: []
   The stakes, grounded in something that actually happened: a layoff, a price
   change, a launch, a hiring shift. If you cannot point at a date or a number,
   the section is probably filler.
+
+  Every concrete, checkable claim — an amount, a percentage, a dated event —
+  carries a marker underneath it. See "Factual claims" in chapters/en/README.md.
 -->
 
-<!-- Last verified: YYYY-MM-DD -->
+<!-- verified YYYY-MM-DD — source: <URL> -->
 
 ## <Body section — name it after the idea, not "Section 2">
 
@@ -80,9 +83,21 @@ tags: []
 
   Anything that can go stale — prices, model names, legal facts, salary
   figures — gets its own marker underneath it:
+
+      <!-- verified 2026-03-14 — source: https://example.com/the-report -->
+
+  A 'verified' marker means you opened the source and it says what you claim.
+  Never use it to mean "this sounds right". An overstated marker is worse than
+  no marker: it tells the reader a check happened when it did not.
+
+  If you cannot source a claim yet, say so out loud rather than dressing it up:
+
+      <!-- unverified -->
+
+  Unverified claims are fine in draft and must be gone before 'review'.
 -->
 
-<!-- Last verified: YYYY-MM-DD -->
+<!-- verified YYYY-MM-DD — source: <URL> -->
 
 ## The honest caveats
 
