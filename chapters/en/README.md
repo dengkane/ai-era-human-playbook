@@ -126,6 +126,12 @@ before this rule existed:
 |---|---|
 | **Exaggeration** | Ch. 01 said the prompt-engineer title had "largely dissolved". Job boards tracking it reported a decline of roughly a third from its 2024 peak; the role still existed. |
 | **Vagueness as cover** | Ch. 02 said junior hiring "fell sharply" with no figure at all, when hard numbers were available and would have been more persuasive. |
+| **Confident citation of a source you never opened** | Ch. 01 cited Bloomberg's "$335,000" for Anthropic's prompt-engineer posting without opening it (it is paywalled). Opening the coverage instead showed the reporting disagrees: Fortune gave $175,000–$335,000, Business Insider $280,000–$375,000. The chapter now cites one source it can actually be checked against. |
+
+The third one is the reason `verified` is defined so narrowly. It is easy to assemble a plausible
+number out of search results and attach a prestigious URL to it. The marker is a claim that you
+opened the source — and that you noticed when the sources contradicted each other, which is itself
+information worth having.
 
 A `Last verified:`-style marker without a source makes both worse, because it signals diligence that
 did not happen. The rule exists so that "we checked" is a claim the repo can actually back up.

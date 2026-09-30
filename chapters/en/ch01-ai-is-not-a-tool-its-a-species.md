@@ -32,12 +32,12 @@ hurts.
 ## Why this matters now
 
 Consider what happened to the "prompt engineer" job title. In March 2023, Anthropic posted a
-"prompt engineer and librarian" role with a base salary of up to $335,000, and the title briefly
-became shorthand for the new safe career. By 2026 the standalone title had shrunk by roughly a third
-from its peak — the work didn't vanish, but it stopped being a job title of its own. What used to be
-a specialized skill became a sentence in a job description for other roles.
+"prompt engineer and librarian" role with a salary range of $175,000 to $335,000, and the title
+briefly became shorthand for the new safe career. By 2026 the standalone title had shrunk by roughly
+a third from its peak — the work didn't vanish, but it stopped being a job title of its own. What
+used to be a specialized skill became a sentence in a job description for other roles.
 
-<!-- verified 2026-09-30 — source: https://www.bloomberg.com/news/articles/2023-03-29/ai-chatgpt-related-prompt-engineer-jobs-pay-up-to-335-000 ; https://4geeks.com/en/blog/ai-powered-learning/ai-prompt-engineer -->
+<!-- verified 2026-09-30 — source: https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/ ; https://4geeks.com/en/blog/ai-powered-learning/ai-prompt-engineer -->
 
 Here is the uncomfortable part: the people who lost that title did nothing wrong. They learned the
 current tool extremely well. Their mistake was assuming the tool would hold still long enough for
