@@ -74,11 +74,14 @@ The tool framing assumes three things. All three are now false.
 **1. Tools have a fixed capability.** A hammer hammers today and hammers in five years. When you buy
 a hammer you know what you bought, and you can plan around it for a decade.
 
-AI capability doesn't hold still, and it doesn't wait until you're ready. Think about the
-professional tasks you were confident a model could not do two years ago. Whatever was on that list
-has been getting shorter — and in most cases it got shorter without you doing anything to prepare for
-it. The capability moved underneath everyone's feet, and it moved without anyone deciding that it
-should.
+AI capability doesn't hold still. SWE-bench asks a model to fix real bugs in real codebases; models
+solved 4.4% of those problems in 2023 and 71.7% in 2024. On GPQA — graduate-level science questions
+written to be hard for non-experts — performance rose 48.9 percentage points in a single year. The
+smallest model that cleared 60% on MMLU in 2022 had 540 billion parameters; by 2024, a
+3.8-billion-parameter model managed the same score. Capability improved and grew dramatically cheaper
+at the same time, which is not how any prior technology curve behaved.
+
+<!-- verified 2026-09-30 — source: https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance -->
 
 This is the part that breaks planning. You learn a tool's limits once and design around them
 permanently. A moving system offers you no such footing.
@@ -98,6 +101,13 @@ With a moving system, a limit is a temporary condition. "AI can't do that" is a 
 expiry date, and the expiry date usually arrives sooner than the person saying it expects. It was said
 about translation, then summarization, then writing code, then reading scans, then legal research.
 Each time it was true when spoken and false within a couple of years.
+
+Translation is the cleanest case, because it has been studied rather than merely observed. Research on
+the rollout of the Google Translate mobile app found that US labour markets which adopted machine
+translation more heavily saw translator employment fall — and that demand for foreign-language skills
+dropped beyond translation itself, in the other jobs that used to list it.
+
+<!-- verified 2026-09-30 — source: https://www.inet.ox.ac.uk/publications/lost-in-translation-ais-impact-on-translators-and-foreign-language-skills -->
 
 > The tool metaphor is comforting because it puts you in charge of a static object. The species
 > metaphor is uncomfortable because it puts you next to a moving one.
@@ -200,11 +210,16 @@ than to a wild species, and that distinction has teeth:
 - **The capabilities are chosen.** Someone decides what the next version can and cannot do. What looks
   like natural evolution is a series of product decisions — some made for legal reasons, some for
   competitive ones, and some you would disagree with if you knew about them.
-- **The direction can reverse.** Features get removed. Models get deprecated. Terms of service change
-  so that work which was fine last month is a violation this month. A trajectory is not a guarantee.
+- **The direction can reverse.** In April 2026, OpenAI emailed developers that a batch of models would
+  be shut down that July — among them several `codex` coding models and two `o3`/`o4` research
+  models, all of them recent. Software built on top of them stopped working on a date the developer
+  did not choose. Terms of service change the same way, so that work which was fine last month is a
+  violation this month. A trajectory is not a guarantee.
 - **Your dependency is somebody's leverage.** If your work runs on one provider's model, your costs,
   your capabilities, and your continuity are all set by a company you have no relationship with and no
   vote in.
+
+<!-- verified 2026-09-30 — source: https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553 -->
 
 The unpredictability is real. The agency is not — or rather, the agency belongs to the vendors, not to
 the technology. That's worth remembering the next time someone describes AI as an unstoppable natural
