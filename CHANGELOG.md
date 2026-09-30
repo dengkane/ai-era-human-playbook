@@ -17,6 +17,7 @@ and this project uses date-based versioning (YYYY.MM).
 - Chapters:
   - `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
   - `chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md` (draft)
+  - `chapters/en/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` (draft)
 - Build tooling:
   - `scripts/check-chapter.sh` — lint a chapter file
   - `scripts/publish-chapter.sh` — branch → commit → push → PR for one chapter
@@ -124,6 +125,37 @@ found and rejected, and why**.
   research contradicts this: exposure concentrates on cognitive, non-routine work (engineering, finance,
   law, administration), while face-to-face and manual work stayed under 10% of work content. The
   metaphor survived; the explanation was wrong.
+
+### Added — Ch. 03, and the first time research killed a planned argument
+
+`ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` is written. The chapter is notable less
+for its content than for what producing it demonstrated about the process.
+
+The draft was going to be built on the strongest evidence available that AI is bad at something: a
+METR randomised controlled trial — 16 experienced developers, 246 real tasks, on their own
+repositories — which found AI made them **19% slower**. Controlled, expert, real-world. It would have
+made a satisfying centrepiece.
+
+Opening the primary source killed it. METR's own page now carries:
+
+> ⚠️ These results are out of date … We believe these historical results no longer reflect the current
+> impact of AI models on open-source developer productivity.
+
+The revision estimates an **18% speedup** on the same population. More importantly, it explains that
+the *measurement* stopped working: 30–50% of participants admitted withholding tasks, recruitment
+became impossible because developers would not work without AI, and some found time-on-task
+unmeasurable while running agents in parallel.
+
+So the chapter's argument inverted. It no longer claims to know where the limits are. It argues you
+**cannot** establish a permanent limit from evidence, however good, and offers a test instead: ask
+whether a limit would disappear because a model improved (machine-side, don't bet on it) or because
+people agreed to something (human-side). Then it applies that test to three candidates and ranks them,
+naming embodiment as the one it would bet on least.
+
+- 2550 words, 7 sourced claims, 6 sources, 0 lint errors.
+- Research notes record the rejected material, including the arXiv continual-learning paper that was
+  excluded by the chapter's own test — a limit that looks structural but is machine-side, which is
+  exactly the mistake the chapter argues against.
 
 ### Changed — book structure
 
