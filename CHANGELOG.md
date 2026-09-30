@@ -78,6 +78,25 @@ and this project uses date-based versioning (YYYY.MM).
 - Rationale, and the three failure modes that prompted this, written up in
   `chapters/en/README.md#factual-claims`.
 
+### Added — research notes
+
+Every chapter now has a research file at `chapters/en/research/ch<NN>-notes.md`, committed alongside
+it. It records the queries actually run, the sources kept, and — the part with real value — **what was
+found and rejected, and why**.
+
+- **Research now happens before drafting**, as step 1 of `WORKFLOW.md`. A chapter written first and
+  sourced afterwards produces claims shaped by the prose; the research then becomes a hunt for support
+  rather than a check on what is true.
+- **At least 5 independent sources per chapter.** Independent means separate origins, not one report
+  reprinted five times.
+- **Every source cited in a chapter must appear in its notes**, and the notes' own `sources_kept` must
+  not understate what the chapter cites. `check-chapter.sh` errors on both. The check runs one way on
+  purpose: notes may legitimately record sources that were read and rejected.
+- Source tiers are defined — primary (original data, official reports, statistics, papers, first-hand
+  accounts, the vendor's own pricing page) can carry a claim alone; secondary reporting is a lead but
+  must not be the only support for a number.
+- New: `templates/research-notes-template.md`, `chapters/en/research/README.md`.
+
 ### Fixed — factual claims in published chapters
 - **Ch. 01** claimed the prompt-engineer title had "largely dissolved" and put the 2023 salary
   at "above $300,000 at some AI startups". Checked: the standalone title declined roughly 30%
@@ -92,7 +111,19 @@ and this project uses date-based versioning (YYYY.MM).
 - **Ch. 02** claimed junior hiring "fell sharply from 2023 through 2025 **as** AI coding
   assistants moved from autocomplete to something closer to a colleague" — unsourced, and
   over-attributed. Sources are explicit that AI adoption and the post-ZIRP correction cannot be
-  separated cleanly. Rewritten with NY Fed data and correct attribution.
+  separated cleanly.
+- **Ch. 02, third pass — a source found that contradicted the chapter.** The rewrite above rested on
+  the widely-shared "6.1% unemployment for recent CS graduates" figure. Research for this pass
+  surfaced a published analysis showing that estimate carries a 95% confidence interval of roughly
+  4–11%, and that the share of recent CS graduates holding any job was 90% in 2023 — above the entire
+  pre-pandemic decade. The chapter now presents the figure *and* why it cannot carry the weight put on
+  it, then gives the better-measured version: employment for 22–25-year-olds in the most AI-exposed
+  occupations fell about 11% between late 2022 and mid-2026 while the least-exposed grew about 10%
+  (Stanford Digital Economy Lab, revised Aug 2026).
+- **Ch. 02, Map 1 — mechanism corrected.** The chapter said AI automates the *simplest* tasks. Task-level
+  research contradicts this: exposure concentrates on cognitive, non-routine work (engineering, finance,
+  law, administration), while face-to-face and manual work stayed under 10% of work content. The
+  metaphor survived; the explanation was wrong.
 
 ### Changed — book structure
 

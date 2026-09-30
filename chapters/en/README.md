@@ -155,6 +155,32 @@ The template in [`templates/chapter-template.md`](../../templates/chapter-templa
 this, including a worked example of the taxonomy shape (`###` subsections with a repeated
 *model / why it's failing / the tell* structure) that Ch. 02 uses.
 
+## Research notes
+
+Every chapter has a research file: `chapters/en/research/ch<NN>-notes.md`. It records the queries that
+were actually run, the sources that were kept, and — most importantly — **what was found and
+rejected, and why**.
+
+**Research happens before drafting, not after.** A chapter written first and sourced afterwards ends
+up with claims shaped by the prose; the research then becomes a hunt for support rather than a check
+on what is true.
+
+- **At least 5 independent sources per chapter.** Independent means separate origins — not one report
+  reprinted five times, and not five pages citing the same study.
+- **Open every source before citing it.** A search snippet is a lead. If the page is paywalled, note
+  that and cite something a reader can check.
+- **Prefer primary sources.** Original data, official reports, statistics, academic papers, first-hand
+  accounts, and the vendor's own pricing page can carry a claim alone. Reporting *about* someone's data
+  is a useful lead but must not be the only support for a number.
+- **Update the notes when you revise the chapter.** A note describing a claim the chapter no longer
+  makes is worse than no note.
+
+`check-chapter.sh` enforces this: it warns when a chapter cites fewer than 5 sources (an **error** at
+`review`/`stable`), and errors when a source cited in a chapter is missing from its notes, or when the
+notes' own `sources_kept` count understates what the chapter cites. The check runs one way on purpose —
+notes may legitimately record sources that were read and rejected. See
+[Research Notes](research/README.md) for the full rules and the source tier table.
+
 ## Factual claims
 
 **Every concrete, checkable claim carries a source.** An amount, a percentage, a dated event, a

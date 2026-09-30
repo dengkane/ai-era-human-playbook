@@ -78,20 +78,50 @@ Then verify the whole setup end to end:
 
 ## Writing a chapter
 
-### 1. Start from the template
+### 1. Research first
+
+**Do not start drafting until the research is done.** A chapter written first and sourced afterwards
+produces claims that fit the prose, which is backwards.
 
 ```bash
-cp templates/chapter-template.md chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md
+cp templates/research-notes-template.md chapters/en/research/ch03-notes.md
+```
+
+Work through it:
+
+1. **Search widely.** Run several queries from different angles — the claim itself, the counter-claim,
+   the underlying data, and who disagrees. Record every query you actually ran, including the ones
+   that went nowhere.
+2. **Open every source.** A search snippet is a lead, not a source. Read the page. If it is paywalled,
+   say so and find something a reader can check — in Ch. 01 the accessible coverage of a paywalled
+   Bloomberg article contradicted the snippet, and the snippet was wrong.
+3. **Keep at least 5 independent sources** per chapter. Independent means separate origins, not one
+   report reprinted five times.
+4. **Prefer primary over secondary.** Original data, official reports, statistics, academic papers,
+   first-hand accounts, and the actual pricing page count as primary and can carry a claim alone.
+   Reporting *about* someone's data is fine as a lead but must not be the only support for a number.
+5. **Record what you rejected, and why.** This is the most valuable part of the file. A source you
+   cannot describe is a source you did not read.
+6. **Downgrade claims the research does not support** — before they reach the draft, not after.
+
+The result is `chapters/en/research/ch<NN>-notes.md`, committed alongside the chapter. See
+[Research Notes](chapters/en/research/README.md) for the rules, and
+[Factual claims](chapters/en/README.md#factual-claims) for why this is enforced.
+
+### 2. Start from the template
+
+```bash
+cp templates/chapter-template.md chapters/en/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md
 ```
 
 Filename convention is enforced by the linter: `ch<NN>-<kebab-case-slug>.md`. Use `chapters/en/README.md`
 as the index — flip the chapter's status there when it moves.
 
-### 2. Draft in `.scratch/` if you want
+### 3. Draft in `.scratch/` if you want
 
 `.scratch/` is gitignored. Use it for fragments, outlines, and dead ends you are not ready to commit.
 
-### 3. Fill in the front matter, length, and structure
+### 4. Fill in the front matter, length, and structure
 
 The linter requires these fields: `chapter`, `title`, `part`, `status`, `language`, `created`,
 `last_updated`, `assisted_by`, `edited_by`.
@@ -103,7 +133,7 @@ actual body length and warns if they are more than 400 words apart — which is 
 Ch. 01 and Ch. 02 was caught.
 
 Target **~2500 words of body**, which is the low end of the 2,500–5,000-word range non-fiction
-chapters normally run. Twenty chapters at 2500 is a 50,000-word book.
+chapters normally run. Twenty-one chapters at 2500 is a 52,000-word book.
 
 - two or three body sections of roughly 700–900 words each, each with its own argument and example;
 - **named after their arguments**, not "Section 2";
@@ -113,7 +143,7 @@ The full spec lives in [`chapters/en/README.md`](chapters/en/README.md#writing-s
 template encodes it with worked examples. Length is a consequence of the arguments, not a target to
 hit — a chapter that needs a second argument is short of an argument, not of words.
 
-### 4. Delete the HTML comments
+### 5. Delete the HTML comments
 
 The template is full of `<!-- guidance -->`. Those are for you while drafting. Remove them before you
 publish — the linter warns on any that remain.
@@ -128,10 +158,10 @@ Two comments are content, not scaffolding, and stay:
 Put one under every concrete, checkable claim — an amount, a percentage, a dated event. `verified`
 means you opened the source; never use it to mean "this sounds right". `unverified` is fine in draft
 and becomes an **error** at `review`. See
-[Factual claims](chapters/en/README.md#factual-claims) for the reasoning, and for the two failure
+[Factual claims](chapters/en/README.md#factual-claims) for the reasoning, and for the three failure
 modes in Ch. 01 and Ch. 02 that made this rule necessary.
 
-### 5. Check it
+### 6. Check it
 
 ```bash
 ./scripts/check-chapter.sh chapters/en/ch02-....md
@@ -144,7 +174,7 @@ and above 2000 words of body, and any large gap between the body and the declare
 Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any
 `unverified` claim once `status` is `review` or `stable`.
 
-### 6. Publish
+### 7. Publish
 
 ```bash
 ./scripts/publish-chapter.sh chapters/en/ch02-....md
@@ -165,7 +195,7 @@ It will **not** move you off a branch it did not create, and it never touches `m
 Re-running it on the same chapter pushes new commits to the same branch — if a PR is already open for
 that branch, `pr-create.sh` reports it rather than opening a second one.
 
-### 7. Merge, then reset
+### 8. Merge, then reset
 
 Single-author repo: read your own diff, then
 
@@ -198,10 +228,11 @@ A chapter is not shipped until three files agree:
 
 The `Last updated:` footer and the `last_updated:` field should match. If you change one, change both.
 
-`publish-chapter.sh` stages `chapters/en/README.md` and `CHANGELOG.md` alongside the chapter when
-they have uncommitted changes, so edits you made to them do not get left behind. It will not guess at
-anything else — other modified files stay unstaged. For a **new** chapter it warns if `CHANGELOG.md`
-is untouched, since that entry is a judgement call it cannot write for you.
+`publish-chapter.sh` stages `chapters/en/README.md`, `CHANGELOG.md`, and the chapter's own
+`research/ch<NN>-notes.md` alongside the chapter, when they have uncommitted changes — so none of the
+three gets left behind. It will not guess at anything else: other modified files stay unstaged. For a
+**new** chapter it warns if `CHANGELOG.md` is untouched, since that entry is a judgement call it
+cannot write for you.
 
 ---
 

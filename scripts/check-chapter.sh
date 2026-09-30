@@ -154,6 +154,58 @@ if [[ "$verified_n" -eq 0 && "$unverified_n" -eq 0 ]]; then
   fi
 fi
 
+# --- research trail ----------------------------------------------------------
+# A chapter's verified markers say what a claim rests on. The research notes say
+# what was searched and what was thrown away. See chapters/en/research/README.md.
+#
+# The cross-check runs one way on purpose: every source cited in the chapter must
+# appear in the notes. A cited source that is not in the notes is an unrecorded
+# source — which is exactly how a confident-sounding number with no provenance
+# gets in. The reverse is allowed: notes may record sources that were read and
+# rejected.
+echo
+unique_sources="$(grep -oE 'source: .*' "$file" | grep -oE 'https?://[^ ;>]+' | sort -u | wc -l | tr -d ' ')"
+min_sources=5
+
+if [[ "$unique_sources" -lt "$min_sources" ]]; then
+  if [[ "$status_now" == "review" || "$status_now" == "stable" ]]; then
+    err "$unique_sources independent source(s) — at least $min_sources required for status '$status_now'"
+  else
+    warn "$unique_sources independent source(s) — target is at least $min_sources per chapter"
+  fi
+else
+  pass "$unique_sources independent source(s)"
+fi
+
+ch_num="$(basename "$file" .md)"; ch_num="${ch_num%%-*}"
+notes="$(dirname "$file")/research/${ch_num}-notes.md"
+
+if [[ -f "$notes" ]]; then
+  pass "research notes present ($(basename "$notes"))"
+
+  unrecorded="$(grep -oE 'source: .*' "$file" | grep -oE 'https?://[^ ;>]+' | sort -u | while read -r u; do
+    grep -qF "$u" "$notes" || echo "$u"
+  done)"
+  if [[ -n "$unrecorded" ]]; then
+    err "source(s) cited in the chapter but absent from the research notes:"
+    sed 's/^/         /' <<<"$unrecorded"
+  elif [[ "$unique_sources" -gt 0 ]]; then
+    pass "every cited source is recorded in the research notes"
+  fi
+
+  # The notes' own front matter counts should not understate what the chapter cites.
+  declared_kept="$(awk 'NR==1 && $0=="---"{i=1;next} i && $0=="---"{exit} i && /^sources_kept:/{sub(/^sources_kept: */,"");gsub(/[^0-9]/,"");print;exit}' "$notes")"
+  if [[ -n "$declared_kept" && "$declared_kept" -lt "$unique_sources" ]]; then
+    err "notes declare sources_kept: $declared_kept, but $unique_sources source(s) are cited in the chapter"
+  fi
+else
+  if [[ "$status_now" == "review" || "$status_now" == "stable" ]]; then
+    err "no research notes — required before '$status_now': research/${ch_num}-notes.md"
+  else
+    warn "no research notes yet — start one at research/${ch_num}-notes.md"
+  fi
+fi
+
 # --- length -----------------------------------------------------------------
 # Target is ~2500 words of body — the low end of the 2,500–5,000 range
 # non-fiction chapters normally run (see the LENGTH note in
