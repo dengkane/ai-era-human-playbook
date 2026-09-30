@@ -9,6 +9,24 @@ and this project uses date-based versioning (YYYY.MM).
 
 ## [Unreleased]
 
+### Current state
+
+Four of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted.
+
+| | `chapters/en/` (source) | `chapters/zh/` (translation) |
+|---|---|---|
+| Chapters | 01–04 | 01–04 |
+| Body length | 2554 / 2812 / 2550 / 2899 words | 16,560 CJK characters, total |
+| Research notes | 4 | 4 |
+| `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
+
+¹ Both warnings are `body is short`, and they are an artefact of counting whitespace-separated words
+in a language that has no spaces — not a short chapter. See "Known limitation" below.
+
+The remaining seventeen chapters (05–21) are outlined in [`README.md`](README.md) and
+[`chapters/en/README.md`](chapters/en/README.md) but not written.
+
 ### Added — Chinese edition (Ch. 01–04)
 
 The book now has a Chinese edition at `chapters/zh/`, derived from `chapters/en/`. All four finished
@@ -46,6 +64,7 @@ editing shared tooling to satisfy one edition is how the English path breaks.
   - `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
   - `chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md` (draft)
   - `chapters/en/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` (draft)
+  - `chapters/en/ch04-where-different-people-actually-stand.md` (draft)
 - Build tooling:
   - `scripts/check-chapter.sh` — lint a chapter file
   - `scripts/publish-chapter.sh` — branch → commit → push → PR for one chapter
@@ -266,7 +285,9 @@ avoiding a renumbering: **no chapter number, filename, or published link changed
 ### Planned
 - [x] Write Chapter 01: AI Is Not a Tool — It's a Species
 - [x] Write Chapter 02: You're Anxious Because You're Using an Old Map
-- [ ] Write Chapter 03: What AI Can Never Do Well
+- [x] Write Chapter 03: What AI Can Never Do Well
+- [x] Write Chapter 04: Where Different People Actually Stand
+- [ ] Write Chapters 05–21
 - [ ] Set up DeepSeek + Reasonix automation pipeline
 - [ ] First intel collection script (RSS → summary)
 - [ ] Gumroad / 面包多 product pages (Coming Soon)
