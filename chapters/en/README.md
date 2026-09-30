@@ -45,7 +45,7 @@ groups, because they answer two different questions.
 |---|---------|------|--------|
 | 05 | The Employee — From Replaceable Part to Indispensable Node | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | Draft |
 | 06 | The Entrepreneur — Why Small Beats Big Now | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | Draft |
-| 07 | The Freelancer — From Selling Skills to Selling Personality | `ch07-the-freelancer-from-selling-skills-to-selling-personality.md` | Planned |
+| 07 | The Freelancer — From Selling Skills to Selling Personality | [ch07-the-freelancer-from-selling-skills-to-selling-personality.md](ch07-the-freelancer-from-selling-skills-to-selling-personality.md) | Draft |
 
 #### If you are choosing a path — *which way should I go?*
 

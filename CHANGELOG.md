@@ -11,22 +11,62 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Six of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Seven of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–06 | 01–06 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 words | 25,309 CJK characters, total |
-| Research notes | 6 | 6 |
+| Chapters | 01–07 | 01–07 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,245 CJK characters, total |
+| Research notes | 7 | 7 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-The remaining fifteen chapters (07–21) are outlined in [`README.md`](README.md) and
+The remaining fourteen chapters (08–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
+
+**One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
+existed.** The notes were rebuilt afterwards by opening all thirteen cited sources again. That is a
+weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
+claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
+entry below.
+
+### Added — Ch. 07, *The Freelancer — From Selling Skills to Selling Personality*
+
+The third of the Part II advice arc, and the one covering the third way of earning: selling yourself
+into other people's problems. Both editions and the research notes:
+
+- `chapters/en/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` (3300 words, `draft`)
+- `chapters/zh/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` (translation)
+- `chapters/en/research/ch07-notes.md` — 13 sources kept, 12 rejected (English)
+- `chapters/zh/research/ch07-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws: *how the unit of sale changes*. The pricing
+mechanics are Ch. 12; the decision to go independent is Ch. 14; judging the tooling is Ch. 15. The
+chapter is allowed to explain a mechanism and hand over a test, not to name a rate.
+
+The chapter opens on Fiverr's Q2 2026 filing — annual active buyers down 21.9%, spend per buyer up
+15.6%, marketplace revenue down 15.5% — and argues that the hour, not the work, is what stopped
+selling. Three things the reconstruction changed:
+
+- **The opening had the two Fiverr figures in the wrong order of causation.** It read as a success
+  story about survivors. The same filing shows marketplace revenue *down 15.5%*, which the draft never
+  mentioned, and both buyer figures are trailing-twelve-month metrics. All three numbers are now there.
+- **A caveat contained a sourced-looking claim with no source.** "One freelance writer doing it
+  estimates much of it will dry up within five to ten years" had no marker, no name and no trace. It
+  was cut, with the reason recorded in the notes.
+- **That same caveat rested the cleanup market on "unverifiability is a machine-side limit"** — a
+  misapplication of Ch. 03's test in the direction that weakens the argument. Verifiability is the case
+  where a machine *can* check output cheaply. The caveat now argues from the window between a defect
+  being produced and being noticed, which the reader can measure.
+
+The one live search run during the reconstruction (OpenAlex, 286 works) turned up three papers directly
+on this chapter's topic that the chapter had not seen — *Winners and losers of generative AI* (JEBO
+2025), NBER WP 33777, and a 2025 HICSS paper on freelancers and the inflection point. They are recorded
+as the first thing a revision should read, not as support.
 
 ### Added — Ch. 06, *The Entrepreneur — Why Small Beats Big Now*
 

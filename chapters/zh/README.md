@@ -20,8 +20,9 @@
 | 04 | 不同人群的真实处境 | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | 草稿 |
 | 05 | 上班族——从可替换的零件，到不可替代的节点 | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | 草稿 |
 | 06 | 创业者——为什么现在小能胜大 | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | 草稿 |
+| 07 | 自由职业者——从卖技能，到卖"你是谁" | [ch07-the-freelancer-from-selling-skills-to-selling-personality.md](ch07-the-freelancer-from-selling-skills-to-selling-personality.md) | 草稿 |
 
-其余章节（07–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（08–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
@@ -36,6 +37,9 @@
 
 每一章在 `research/ch<NN>-notes.md` 有一份研究笔记，和章节一起提交，记录实际跑过的搜索、保留的
 来源，以及——最有价值的那部分——**找到但弃用的来源，以及为什么弃用**。译文保留了这一记录。
+
+第 07 章是个例外，得说明一下：它的英文稿先于研究笔记写成，笔记是事后重建的。中文版如实保留了这一段
+历史，见 `research/ch07-notes.md` 的「框架说明」。
 
 ## 翻译约定
 
