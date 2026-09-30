@@ -187,7 +187,10 @@ This does, in order:
 2. creates or reuses the branch `draft/<filename-stem>`;
 3. commits as `draft(ch02): <title>` (or `revise(...)` if the file is already tracked);
 4. pushes over SSH;
-5. opens a draft PR through the REST API, if a token is available.
+5. opens a draft PR through the REST API, if a token is available — titled with the same
+   `draft(ch02): <title>` string as the commit, so the PR list and `main`'s history agree.
+   (`pr-create.sh` only reports an existing PR, so this applies when the PR is first opened —
+   re-running `publish-chapter.sh` on an already-open PR pushes to it without renaming it.)
 
 Flags: `--dry-run` previews without touching anything, `--no-pr` pushes without opening a PR,
 `--type` overrides the inferred commit type.

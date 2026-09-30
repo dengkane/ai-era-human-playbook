@@ -57,6 +57,20 @@ Dell'Acqua *jagged frontier* experiment, which is precisely on topic but whose f
 unreachable on every route, and the widely repeated Gartner middle-management forecast, which arrives
 only through secondary restatements of a paywalled release.
 
+### Changed — `publish-chapter.sh` now names the PR after the commit
+
+Found while shipping Ch. 05: the script committed as `draft(ch05): <title>` but opened the PR with the
+bare `<title>`, so the same change read differently in the PR list and in `main`'s history. The two now
+use one string. `--type` still flows through, so a tracked chapter gets `revise(ch05): …` in both.
+
+This also settles a discrepancy in the existing record rather than introducing one. PR titles #12–#17
+were bare (`Where Different People Actually Stand`, `不同人群的真实处境`); only the squash commits
+carried the type prefix. Ch. 05's Chinese PR (#19) was opened with the prefix by hand, which is the form
+the script now produces.
+
+Caveat, from `pr-create.sh`: it reports an existing PR rather than updating it, so a PR already open
+when this changed keeps whatever title it was created with. Applies to PRs opened from here on.
+
 ### Changed — Ch. 15–21 renumbered so the sequence reads in order
 
 Ch. 21 sat after Ch. 14 in Part III, which made the table of contents read 10–14, 21, 15–20. That

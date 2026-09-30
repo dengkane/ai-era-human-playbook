@@ -137,6 +137,14 @@ else
 fi
 commit_type="${commit_type:-$default_type}"
 
+# The PR title and the commit subject are the same string on purpose. They used to
+# differ — the commit got 'draft(ch02): <title>' while the PR was opened with the
+# bare '<title>' — which made the PR list and the history read differently for the
+# same change. GitHub's squash merge takes its subject from the commit, so naming
+# the PR after the commit also means the title you read in the PR matches the one
+# that lands on main.
+pr_title="${commit_type}(${chapter_tag}): ${title}"
+
 # --- CHANGELOG consistency ---------------------------------------------------
 # WORKFLOW.md requires the chapter, the index, and the changelog to agree before a
 # chapter ships. The index is staged automatically; the changelog is not, because
@@ -250,7 +258,7 @@ Opened by \`scripts/publish-chapter.sh\`.
 
 if $dry_run; then
   if "$repo_root/scripts/github-token.sh" >/dev/null 2>&1; then
-    info "[dry-run] ./scripts/pr-create.sh --head $branch --title \"$title\" --draft"
+    info "[dry-run] ./scripts/pr-create.sh --head $branch --title \"$pr_title\" --draft"
   else
     info "[dry-run] no token — PR would be skipped, only the branch is pushed"
   fi
@@ -262,7 +270,7 @@ elif ! "$repo_root/scripts/github-token.sh" >/dev/null 2>&1; then
   echo
   echo "      To automate this: echo '<your-pat>' > .secrets/github-token"
 elif "$repo_root/scripts/pr-create.sh" \
-       --head "$branch" --base main --title "$title" \
+       --head "$branch" --base main --title "$pr_title" \
        --body "$pr_body" --draft | tail -1 | grep -q '^https'; then
   ok "pull request ready"
 else
