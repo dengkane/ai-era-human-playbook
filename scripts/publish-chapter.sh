@@ -124,7 +124,22 @@ fi
 if $dry_run; then
   info "[dry-run] git push -u origin $branch"
 else
-  git push -u origin "$branch"
+  if ! push_out="$(git push -u origin "$branch" 2>&1)"; then
+    echo "$push_out" | sed 's/^/     /'
+    echo
+    bad "push failed — the branch and commit are still here locally, nothing is lost."
+    echo
+    if grep -q "Permission denied (publickey)" <<<"$push_out"; then
+      echo "     The SSH key is not registered on GitHub. Run:"
+      echo "         ./scripts/setup-ssh.sh"
+      echo "     copy the printed public key to https://github.com/settings/ssh/new"
+      echo "     then re-run this script — it will reuse the branch and commit."
+    elif grep -q "Could not read from remote repository" <<<"$push_out"; then
+      echo "     Repo not reachable. Check network and that origin is a repo you can write to:"
+      echo "         ./scripts/setup-ssh.sh --check"
+    fi
+    exit 1
+  fi
   ok "pushed to origin/$branch"
 fi
 
