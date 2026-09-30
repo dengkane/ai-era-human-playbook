@@ -11,39 +11,68 @@ This document describes the *mechanical* flow: the git commands, the checks, the
 ## One-time setup
 
 ```bash
-./scripts/setup-ssh.sh      # SSH key in .git-ssh/ + wire up core.sshCommand
-sudo apt-get install gh     # GitHub CLI, for opening PRs
-gh auth login               # authenticate gh
+./scripts/setup-ssh.sh                              # SSH key + core.sshCommand
+echo '<your-pat>' > .secrets/github-token           # PAT, for opening PRs
+chmod 600 .secrets/github-token
+./scripts/doctor.sh                                 # verify everything
 ```
 
-`git` pushes over SSH with a key kept inside the repo (`.git-ssh/`, gitignored). `gh` is a normal
-system package — this wrapper only steps in to redirect `gh`'s config directory when `$HOME` happens
-to be read-only.
+Two credentials, two jobs:
+
+| Credential | Used for | Stored in |
+|------------|----------|-----------|
+| SSH key | `git push` | `.git-ssh/` (gitignored) |
+| GitHub token (PAT) | opening pull requests | `.secrets/github-token` (gitignored) |
+
+They are deliberately separate. The token never touches your git history, and losing it only costs you
+PR automation, not your ability to push.
 
 ### Why SSH, and why the key is inside the repo
 
-`~/.ssh` is not writable in this environment, so the key lives at `.git-ssh/id_ed25519` and
-`scripts/git-ssh.sh` is registered as `core.sshCommand`. That wrapper:
+`scripts/git-ssh.sh` is registered as `core.sshCommand` and points ssh at `.git-ssh/id_ed25519`. It:
 
 - resolves the key path relative to the repo root, so git works from any subdirectory;
-- passes `-F /dev/null`, which **ignores the system ssh config**. This is required, not cosmetic:
-  `/etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf` has bad ownership on this machine and ssh refuses
-  to start when it reads it. If you ever see `Bad owner or permissions on ... ssh_config.d/...`, that
-  is this problem, and the `-F /dev/null` in the wrapper is the fix.
+- passes `-F /dev/null`, which **ignores the system ssh config**.
 
-`.git-ssh/` is gitignored. **Never commit it.** The private key is in there.
+That second point is not cosmetic. On this machine `/etc/ssh/ssh_config.d/` is owned by
+`nobody:nogroup`, and ssh refuses to start at all when it reads it — which breaks every SSH push with
+a `Bad owner or permissions` error that looks nothing like the real cause. The `-F /dev/null` bypasses
+the broken include.
 
-Confirm the setup at any time:
+The durable fix is to correct the ownership (needs root):
 
 ```bash
-./scripts/setup-ssh.sh --check
+sudo chown root:root /etc/ssh/ssh_config.d /usr/lib/systemd/ssh_config.d
+sudo chown root:root /etc/ssh/ssh_config.d/*.conf /usr/lib/systemd/ssh_config.d/*.conf
 ```
 
-### SSH vs. PR creation
+Once that is done, ordinary `ssh` and `git` work everywhere, not just inside this repo.
 
-SSH authenticates `git push` only. It cannot open a pull request — that goes through GitHub's API.
-That is what `gh` is for. If `gh` is not authenticated, `publish-chapter.sh` still pushes the branch
-and prints the compare URL, and you finish in the browser.
+`.git-ssh/` is gitignored. **Never commit it** — it holds a private key.
+
+### The token
+
+Looked up in this order, first hit wins:
+
+1. `$GITHUB_TOKEN`
+2. `$GH_TOKEN`
+3. `.secrets/github-token`
+4. `gh auth token`, if `gh` is installed and logged in
+
+Create one at <https://github.com/settings/tokens>. Scope: **`repo`** (classic PAT), or
+`Contents: read/write` + `Pull requests: read/write` (fine-grained).
+
+Check it:
+
+```bash
+./scripts/github-token.sh --check
+```
+
+Then verify the whole setup end to end:
+
+```bash
+./scripts/doctor.sh
+```
 
 ---
 
@@ -97,11 +126,15 @@ This does, in order:
 1. lints the chapter — aborts on errors;
 2. creates or reuses the branch `draft/<filename-stem>`;
 3. commits as `draft(ch02): <title>` (or `revise(...)` if the file is already tracked);
-4. pushes to `origin`;
-5. opens a PR via `gh` if authenticated, otherwise prints the compare URL.
+4. pushes over SSH;
+5. opens a draft PR through the REST API, if a token is available.
+
+Flags: `--dry-run` previews without touching anything, `--no-pr` pushes without opening a PR,
+`--type` overrides the inferred commit type.
 
 It will **not** move you off a branch it did not create, and it never touches `main` or force-pushes.
-Re-running it on the same chapter pushes new commits to the same branch — so the PR updates in place.
+Re-running it on the same chapter pushes new commits to the same branch — if a PR is already open for
+that branch, `pr-create.sh` reports it rather than opening a second one.
 
 ### 7. Merge, then reset
 
@@ -131,25 +164,37 @@ The `Last updated:` footer and the `last_updated:` field should match. If you ch
 
 | Script | Purpose |
 |--------|---------|
-| `scripts/setup-ssh.sh` | Generate/verify the SSH key, wire up `core.sshCommand`, switch `origin` to SSH. `--check` to verify only. |
-| `scripts/git-ssh.sh` | The SSH wrapper git calls. Resolves the repo-local key and ignores the broken system ssh config. |
-| `scripts/gh.sh` | Run `gh`, redirecting its config dir if `$HOME` is read-only. |
+| `scripts/setup-ssh.sh` | Create/verify the SSH key, wire up `core.sshCommand`, point `origin` at SSH. `--check` to verify only. |
+| `scripts/git-ssh.sh` | The SSH wrapper git calls. Resolves the repo-local key, ignores the broken system ssh config. |
+| `scripts/github-token.sh` | Resolve and diagnose the PAT. `--check` reports the source without printing the token. |
+| `scripts/pr-create.sh` | Open (or find) a PR via the REST API. Idempotent. |
+| `scripts/doctor.sh` | Diagnose repo, ssh, key, and token in one shot. Start here when something fails. |
 | `scripts/check-chapter.sh` | Lint one chapter file. Non-zero exit on errors. |
-| `scripts/publish-chapter.sh` | Branch → commit → push → PR for one chapter. `--dry-run` to preview. |
+| `scripts/publish-chapter.sh` | Branch → commit → push → PR for one chapter. |
+| `scripts/gh.sh` | Optional `gh` wrapper. Not required — PRs go through the REST API. |
 
 ## Troubleshooting
 
+Start with `./scripts/doctor.sh`. It checks all of the below at once.
+
 **`Bad owner or permissions on /etc/ssh/ssh_config.d/...`**
-The system ssh config is broken. `scripts/git-ssh.sh` already works around it with `-F /dev/null`. If
-you call `ssh` or `git` outside this repo's config, you'll hit it again.
+The system ssh config is broken. Inside this repo, `scripts/git-ssh.sh` works around it with
+`-F /dev/null`. Outside the repo, fix the ownership (see
+[One-time setup](#one-time-setup)) — it needs root.
 
 **`Permission denied (publickey)`**
-The key is not registered on GitHub. Run `./scripts/setup-ssh.sh`, copy the printed public key to
+The key is not registered on GitHub. Run `./scripts/setup-ssh.sh`, add the printed public key at
 <https://github.com/settings/ssh/new>, then `./scripts/setup-ssh.sh --check`.
 
-**`gh: command not found`, or PR creation is skipped**
-`gh` is not installed. `sudo apt-get install gh`, then `gh auth login`. The push still worked — only
-the automatic PR was skipped.
+**PR creation is skipped**
+No token was found. `./scripts/github-token.sh --check` says which source it looked at. The push still
+worked — only the PR was skipped, and the compare URL is printed for you.
+
+**`GitHub API error: Bad credentials`**
+The token is wrong, expired, or revoked. Issue a new one.
+
+**`GitHub API error: Resource not accessible by personal access token`**
+The token lacks scope, or the org requires SSO authorization. Needs `repo`.
 
 **`could not read Username for 'https://github.com'`**
 `origin` is still on HTTPS. Run `./scripts/setup-ssh.sh`, which switches it to SSH.
