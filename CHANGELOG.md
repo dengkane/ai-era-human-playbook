@@ -9,13 +9,15 @@ and this project uses date-based versioning (YYYY.MM).
 
 ## [Unreleased]
 
-### Added — Chinese edition, starting with Ch. 01
+### Added — Chinese edition (Ch. 01–02)
 
-The book now has a Chinese edition at `chapters/zh/`, derived from `chapters/en/`. Ch. 01 is
-translated; the remaining finished chapters follow one at a time.
+The book now has a Chinese edition at `chapters/zh/`, derived from `chapters/en/`. Ch. 01 and Ch. 02
+are translated; the remaining finished chapters follow one at a time.
 
-- `chapters/zh/ch01-ai-is-not-a-tool-its-a-species.md` — the full chapter, translated
-- `chapters/zh/research/ch01-notes.md` — the research notes, translated
+- `chapters/zh/ch01-ai-is-not-a-tool-its-a-species.md`,
+  `chapters/zh/ch02-youre-anxious-because-youre-using-an-old-map.md` — the chapters, translated
+- `chapters/zh/research/ch01-notes.md`, `chapters/zh/research/ch02-notes.md` — the research notes,
+  translated
 - `chapters/zh/README.md` — Chinese chapter index, translation status, and the conventions the
   translation follows
 - `README_zh.md` — the 章节 links now point at `chapters/zh/`, and the repo-layout section lists it
