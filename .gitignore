@@ -32,8 +32,9 @@ credentials.json
 # NEVER commit this directory. It holds the private key.
 .git-ssh/
 
-# Locally installed binaries (gh, etc.) — not part of the book
-.tools/
+# Fallback gh config dir, used only when $HOME is read-only (see scripts/gh.sh).
+# May contain an auth token — never commit it.
+.tools/gh-config/
 
 # Scratch space for drafts you don't want to commit yet
 .scratch/

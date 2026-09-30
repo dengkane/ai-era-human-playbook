@@ -16,11 +16,11 @@ and this project uses date-based versioning (YYYY.MM).
 - `templates/chapter-template.md` — front matter + required disclosure footer
 - `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
 - Build tooling: `scripts/check-chapter.sh`, `scripts/publish-chapter.sh`, `scripts/setup-ssh.sh`,
-  `scripts/git-ssh.sh`, `scripts/install-gh.sh`, `scripts/gh.sh`
+  `scripts/git-ssh.sh`, `scripts/gh.sh`
 
 ### Changed
 - `origin` switched from HTTPS to SSH
-- `.gitignore` — ignore `.git-ssh/` (private key), `.tools/` (vendored binaries), `.scratch/`
+- `.gitignore` — ignore `.git-ssh/` (private key), `.tools/gh-config/` (gh token fallback), `.scratch/`
 
 ### Notes
 - Content is English-first. Translations derive from `chapters/en/`.

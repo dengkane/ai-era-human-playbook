@@ -10,14 +10,15 @@ This document describes the *mechanical* flow: the git commands, the checks, the
 
 ## One-time setup
 
-The machine this was first set up on has no usable root and a read-only `$HOME`, so two things are
-vendored into the repo instead of installed system-wide. Both are gitignored.
-
 ```bash
 ./scripts/setup-ssh.sh      # SSH key in .git-ssh/ + wire up core.sshCommand
-./scripts/install-gh.sh     # gh binary in .tools/ (no root needed)
-./scripts/gh.sh auth login  # authenticate gh for PR creation
+sudo apt-get install gh     # GitHub CLI, for opening PRs
+gh auth login               # authenticate gh
 ```
+
+`git` pushes over SSH with a key kept inside the repo (`.git-ssh/`, gitignored). `gh` is a normal
+system package — this wrapper only steps in to redirect `gh`'s config directory when `$HOME` happens
+to be read-only.
 
 ### Why SSH, and why the key is inside the repo
 
@@ -132,8 +133,7 @@ The `Last updated:` footer and the `last_updated:` field should match. If you ch
 |--------|---------|
 | `scripts/setup-ssh.sh` | Generate/verify the SSH key, wire up `core.sshCommand`, switch `origin` to SSH. `--check` to verify only. |
 | `scripts/git-ssh.sh` | The SSH wrapper git calls. Resolves the repo-local key and ignores the broken system ssh config. |
-| `scripts/install-gh.sh` | Download `gh` into `.tools/` without root. |
-| `scripts/gh.sh` | Run the vendored `gh`, falling back to `PATH`. |
+| `scripts/gh.sh` | Run `gh`, redirecting its config dir if `$HOME` is read-only. |
 | `scripts/check-chapter.sh` | Lint one chapter file. Non-zero exit on errors. |
 | `scripts/publish-chapter.sh` | Branch → commit → push → PR for one chapter. `--dry-run` to preview. |
 
@@ -148,8 +148,8 @@ The key is not registered on GitHub. Run `./scripts/setup-ssh.sh`, copy the prin
 <https://github.com/settings/ssh/new>, then `./scripts/setup-ssh.sh --check`.
 
 **`gh: command not found`, or PR creation is skipped**
-`gh` is not on `PATH` and not in `.tools/`. Run `./scripts/install-gh.sh`, then `./scripts/gh.sh auth login`.
-The push still worked — only the automatic PR was skipped.
+`gh` is not installed. `sudo apt-get install gh`, then `gh auth login`. The push still worked — only
+the automatic PR was skipped.
 
 **`could not read Username for 'https://github.com'`**
 `origin` is still on HTTPS. Run `./scripts/setup-ssh.sh`, which switches it to SSH.

@@ -164,7 +164,7 @@ if [[ -x "$repo_root/scripts/gh.sh" ]] && "$repo_root/scripts/gh.sh" auth status
   fi
 else
   info "gh is not authenticated (or not installed) — open the link above."
-  echo "      ./scripts/install-gh.sh && ./scripts/gh.sh auth login"
+  echo "      gh auth login        # install: sudo apt-get install gh"
 fi
 echo
 info "merge yourself once it reads right — this is a single-author repo."

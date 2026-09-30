@@ -1,48 +1,48 @@
 #!/usr/bin/env bash
-# Run gh, preferring the copy vendored in .tools/ over whatever is on PATH.
+# Thin wrapper around the system `gh`.
 #
-#   ./scripts/gh.sh pr list
 #   ./scripts/gh.sh auth login
+#   ./scripts/gh.sh pr list
 #   ./scripts/gh.sh auth status
 #
-# Two environment quirks are handled here, both because $HOME is read-only on this
-# machine:
+# Why this wrapper exists instead of calling gh directly:
 #
-#   * gh is installed into .tools/ (no usable sudo, so no system package). .tools/
-#     is gitignored.
-#   * gh wants to write its config and auth token to ~/.config/gh. That write
-#     fails, and `gh auth login` dies with a confusing error. GH_CONFIG_DIR is
-#     redirected into .tools/gh-config/ instead.
+#   gh writes its config and auth token to $XDG_CONFIG_HOME/gh (~/.config/gh).
+#   In restricted environments where $HOME is read-only, that write fails and
+#   `gh auth login` dies with an unrelated-looking error. This script probes for
+#   a usable config dir and falls back to a gitignored one inside the repo.
 #
-# GH_CONFIG_DIR holds your auth token. .tools/ is gitignored — never commit it.
+#   In a normal shell the probe passes and gh uses its usual location, so this
+#   wrapper is effectively a no-op.
+#
+# To install gh:  sudo apt-get install gh   (or your platform's package manager)
+#                 https://github.com/cli/cli#installation
 
 set -euo pipefail
 
-repo_root="$(git rev-parse --show-toplevel)"
+if ! command -v gh >/dev/null 2>&1; then
+  cat >&2 <<'EOF'
+gh is not installed.
 
-# Redirect gh's state into the repo if the default location is not writable.
+  Debian/Ubuntu:  sudo apt-get install gh
+  macOS:          brew install gh
+  Other:          https://github.com/cli/cli#installation
+
+gh is only needed to open pull requests automatically. Without it,
+scripts/publish-chapter.sh still pushes the branch and prints a compare URL
+you can open in the browser.
+EOF
+  exit 1
+fi
+
+# Try gh's normal config location first; only fall back if it is unusable.
 if [[ -z "${GH_CONFIG_DIR:-}" ]]; then
-  default_cfg="${XDG_CONFIG_HOME:-$HOME/.config}/gh"
-  if [[ ! -d "$default_cfg" ]] || [[ ! -w "$default_cfg" ]]; then
+  gh_cfg_default="${XDG_CONFIG_HOME:-$HOME/.config}/gh"
+  if ! { mkdir -p "$gh_cfg_default" && [ -w "$gh_cfg_default" ]; }; then
+    repo_root="$(git rev-parse --show-toplevel)"
     export GH_CONFIG_DIR="$repo_root/.tools/gh-config"
     mkdir -p "$GH_CONFIG_DIR"
   fi
 fi
 
-if [[ -x "$repo_root/.tools/gh" ]]; then
-  exec "$repo_root/.tools/gh" "$@"
-fi
-
-if command -v gh >/dev/null 2>&1; then
-  exec gh "$@"
-fi
-
-cat >&2 <<'EOF'
-gh is not available.
-
-Install it one of these ways:
-  1. Vendored (no root needed):  ./scripts/install-gh.sh
-  2. System package:             apt-get install gh        (needs root)
-  3. Download:                   https://github.com/cli/cli/releases
-EOF
-exit 1
+exec gh "$@"
