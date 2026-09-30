@@ -52,6 +52,15 @@ and this project uses date-based versioning (YYYY.MM).
   drafts (1250 and 1384 words) rather than from the genre. That was backwards — the
   drafts were short because they were drafted short, so the reasoning was circular.
   Corrected against genre norms before release.
+- **Ch. 01 and Ch. 02 rewritten to the new length**: 1238 → 2404 and 1384 → 2514 words.
+  Both gained substantive sections rather than padding:
+  - Ch. 01: a treatment of the three ways people avoid the question ("it's a
+    revolution" / "it's superintelligence" / "I'll just not use it"), a sourced
+    Stack Overflow figure showing usage rising while sentiment falls, and an expanded
+    account of what "under management" means for dependency risk.
+  - Ch. 02: the explanation of anxiety its title promised but its body never delivered,
+    a section on why stale maps stay persuasive, a concrete example per map, and two
+    further caveats (a new map is not a correct map; the payoff is slow and invisible).
 
 ### Added — source discipline
 - Every concrete, checkable claim now carries a marker:
