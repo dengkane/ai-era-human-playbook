@@ -37,7 +37,7 @@ groups, because they answer two different questions.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 04 | Where Different People Actually Stand | `ch04-where-different-people-actually-stand.md` | Planned |
+| 04 | Where Different People Actually Stand | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | Draft |
 
 #### If you are already on a path — *how do I get stronger where I am?*
 

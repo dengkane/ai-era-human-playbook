@@ -157,6 +157,39 @@ naming embodiment as the one it would bet on least.
   excluded by the chapter's own test — a limit that looks structural but is machine-side, which is
   exactly the mistake the chapter argues against.
 
+### Added — Ch. 04, and an exposure map that turned out upside down
+
+`ch04-where-different-people-actually-stand.md` is written, as the diagnostic opener of Part II.
+
+Ch. 03 closed by admitting it had no data on whether judgement is becoming more valuable. This is that
+data. It also answers a question the earlier chapters kept deferring: *which* readers are actually
+exposed — and the answer is not the one the news cycle gives.
+
+- **The exposure map is inverted.** The most AI-exposed occupation is **computer programmer** (75% of
+  its task content covered by observed AI use), then customer service representative, then data entry
+  keyer at 67%. The most-exposed quartile earns **47% more** than the 30% of workers with no measured
+  exposure at all, and is far better educated. Exposure concentrates on cognitive, educated, well-paid
+  work — not on routine low-skill work, which is the framing the chapter was originally going to open
+  with.
+- **The sorting variable is the experience premium** — the pay gap between an entry-level and an
+  experienced worker in the same occupation, from BLS wage estimates. It predicts the *direction* of AI's
+  effect on wages: −0.28 percentage points for occupations with no premium, roughly zero at the median
+  (40%), **+0.2** at the 90th percentile. That is the mechanism behind "fewer jobs, faster-rising pay"
+  in exposed sectors, and it is what makes this a diagnostic rather than a description.
+- **Four positions**, each with a *what it is / what the data shows / the tell* shape: the task has
+  already moved; the door closed behind you (the hiring-freeze position, created by the 19% employment
+  shortfall for 22–25-year-olds that shows up as no layoffs at all); the premium is paying you; and off
+  the map entirely, where a blank has two very different meanings.
+- 2899 words, 10 sourced claims, 7 sources, 0 lint errors, 0 warnings.
+
+Research notes record the material that did **not** survive: the Pew AI-at-work figure (unreachable at
+every URL tried, and only quotable second-hand through aggregators), the WEF entry-level-work report,
+the EPI counter-argument, PwC's AI Jobs Barometer, and the Hui/Reshef/Zhou freelance study — paywalled
+at the full text, so §1's freelance claim rests on the translation study instead. A precise coefficient
+(0.7 percentage points of translator employment growth per point of machine-translation adoption) was
+visible in a search snippet and left out, because neither openable record of the paper states it. That
+is the Ch. 01 failure mode caught one step earlier.
+
 ### Changed — book structure
 
 The outline was reviewed for structural problems, not just wording. Five changes, all of them
