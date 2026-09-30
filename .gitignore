@@ -28,13 +28,13 @@ credentials.json
 *.pem
 *.key
 
-# SSH keys for pushing to this repo (see scripts/setup-ssh.sh)
-# NEVER commit this directory. It holds the private key.
-.git-ssh/
+# GitHub token for pushing + opening PRs from automated/sandboxed sessions.
+# NEVER commit this. See scripts/github-token.sh.
+.secrets/
 
-# Fallback gh config dir, used only when $HOME is read-only (see scripts/gh.sh).
-# May contain an auth token — never commit it.
-.tools/gh-config/
+# Repo-local SSH key left over from the pre-token setup.
+# NEVER commit this — it holds a private key.
+.git-ssh/
 
 # Scratch space for drafts you don't want to commit yet
 .scratch/

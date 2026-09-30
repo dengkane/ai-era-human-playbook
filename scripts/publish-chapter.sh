@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
 #
-# Ship one chapter: branch → commit → push → PR link.
+# Ship one chapter: branch → commit → push → pull request.
 #
 #   ./scripts/publish-chapter.sh chapters/en/ch01-ai-is-not-a-tool-its-a-species.md
 #   ./scripts/publish-chapter.sh --type revise chapters/en/ch01-....md
 #   ./scripts/publish-chapter.sh --dry-run chapters/en/ch01-....md
+#   ./scripts/publish-chapter.sh --no-pr chapters/en/ch01-....md    # push only
 #
 # One chapter per branch per PR (see CONTRIBUTING.md). The branch is created from
-# main the first time and reused on later runs, so you can push revisions to the
-# same PR by running this again.
+# main the first time and reused on later runs, so re-running pushes revisions to
+# the same PR instead of opening a second one.
 #
-# This script never force-pushes and never touches main directly.
+# Transport: if a GitHub token is available (see scripts/github-token.sh) the
+# push goes over HTTPS with that token, because a sandboxed session may not be
+# able to read ~/.ssh. Otherwise it falls back to the configured remote, which is
+# what your own terminal will use.
+#
+# This script never force-pushes and never commits to main.
 
 set -euo pipefail
 
@@ -19,19 +25,21 @@ cd "$repo_root"
 
 commit_type=""
 dry_run=false
+open_pr=true
 file=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --type) commit_type="${2:-}"; shift 2 ;;
+    --type)   commit_type="${2:-}"; shift 2 ;;
     --dry-run) dry_run=true; shift ;;
-    -h|--help) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    --no-pr)  open_pr=false; shift ;;
+    -h|--help) sed -n '2,20p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
     -*) echo "Unknown option: $1" >&2; exit 2 ;;
     *) file="$1"; shift ;;
   esac
 done
 
-[[ -n "$file" ]] || { echo "Usage: scripts/publish-chapter.sh [--type draft|revise|fix] [--dry-run] <chapter.md>" >&2; exit 2; }
+[[ -n "$file" ]] || { echo "Usage: scripts/publish-chapter.sh [--type T] [--dry-run] [--no-pr] <chapter.md>" >&2; exit 2; }
 [[ -f "$file" ]] || { echo "No such file: $file" >&2; exit 1; }
 
 step() { printf '\n\033[1m%s\033[0m\n' "$1"; }
@@ -39,7 +47,7 @@ ok()   { printf '  \033[32m✓\033[0m %s\n' "$1"; }
 info() { printf '  \033[36m·\033[0m %s\n' "$1"; }
 bad()  { printf '  \033[31m✗\033[0m %s\n' "$1"; }
 
-# --- 0. lint ----------------------------------------------------------------
+# --- 1. lint ----------------------------------------------------------------
 step "1. Lint"
 if "$repo_root/scripts/check-chapter.sh" "$file"; then
   ok "chapter passes checks"
@@ -50,12 +58,15 @@ else
   exit 1
 fi
 
-# --- 1. derive names --------------------------------------------------------
+# --- 2. derive names --------------------------------------------------------
 stem="$(basename "$file" .md)"
 chapter_tag="${stem%%-*}"          # ch01
 
 title="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^title:/{sub(/^title: */,"");gsub(/^"|"$/,"");print;exit}' "$file")"
 [[ -n "$title" ]] || title="$stem"
+
+status="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^status:/{sub(/^status: */,"");gsub(/^"|"$/,"");print;exit}' "$file")"
+[[ -n "$status" ]] || status="draft"
 
 if git ls-files --error-unmatch "$file" >/dev/null 2>&1; then
   default_type="revise"
@@ -66,12 +77,16 @@ commit_type="${commit_type:-$default_type}"
 
 branch="draft/${stem}"
 
+remote_url="$(git remote get-url origin)"
+slug="$(sed -E 's#^git@github\.com:##; s#^https://([^@]*@)?github\.com/##; s#\.git$##' <<<"$remote_url")"
+
 step "2. Plan"
 info "file    : $file"
 info "branch  : $branch"
 info "commit  : ${commit_type}(${chapter_tag}): ${title}"
+info "repo    : $slug"
 
-# --- 2. branch state --------------------------------------------------------
+# --- 3. branch --------------------------------------------------------------
 current="$(git rev-parse --abbrev-ref HEAD)"
 step "3. Branch"
 if [[ "$current" == "$branch" ]]; then
@@ -100,12 +115,12 @@ else
   exit 1
 fi
 
-# --- 3. stage ---------------------------------------------------------------
+# --- 4. stage and commit ----------------------------------------------------
 step "4. Stage and commit"
-$dry_run || git add "$file"
 if $dry_run; then
   info "[dry-run] git add $file"
 else
+  git add "$file"
   if git diff --cached --quiet; then
     info "nothing staged for $file — already committed?"
   else
@@ -114,64 +129,81 @@ else
   fi
 fi
 
-# --- 4. push ----------------------------------------------------------------
+# --- 5. push ----------------------------------------------------------------
 step "5. Push"
-if ! git config --get core.sshCommand >/dev/null; then
-  bad "core.sshCommand is not configured — run ./scripts/setup-ssh.sh first"
-  exit 1
-fi
 
+# Push always goes over the configured remote (SSH). Only PR creation uses the
+# token — keeping the two separate means a token with a narrow scope still can't
+# be used to rewrite history, and a broken token can't block a push.
 if $dry_run; then
   info "[dry-run] git push -u origin $branch"
 else
+  info "transport: configured remote ($(sed -E 's#^(git@|https://).*#\1...#; s#:$##' <<<"$remote_url"))"
   if ! push_out="$(git push -u origin "$branch" 2>&1)"; then
     echo "$push_out" | sed 's/^/     /'
     echo
-    bad "push failed — the branch and commit are still here locally, nothing is lost."
+    bad "push failed — branch and commit are still here locally, nothing is lost."
     echo
     if grep -q "Permission denied (publickey)" <<<"$push_out"; then
-      echo "     The SSH key is not registered on GitHub. Run:"
-      echo "         ./scripts/setup-ssh.sh"
-      echo "     copy the printed public key to https://github.com/settings/ssh/new"
-      echo "     then re-run this script — it will reuse the branch and commit."
-    elif grep -q "Could not read from remote repository" <<<"$push_out"; then
-      echo "     Repo not reachable. Check network and that origin is a repo you can write to:"
-      echo "         ./scripts/setup-ssh.sh --check"
+      echo "     SSH key not accepted. Check your setup:"
+      echo "         ssh -T git@github.com"
+    elif grep -q "Bad owner or permissions" <<<"$push_out"; then
+      echo "     ssh refuses to read its system config (unrelated to your key). Fix:"
+      echo "         sudo chown root:root /etc/ssh/ssh_config.d /usr/lib/systemd/ssh_config.d"
     fi
     exit 1
   fi
-  ok "pushed to origin/$branch"
+  ok "pushed $branch"
 fi
 
-# --- 5. PR link -------------------------------------------------------------
-step "6. Open the pull request"
-remote_url="$(git remote get-url origin)"
-slug="$(sed -E 's#^git@github\.com:##; s#^https://github\.com/##; s#\.git$##' <<<"$remote_url")"
+# --- 6. pull request --------------------------------------------------------
+step "6. Pull request"
 pr_url="https://github.com/${slug}/compare/main...${branch}?expand=1"
 
-echo
-echo "  $pr_url"
-echo
-if [[ -x "$repo_root/scripts/gh.sh" ]] && "$repo_root/scripts/gh.sh" auth status >/dev/null 2>&1; then
-  info "gh is authenticated — creating the PR for you:"
-  if $dry_run; then
-    echo "      gh pr create --base main --head $branch --title \"$title\" --fill"
-  elif "$repo_root/scripts/gh.sh" pr create --base main --head "$branch" \
-        --title "$title" --body "Draft PR for ${chapter_tag}. Generated by scripts/publish-chapter.sh." ; then
-    ok "PR opened"
-  else
-    info "gh could not open the PR — use the link above"
-  fi
-else
-  info "gh is not authenticated (or not installed) — open the link above."
-  echo "      gh auth login        # install: sudo apt-get install gh"
+if ! $open_pr; then
+  info "--no-pr given; open it yourself at:"
+  echo "  $pr_url"
+  exit 0
 fi
-echo
-info "merge yourself once it reads right — this is a single-author repo."
 
-# --- 6. remap main note -----------------------------------------------------
+pr_body="Draft for **${chapter_tag}** — _${title}_.
+
+| | |
+|---|---|
+| Chapter | \`${chapter_tag}\` |
+| Source | \`${file}\` |
+| Status | \`${status}\` |
+| Part | see front matter |
+
+Opened by \`scripts/publish-chapter.sh\`.
+
+🤖 Generated with AI assistance — see the disclosure footer in the chapter."
+
+if $dry_run; then
+  if "$repo_root/scripts/github-token.sh" >/dev/null 2>&1; then
+    info "[dry-run] ./scripts/pr-create.sh --head $branch --title \"$title\" --draft"
+  else
+    info "[dry-run] no token — PR would be skipped, only the branch is pushed"
+  fi
+  echo
+  echo "  $pr_url"
+elif ! "$repo_root/scripts/github-token.sh" >/dev/null 2>&1; then
+  info "no token found, so the PR cannot be opened automatically. Open it here:"
+  echo "  $pr_url"
+  echo
+  echo "      To automate this: echo '<your-pat>' > .secrets/github-token"
+elif "$repo_root/scripts/pr-create.sh" \
+       --head "$branch" --base main --title "$title" \
+       --body "$pr_body" --draft | tail -1 | grep -q '^https'; then
+  ok "pull request ready"
+else
+  info "could not open the PR automatically — open it here:"
+  echo "  $pr_url"
+fi
+
+# --- 7. next ----------------------------------------------------------------
 if ! $dry_run; then
   step "Next"
-  echo "  After merging, get back to a clean main:"
+  echo "  After merging, return to a clean main:"
   echo "      git checkout main && git pull && git branch -d $branch"
 fi
