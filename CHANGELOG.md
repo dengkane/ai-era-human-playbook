@@ -9,6 +9,29 @@ and this project uses date-based versioning (YYYY.MM).
 
 ## [Unreleased]
 
+### Added — Chinese edition, starting with Ch. 01
+
+The book now has a Chinese edition at `chapters/zh/`, derived from `chapters/en/`. Ch. 01 is
+translated; the remaining finished chapters follow one at a time.
+
+- `chapters/zh/ch01-ai-is-not-a-tool-its-a-species.md` — the full chapter, translated
+- `chapters/zh/research/ch01-notes.md` — the research notes, translated
+- `chapters/zh/README.md` — Chinese chapter index, translation status, and the conventions the
+  translation follows
+- `README_zh.md` — the 章节 links now point at `chapters/zh/`, and the repo-layout section lists it
+
+**Filenames stay English, and so do four other things.** `check-chapter.sh` validates
+`ch<NN>-<slug>.md` against `[a-z0-9-]`, so a Chinese slug would fail outright — and the numbers live in
+cross-language links. It also greps for the four footer markers verbatim, and the `<!-- verified -->`
+markers exist to record that a source was opened: rewriting one, or its URL, would forge that record.
+So the slugs, the footer, the markers and their URLs, and the search queries in the notes are all left
+untranslated. Everything a reader reads is Chinese.
+
+**Known limitation, deliberately not fixed.** `check-chapter.sh` counts words by whitespace, and
+Chinese has none, so a full chapter reads as a few hundred "words" and trips the `body is short`
+warning. The script was left alone: the warning is a measurement artefact, not a short chapter, and
+editing shared tooling to satisfy one edition is how the English path breaks.
+
 ### Added
 - `WORKFLOW.md` — writing and publishing manual: git flow, script reference, troubleshooting
 - `chapters/en/README.md` — chapter index with per-chapter status (`planned`/`draft`/`review`/`stable`)
