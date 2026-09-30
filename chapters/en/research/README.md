@@ -57,3 +57,4 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch02-notes.md](ch02-notes.md) | 02 — You're Anxious Because You're Using an Old Map | 5 kept / 9 rejected | Complete |
 | [ch03-notes.md](ch03-notes.md) | 03 — What AI Can Never Do Well | 6 kept / 11 rejected | Complete |
 | [ch04-notes.md](ch04-notes.md) | 04 — Where Different People Actually Stand | 7 kept / 12 rejected | Complete |
+| [ch05-notes.md](ch05-notes.md) | 05 — The Employee | 12 kept / 14 rejected | Complete |
