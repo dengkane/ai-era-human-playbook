@@ -3,7 +3,7 @@
 > 一本关于普通人在人工智能时代如何生存、繁荣、保持人性的"活书"。
 > AI辅助创作，人工审校，持续迭代更新。
 
-[English](README.md) | [章节](chapters/en/) | [写作流程](WORKFLOW.md) | [更新日志](CHANGELOG.md) | [支持](#支持)
+[English](README.md) | [章节](chapters/zh/) | [写作流程](WORKFLOW.md) | [更新日志](CHANGELOG.md) | [支持](#支持)
 
 ---
 
@@ -201,6 +201,8 @@ AI每周都在变。纸质书还没印出来就过时了。
 ```
 chapters/en/          书稿正文。唯一源文件——译本由此派生
   README.md           章节索引 + 各章进度状态
+chapters/zh/          中文译本，由 chapters/en/ 派生
+  README.md           中文版索引 + 翻译进度
 appendix/             月度更新的工具矩阵与提示词库
 templates/            章节模板（含元信息与必备页脚）
 scripts/              本地工具：校验、发布、SSH 配置、gh 引导安装
