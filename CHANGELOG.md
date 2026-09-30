@@ -15,16 +15,26 @@ and this project uses date-based versioning (YYYY.MM).
 - `appendix/README.md` — appendix index, refresh cadences, tool-matrix schema
 - `templates/chapter-template.md` — front matter + required disclosure footer
 - `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
-- Build tooling: `scripts/check-chapter.sh`, `scripts/publish-chapter.sh`, `scripts/setup-ssh.sh`,
-  `scripts/git-ssh.sh`, `scripts/gh.sh`
+- Build tooling:
+  - `scripts/check-chapter.sh` — lint a chapter file
+  - `scripts/publish-chapter.sh` — branch → commit → push → PR for one chapter
+  - `scripts/pr-create.sh` — open a PR through the GitHub REST API (idempotent)
+  - `scripts/github-token.sh` — resolve/diagnose the PAT
+  - `scripts/setup-ssh.sh` / `scripts/git-ssh.sh` — SSH key and push transport
+  - `scripts/doctor.sh` — diagnose repo, ssh, token in one shot
+  - `scripts/gh.sh` — optional `gh` wrapper
 
 ### Changed
 - `origin` switched from HTTPS to SSH
-- `.gitignore` — ignore `.git-ssh/` (private key), `.tools/gh-config/` (gh token fallback), `.scratch/`
+- Publishing split into two credentials by job: SSH for `git push`, PAT for opening
+  pull requests. The token is never used for pushes, so a leaked token cannot rewrite
+  history and a broken token cannot block a push.
+- `.gitignore` — ignore `.git-ssh/` (private key), `.secrets/` (PAT), `.scratch/`
 
 ### Notes
 - Content is English-first. Translations derive from `chapters/en/`.
 - One chapter per branch per PR; self-merged.
+- Scripts avoid `jq` and `gh` as hard dependencies — `jq` is not installed here.
 
 ---
 
