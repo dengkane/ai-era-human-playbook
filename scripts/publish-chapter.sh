@@ -148,15 +148,39 @@ info "repo    : $slug"
 
 # --- 4. stage and commit ----------------------------------------------------
 step "4. Stage and commit"
+
+# A chapter is not shipped until the index and the changelog agree with it (see
+# "Updating the index and changelog" in WORKFLOW.md). Those edits live in
+# chapters/en/README.md and CHANGELOG.md, so they have to travel in the same
+# commit as the chapter — staging only $file would silently leave them behind.
+tracked_extras=()
+for extra in chapters/en/README.md CHANGELOG.md; do
+  if [[ -f "$extra" ]] && ! git diff --quiet -- "$extra" 2>/dev/null; then
+    tracked_extras+=("$extra")
+  fi
+done
+
 if $dry_run; then
-  info "[dry-run] git add $file"
+  info "[dry-run] git add $file ${tracked_extras[*]:-(nothing else modified)}"
 else
   git add "$file"
-  if git diff --cached --quiet; then
-    info "nothing staged for $file — already committed?"
-  else
+  # Guarded because "${arr[@]}" on an empty array trips `set -u` on older bash,
+  # and "${arr[@]:-}" would pass a literal empty string to git add.
+  [[ ${#tracked_extras[@]} -gt 0 ]] && git add "${tracked_extras[@]}"
+
+  if ! git diff --cached --quiet; then
     git commit -q -m "${commit_type}(${chapter_tag}): ${title}"
     ok "committed: ${commit_type}(${chapter_tag}): ${title}"
+    [[ ${#tracked_extras[@]} -gt 0 ]] && info "included: ${tracked_extras[*]}"
+  else
+    info "nothing staged for $file — already committed?"
+  fi
+
+  # Anything else the author edited stays unstaged on purpose: guessing which
+  # unrelated files belong in a chapter's PR is how stray changes get shipped.
+  if ! git diff --quiet || [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
+    info "other uncommitted changes were left alone:"
+    git status --short | grep -vE "^ M (chapters/en/README\.md|CHANGELOG\.md)$" | head -5 | sed 's/^/       /'
   fi
 fi
 
