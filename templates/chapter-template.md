@@ -1,13 +1,3 @@
-<!--
-  CHAPTER TEMPLATE — copy to chapters/en/ch<NN>-<slug>.md and fill it in.
-  Delete every HTML comment (including this one) before opening the PR.
-  See WORKFLOW.md for the drafting → review → publish flow.
-
-  Target length: ~1300 words. That is a deliberate choice — short enough to
-  finish in one sitting, long enough to make one argument properly. See
-  "Length" at the bottom of this file.
--->
-
 ---
 chapter: 0
 title: "Chapter Title Here"
@@ -21,6 +11,20 @@ edited_by: "Ken Deng"
 word_target: 1300
 tags: []
 ---
+
+<!--
+  CHAPTER TEMPLATE — copy to chapters/en/ch<NN>-<slug>.md and fill it in.
+  Delete every HTML comment (including this one) before opening the PR.
+  See WORKFLOW.md for the drafting → review → publish flow.
+
+  Target length: ~1300 words. Deliberate: short enough to finish in one
+  sitting, long enough to make one argument properly. See "Length" at the
+  bottom of this file.
+
+  This comment sits AFTER the front matter on purpose. check-chapter.sh
+  requires the file to start with '---', so anything above it breaks the
+  fresh-copy-still-has-the-template-comment case.
+-->
 
 # <NN>. Chapter Title Here
 
