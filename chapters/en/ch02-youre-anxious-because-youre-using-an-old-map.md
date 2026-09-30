@@ -32,12 +32,14 @@ and the path from "I learned Python" to "I have a good job" was short and well-l
 
 That map was correct for its terrain. It is now producing wrong turns.
 
-Junior developer hiring in the US fell sharply from 2023 through 2025 as AI coding assistants moved
-from autocomplete to something closer to a colleague. The work didn't disappear — senior engineers are
-as busy as ever — but the *on-ramp* narrowed. The map said "start here." The terrain said "the start is
-now a different place."
+Junior developer hiring in the US narrowed sharply. By 2025 the unemployment rate for computer science
+graduates had climbed to 6.1% — high for a field that spent two decades unable to hire fast enough.
+AI coding assistants are one factor; the end of the zero-interest era is another, and the two overlap
+too closely to separate cleanly. The work didn't disappear — senior engineers are as busy as ever —
+but the *on-ramp* narrowed. The map said "start here." The terrain said "the start is now a different
+place."
 
-<!-- Last verified: 2026-09-30 -->
+<!-- verified 2026-09-30 — source: https://www.softwareseni.com/what-the-data-actually-shows-about-ai-and-junior-developer-employment-decline/ -->
 
 The people who got hurt most badly were not the ones who ignored the advice. They were the ones who
 followed it *precisely*, spent four years and a lot of money, and arrived to find the door moved.
