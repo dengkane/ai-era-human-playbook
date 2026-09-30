@@ -58,3 +58,4 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch03-notes.md](ch03-notes.md) | 03 — What AI Can Never Do Well | 6 kept / 11 rejected | Complete |
 | [ch04-notes.md](ch04-notes.md) | 04 — Where Different People Actually Stand | 7 kept / 12 rejected | Complete |
 | [ch05-notes.md](ch05-notes.md) | 05 — The Employee | 12 kept / 14 rejected | Complete |
+| [ch06-notes.md](ch06-notes.md) | 06 — The Entrepreneur | 7 kept / 13 rejected | Complete |
