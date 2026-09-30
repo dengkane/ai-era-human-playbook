@@ -36,12 +36,25 @@ EOF
 fi
 
 # Try gh's normal config location first; only fall back if it is unusable.
+#
+# GH_CONFIG_DIR is where gh keeps hosts.yml, i.e. your auth token. If you
+# authenticate in your own terminal, gh writes it to ~/.config/gh — and a
+# sandboxed session that cannot read $HOME would then look unauthenticated.
+# So if the repo already has an authenticated config, prefer it.
 if [[ -z "${GH_CONFIG_DIR:-}" ]]; then
-  gh_cfg_default="${XDG_CONFIG_HOME:-$HOME/.config}/gh"
-  if ! { mkdir -p "$gh_cfg_default" && [ -w "$gh_cfg_default" ]; }; then
-    repo_root="$(git rev-parse --show-toplevel)"
-    export GH_CONFIG_DIR="$repo_root/.tools/gh-config"
-    mkdir -p "$GH_CONFIG_DIR"
+  repo_root="$(git rev-parse --show-toplevel 2>/dev/null || echo "")"
+  local_cfg="${repo_root:+$repo_root/.tools/gh-config}"
+
+  if [[ -n "$local_cfg" && -f "$local_cfg/hosts.yml" ]]; then
+    export GH_CONFIG_DIR="$local_cfg"
+  else
+    gh_cfg_default="${XDG_CONFIG_HOME:-$HOME/.config}/gh"
+    if ! { mkdir -p "$gh_cfg_default" && [ -w "$gh_cfg_default" ]; }; then
+      if [[ -n "$local_cfg" ]]; then
+        export GH_CONFIG_DIR="$local_cfg"
+        mkdir -p "$GH_CONFIG_DIR"
+      fi
+    fi
   fi
 fi
 
