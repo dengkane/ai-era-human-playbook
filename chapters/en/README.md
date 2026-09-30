@@ -11,28 +11,53 @@ This directory is the **source of truth** for the book text. Translations are de
 | **Review** | Human-edited and fact-checked. Open for PRs and corrections. |
 | **Stable** | Locked into the current release. Changes need an Issue first. |
 
-## The 20 Chapters
+## The 21 Chapters
+
+Parts are grouped by what the reader needs next, not by chapter number. Chapter numbers are stable and
+never change — a chapter that moves between parts keeps its number, because the numbers are in
+filenames and in every cross-reference.
 
 ### Part I — Face Reality
+
+Three chapters that build one argument: what AI is, why your instincts about it are miscalibrated,
+and where the structural advantage actually sits.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
 | 01 | AI Is Not a Tool — It's a Species | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | Draft |
 | 02 | You're Anxious Because You're Using an Old Map | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | Draft |
 | 03 | What AI Can Never Do Well (and Why That's Your Moat) | `ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` | Planned |
+
+### Part II — Secure the Baseline
+
+One diagnostic chapter, then five that apply it to where you currently are. The five split into two
+groups, because they answer two different questions.
+
+#### Where you stand
+
+| # | Chapter | File | Status |
+|---|---------|------|--------|
 | 04 | Where Different People Actually Stand | `ch04-where-different-people-actually-stand.md` | Planned |
 
-### Part II — Secure the Baseline (by Persona)
+#### If you are already on a path — *how do I get stronger where I am?*
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
 | 05 | The Employee — From Replaceable Part to Indispensable Node | `ch05-the-employee-from-replaceable-part-to-indispensable-node.md` | Planned |
-| 06 | The Entrepreneur — Building a "One-Person Company" | `ch06-the-entrepreneur-building-a-one-person-company.md` | Planned |
+| 06 | The Entrepreneur — Why Small Beats Big Now | `ch06-the-entrepreneur-why-small-beats-big-now.md` | Planned |
 | 07 | The Freelancer — From Selling Skills to Selling Personality | `ch07-the-freelancer-from-selling-skills-to-selling-personality.md` | Planned |
+
+#### If you are choosing a path — *which way should I go?*
+
+| # | Chapter | File | Status |
+|---|---------|------|--------|
 | 08 | The Student — Choosing a Path in the Age of AI | `ch08-the-student-choosing-a-path-in-the-age-of-ai.md` | Planned |
 | 09 | The Mid-Career Switcher — Your Judgment Is the Asset | `ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` | Planned |
 
 ### Part III — Amplify Your Leverage
+
+The skills layer. Chapters 10–13 build the capability; 14 is the decision to use it on your own;
+21 is how to keep your tooling honest.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
@@ -40,12 +65,13 @@ This directory is the **source of truth** for the book text. Translations are de
 | 11 | Context Engineering (Beyond Prompt Writing) | `ch11-context-engineering-beyond-prompt-writing.md` | Planned |
 | 12 | One-Person Business Playbook | `ch12-one-person-business-playbook.md` | Planned |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy | `ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` | Planned |
+| 14 | From "Employed" to "Self-Employed" | `ch14-from-employed-to-self-employed.md` | Planned |
+| 21 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) | `ch21-judging-ai-tools-for-yourself.md` | Planned |
 
 ### Part IV — Beyond Survival
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 14 | From "Employed" to "Self-Employed" | `ch14-from-employed-to-self-employed.md` | Planned |
 | 15 | Creativity When AI Can Generate Everything | `ch15-creativity-when-ai-can-generate-everything.md` | Planned |
 | 16 | Relationships & Community in a Digital World | `ch16-relationships-and-community-in-a-digital-world.md` | Planned |
 | 17 | Rebuilding Meaning | `ch17-rebuilding-meaning.md` | Planned |
@@ -58,6 +84,38 @@ This directory is the **source of truth** for the book text. Translations are de
 | 19 | The Courage to Slow Down | `ch19-the-courage-to-slow-down.md` | Planned |
 | 20 | Designing the Life You Actually Want | `ch20-designing-the-life-you-actually-want.md` | Planned |
 
+## Chapter boundaries
+
+Several chapters sit close to each other topically. These boundaries are a contract: when drafting, if
+you find yourself writing the neighbouring chapter, stop and cross-reference it instead. Without this,
+Ch. 06 and Ch. 12 would both be "the one about one-person businesses" and readers would get the same
+chapter twice.
+
+### The independent-work cluster
+
+| Chapter | Owns | Does not cover |
+|---------|------|----------------|
+| **05** The Employee | mattering *inside* an organisation | anything about working for yourself |
+| **06** The Entrepreneur | why small teams are newly viable, and what that changes about strategy | the operating playbook (that is 12) |
+| **07** The Freelancer | moving from selling hours to selling judgement and reputation | pricing mechanics (that is 12) |
+| **12** One-Person Business Playbook | the concrete operating system: offers, pricing, delivery, tooling | why small works (that is 06), or the life decision (that is 14) |
+| **14** From "Employed" to "Self-Employed" | the transition itself — when to jump, what to keep, how to sequence it | running the business once you are in it (that is 12) |
+| **21** Judging AI Tools for Yourself | how to evaluate *any* tool without trusting a list | which tools to use right now (that is Appendix A) |
+
+### Creativity and the body — 15 vs 18
+
+| Chapter | Owns |
+|---------|------|
+| **15** Creativity When AI Can Generate Everything | making things *with* the machine in the loop |
+| **18** The Last Fortress: Body, Nature, Art | experience defined by the machine's *absence* — the point is that nothing is generated |
+
+### Meaning and life design — 17 vs 20
+
+| Chapter | Owns |
+|---------|------|
+| **17** Rebuilding Meaning | why the old sources of meaning stopped working, and what can replace them |
+| **20** Designing the Life You Actually Want | turning that into a design: time, money, place, commitments |
+
 ## File naming
 
 ```
@@ -67,13 +125,17 @@ ch<NN>-<kebab-case-slug>.md
 - Two-digit chapter number, zero-padded (`ch01`, not `ch1`)
 - Lowercase, hyphens only. No spaces, no apostrophes, no em-dashes.
 - Drop articles only when the title is unwieldy (`youre` → keep, `its` → keep).
+- **Numbers are immutable.** Renaming a chapter file breaks every link to it and every cross-reference
+  inside the book. If a chapter's scope changes, change its title and its placement — not its number.
+  (`ch21` is the newest chapter; it sits in Part III because that is where it reads, not because it
+  belongs after `ch20`.)
 
 ## Writing standards
 
 Pulled from [CONTRIBUTING.md](../../CONTRIBUTING.md) — the short version:
 
 - **Length: ~2500 words.** Low end of the non-fiction convention (2,500–5,000
-  words per chapter), and what makes 20 chapters add up to a ~50,000-word book.
+  words per chapter), and what makes 21 chapters add up to a ~52,000-word book.
   `check-chapter.sh` warns below 2000 and above 3500.
 - **Structure:** an opening that makes the reader feel the problem, then **two or three body sections
   of roughly 700–900 words each**, named after their arguments, not their position. Each section
@@ -119,8 +181,8 @@ silently plausible sentence.
 
 ### Why this is strict
 
-Drafting with a model produces two failure modes at once, and both were present in Ch. 01 and Ch. 02
-before this rule existed:
+Drafting with a model produces several failure modes at once, and all three below were present in
+Ch. 01 and Ch. 02 before this rule existed:
 
 | Failure | Example from this repo |
 |---|---|

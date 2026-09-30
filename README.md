@@ -49,24 +49,42 @@ The book is organized in five parts, from survival to flourishing:
 
 ### Part I: Face Reality
 
+Three chapters, one argument: what AI is, why your instincts about it are miscalibrated, and where the
+structural advantage actually sits.
+
 | Chapter | Topic |
 |---------|-------|
 | 01 | AI Is Not a Tool — It's a Species |
 | 02 | You're Anxious Because You're Using an Old Map |
 | 03 | What AI Can Never Do Well (and Why That's Your Moat) |
+
+### Part II: Secure the Baseline
+
+A diagnostic chapter, then five that apply it to where you are. The five split into two groups,
+because they answer two different questions.
+
+| Chapter | Topic |
+|---------|-------|
 | 04 | Where Different People Actually Stand |
 
-### Part II: Secure the Baseline (by Persona)
+*If you are already on a path — how do I get stronger where I am?*
 
 | Chapter | Topic |
 |---------|-------|
 | 05 | The Employee — From Replaceable Part to Indispensable Node |
-| 06 | The Entrepreneur — Building a "One-Person Company" |
+| 06 | The Entrepreneur — Why Small Beats Big Now |
 | 07 | The Freelancer — From Selling Skills to Selling Personality |
+
+*If you are choosing a path — which way should I go?*
+
+| Chapter | Topic |
+|---------|-------|
 | 08 | The Student — Choosing a Path in the Age of AI |
 | 09 | The Mid-Career Switcher — Your Judgment Is the Asset |
 
 ### Part III: Amplify Your Leverage
+
+The skills layer, then the decision to use it on your own, then how to keep your tooling honest.
 
 | Chapter | Topic |
 |---------|-------|
@@ -74,12 +92,13 @@ The book is organized in five parts, from survival to flourishing:
 | 11 | Context Engineering (Beyond Prompt Writing) |
 | 12 | One-Person Business Playbook |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy |
+| 14 | From "Employed" to "Self-Employed" |
+| 21 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) |
 
 ### Part IV: Beyond Survival
 
 | Chapter | Topic |
 |---------|-------|
-| 14 | From "Employed" to "Self-Employed" |
 | 15 | Creativity When AI Can Generate Everything |
 | 16 | Relationships & Community in a Digital World |
 | 17 | Rebuilding Meaning |
@@ -92,12 +111,33 @@ The book is organized in five parts, from survival to flourishing:
 | 19 | The Courage to Slow Down |
 | 20 | Designing the Life You Actually Want |
 
+Chapter numbers never change, even when a chapter moves between parts — they are in filenames and in
+every cross-reference. `ch21` sits in Part III because that is where it reads.
+
 ### Appendices (Updated Monthly)
 
 - **A.** 2026 AI Tool Matrix (CN + Global stacks)
 - **B.** Bilingual Prompt Library (EN/CN, by scenario)
 - **C.** One-Person Business Toolchain Templates
 - **D.** Monthly Changelog
+
+---
+
+## How to Read This: Text vs. Appendices
+
+The chapters are about **how to think**. The appendices are about **what to use**. They age at
+completely different rates, and that is deliberate.
+
+| | Chapters | Appendices |
+|---|---|---|
+| Answers | "How should I think about this?" | "Which tool, at what price, right now?" |
+| Ages | Slowly — arguments, not products | Fast — monthly, sometimes weekly |
+| Free? | Parts I–II are free | Paid layer |
+
+So the book does **not** claim its tool matrix is authoritative. It can't be, and Ch. 21 exists to make
+that explicit: it teaches you to judge a tool yourself, so that when Appendix A goes stale — and it
+will — you are not stuck waiting for someone else to update it. **The appendices are a convenience;
+the judgement is the product.**
 
 ---
 

@@ -18,7 +18,7 @@ tags: []
   See WORKFLOW.md for the drafting → review → publish flow.
 
   Target length: ~2500 words. That is the low end of what non-fiction
-  chapters normally run (2,500–5,000), and it is what makes 20 chapters add
+  chapters normally run (2,500–5,000), and it is what makes 21 chapters add
   up to a book rather than a pamphlet. See "Length" at the bottom of this
   file for the arithmetic.
 
@@ -146,9 +146,9 @@ tags: []
   4,000. 2500 sits at the low end of that convention, not below it. At roughly
   230 words a minute, it is a ten-minute read.
 
-  The other half of the reason is the book as a whole. Twenty chapters at 2500
-  words is 50,000 words — a real book, and one that can carry a price. At 1300
-  it would be 26,000, which is a long essay collection.
+  The other half of the reason is the book as a whole. Twenty-one chapters at
+  2500 words is 52,000 words — a real book, and one that can carry a price. At
+  1300 it would be 26,000, which is a long essay collection.
 
   What not to do to reach the target: restate the heading, open with "with the
   development of AI", or pad the caveats. Length is not the goal. A chapter

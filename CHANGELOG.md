@@ -94,10 +94,39 @@ and this project uses date-based versioning (YYYY.MM).
   over-attributed. Sources are explicit that AI adoption and the post-ZIRP correction cannot be
   separated cleanly. Rewritten with NY Fed data and correct attribution.
 
+### Changed — book structure
+
+The outline was reviewed for structural problems, not just wording. Five changes, all of them
+avoiding a renumbering: **no chapter number, filename, or published link changed.**
+
+- **Part II mixed two classification axes.** Ch. 05–07 sorted by *how you earn* (employee /
+  entrepreneur / freelancer), Ch. 08–09 by *life stage* (student / mid-career switcher). A 45-year-old
+  employee weighing a change had no way to tell which chapter was his. The five now sit in two named
+  groups — "already on a path" and "choosing a path" — because they answer two different questions.
+- **Ch. 04 moved into Part II** as its diagnostic opener. "Where Different People Actually Stand" is
+  the setup for a part about different people; it was sitting at the end of a part about cognition.
+  Part I is now a clean three-chapter argument.
+- **Ch. 14 moved into Part III.** "From Employed to Self-Employed" is the payoff of the career arc in
+  Ch. 05–12, but it sat in Part IV, separated from that arc by Ch. 13. The reader finished the career
+  material, detoured through creativity, and came back to careers.
+- **Ch. 06 and Ch. 12 were effectively the same title.** "Building a One-Person Company" vs. "One-Person
+  Business Playbook" — four chapters (06, 07, 12, 14) sat in the same topical space with no stated
+  division of labour. Ch. 06 is retitled *Why Small Beats Big Now* (the strategic why), leaving Ch. 12
+  as the operating playbook. A `## Chapter boundaries` section now states what each chapter owns and
+  what it explicitly does not, for the independent-work cluster, for 15-vs-18, and for 17-vs-20.
+- **Ch. 21 added:** *Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong).* The book
+  sells a tool matrix in the paid tier but never taught readers to evaluate a tool independently —
+  which contradicts Ch. 01's own advice to invest in judgement rather than interfaces. Ch. 21 closes
+  that gap and is numbered 21 to leave Ch. 01–20 untouched.
+- Part II's title dropped "(by Persona)", since it now opens with a diagnostic chapter.
+- Book total updated from ~50,000 to ~52,000 words.
+
 ### Notes
 - Content is English-first. Translations derive from `chapters/en/`.
 - One chapter per branch per PR; self-merged.
 - Scripts avoid `jq` and `gh` as hard dependencies — `jq` is not installed here.
+- **Chapter numbers are immutable.** A chapter that changes scope changes its title and its placement,
+  never its number — the numbers are in filenames, in cross-references, and in public links.
 
 ---
 

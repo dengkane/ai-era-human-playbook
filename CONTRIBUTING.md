@@ -43,7 +43,7 @@ Want to translate a chapter into another language? Open an Issue first to coordi
 ## Content Standards
 
 - **Length:** ~2500 words per chapter. The low end of the 2,500–5,000-word non-fiction convention,
-  and what makes 20 chapters add up to a ~50,000-word book
+  and what makes 21 chapters add up to a ~52,000-word book
 - **Structure:** two or three body sections of roughly 700–900 words each, named after their
   arguments, then explicit "The honest caveats" and "Do this today" sections
 - **Tone:** Professional but conversational, like a smart friend explaining something
