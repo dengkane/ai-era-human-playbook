@@ -8,7 +8,7 @@ created: YYYY-MM-DD
 last_updated: YYYY-MM-DD
 assisted_by: "DeepSeek + Reasonix"
 edited_by: "Ken Deng"
-word_target: 1300
+word_target: 2500
 tags: []
 ---
 
@@ -17,9 +17,10 @@ tags: []
   Delete every HTML comment (including this one) before opening the PR.
   See WORKFLOW.md for the drafting → review → publish flow.
 
-  Target length: ~1300 words. Deliberate: short enough to finish in one
-  sitting, long enough to make one argument properly. See "Length" at the
-  bottom of this file.
+  Target length: ~2500 words. That is the low end of what non-fiction
+  chapters normally run (2,500–5,000), and it is what makes 20 chapters add
+  up to a book rather than a pamphlet. See "Length" at the bottom of this
+  file for the arithmetic.
 
   This comment sits AFTER the front matter on purpose. check-chapter.sh
   requires the file to start with '---', so anything above it breaks the
@@ -51,14 +52,16 @@ tags: []
 ## <Body section — name it after the idea, not "Section 2">
 
 <!--
-  TWO OR THREE body sections. Not a fixed number — a chapter that needs two
-  should have two, and padding to three is how filler gets written.
+  TWO OR THREE body sections, each roughly 700–900 words. Every section carries
+  its own argument and its own example. If two sections are making the same
+  point, that is one section, not two.
 
   Name each one after its argument ("A species, not a screwdriver"), never after
   its position. The heading should tell the reader what it claims.
 
-  One argument per section. Concrete over abstract: named tools, real prices,
-  actual job titles, specific years.
+  Concrete over abstract: named tools, real prices, actual job titles, specific
+  years. Every concrete, checkable claim gets a source marker — see the
+  "verified" notes further down.
 -->
 
 ## <Body section — the framework or method>
@@ -137,16 +140,21 @@ tags: []
 ---
 
 <!--
-  LENGTH — why ~1300 words
+  LENGTH — why ~2500 words
 
-  A chapter has to finish one argument and stop. 1300 words is roughly a
-  ten-minute read: long enough to develop a position with evidence, short
-  enough that nobody skims. Both published chapters land in the 1250–1400
-  range and read better for it.
+  Non-fiction chapters normally run 2,500–5,000 words, averaging around
+  4,000. 2500 sits at the low end of that convention, not below it. At roughly
+  230 words a minute, it is a ten-minute read.
+
+  The other half of the reason is the book as a whole. Twenty chapters at 2500
+  words is 50,000 words — a real book, and one that can carry a price. At 1300
+  it would be 26,000, which is a long essay collection.
 
   What not to do to reach the target: restate the heading, open with "with the
-  development of AI", or pad the caveats. If the argument is done at 1100
-  words, stop at 1100.
+  development of AI", or pad the caveats. Length is not the goal. A chapter
+  carrying two or three distinct arguments, each with its own example and its
+  own honest limits, lands here on its own. If you find yourself stretching a
+  single idea to 2500 words, the chapter is missing an argument, not words.
 
-  check-chapter.sh warns below 1000 and above 2000 words of body text.
+  check-chapter.sh warns below 2000 and above 3500 words of body text.
 -->

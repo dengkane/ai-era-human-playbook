@@ -72,11 +72,12 @@ ch<NN>-<kebab-case-slug>.md
 
 Pulled from [CONTRIBUTING.md](../../CONTRIBUTING.md) — the short version:
 
-- **Length: ~1300 words.** A ten-minute read. Long enough to land one argument with evidence, short
-  enough that nobody skims. `check-chapter.sh` warns below 1000 and above 2000.
+- **Length: ~2500 words.** Low end of the non-fiction convention (2,500–5,000
+  words per chapter), and what makes 20 chapters add up to a ~50,000-word book.
+  `check-chapter.sh` warns below 2000 and above 3500.
 - **Structure:** an opening that makes the reader feel the problem, then **two or three body sections
-  named after their arguments** — not after their position. Two is a valid answer; padding to three is
-  how filler gets written.
+  of roughly 700–900 words each**, named after their arguments, not their position. Each section
+  carries its own argument and its own example — two sections making the same point is one section.
 - **Tone:** professional but conversational, like a smart friend explaining something.
 - **No fluff.** No "with the development of AI" openings, no filler paragraphs, no restating the heading.
 - **Concrete.** Specific tools, prices, dates, numbers. "A $20/month tool" beats "affordable AI solutions".

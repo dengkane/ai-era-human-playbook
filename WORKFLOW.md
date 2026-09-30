@@ -98,18 +98,20 @@ The linter requires these fields: `chapter`, `title`, `part`, `status`, `languag
 
 `status` is one of `planned` / `draft` / `review` / `stable`.
 
-Also fill in `word_target` (use `1300`) and `tags`. The linter cross-checks `word_target` against the
+Also fill in `word_target` (use `2500`) and `tags`. The linter cross-checks `word_target` against the
 actual body length and warns if they are more than 400 words apart — which is how the mismatch in
 Ch. 01 and Ch. 02 was caught.
 
-Target **~1300 words of body**. That is a deliberate constraint, not a rough guide:
+Target **~2500 words of body**, which is the low end of the 2,500–5,000-word range non-fiction
+chapters normally run. Twenty chapters at 2500 is a 50,000-word book.
 
-- short enough to finish in one sitting, long enough to land one argument with evidence;
-- two or three body sections, **named after their arguments**, not "Section 2";
+- two or three body sections of roughly 700–900 words each, each with its own argument and example;
+- **named after their arguments**, not "Section 2";
 - finishes with `## The honest caveats` and `## Do this today`.
 
 The full spec lives in [`chapters/en/README.md`](chapters/en/README.md#writing-standards), and the
-template encodes it with worked examples. If the argument is done at 1100 words, stop at 1100.
+template encodes it with worked examples. Length is a consequence of the arguments, not a target to
+hit — a chapter that needs a second argument is short of an argument, not of words.
 
 ### 4. Delete the HTML comments
 

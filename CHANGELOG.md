@@ -35,16 +35,23 @@ and this project uses date-based versioning (YYYY.MM).
 - `.gitignore` — ignore `.git-ssh/` (private key), `.secrets/` (PAT), `.scratch/`
 
 ### Changed — writing rules
-- **Chapter length settled at ~1300 words**, replacing the 2500 in the original template.
-  Both published chapters landed at 1250–1400; the old target was never realistic.
-  `check-chapter.sh` warns below 1000 and above 2000, and flags a gap over 400 words
+- **Chapter length set at ~2500 words**, the low end of the 2,500–5,000 range
+  non-fiction chapters normally run. Twenty chapters at 2500 is a 50,000-word book;
+  at the 1300 briefly tried earlier it would have been 26,000, which is an essay
+  collection rather than something that can carry a price.
+  `check-chapter.sh` warns below 2000 and above 3500, and flags a gap over 400 words
   between the body and the declared `word_target`.
-- **Chapter shape settled at two or three body sections named after their arguments**,
-  replacing three anonymous `Body section N` placeholders. The comparison table and the
-  taxonomy shape (`###` subsections repeating *model / why it's failing / the tell*) used
-  by Ch. 02 are now documented in the template as first-class components.
+- **Chapter shape settled at two or three body sections of 700–900 words named after
+  their arguments**, replacing three anonymous `Body section N` placeholders. The
+  comparison table and the taxonomy shape (`###` subsections repeating
+  *model / why it's failing / the tell*) used by Ch. 02 are now documented in the
+  template as first-class components.
 - `templates/chapter-template.md` rewritten to encode the above with worked examples.
-- Ch. 01 and Ch. 02 metadata corrected from `word_target: 2500` to `1300`.
+
+  An earlier pass in this same release had derived the target from the two published
+  drafts (1250 and 1384 words) rather than from the genre. That was backwards — the
+  drafts were short because they were drafted short, so the reasoning was circular.
+  Corrected against genre norms before release.
 
 ### Added — source discipline
 - Every concrete, checkable claim now carries a marker:

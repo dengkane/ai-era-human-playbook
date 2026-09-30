@@ -155,16 +155,17 @@ if [[ "$verified_n" -eq 0 && "$unverified_n" -eq 0 ]]; then
 fi
 
 # --- length -----------------------------------------------------------------
-# Target is ~1300 words of body (see the LENGTH note in templates/chapter-template.md).
-# Warn at both ends: too short is thin, too long is drifting away from the format.
+# Target is ~2500 words of body — the low end of the 2,500–5,000 range
+# non-fiction chapters normally run (see the LENGTH note in
+# templates/chapter-template.md). Warn at both ends.
 words="$(wc -w < "$file" | tr -d ' ')"
 body_words="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{inside=0;next} !inside' "$file" | wc -w | tr -d ' ')"
 echo
-echo "  Length: $words words total, $body_words words of body (target ~1300)"
-if [[ "$body_words" -lt 1000 ]]; then
-  warn "body is short — under 1000 words is thin for a chapter"
-elif [[ "$body_words" -gt 2000 ]]; then
-  warn "body is long — over 2000 words, consider splitting or trimming"
+echo "  Length: $words words total, $body_words words of body (target ~2500)"
+if [[ "$body_words" -lt 2000 ]]; then
+  warn "body is short — under 2000 words is thin for a book chapter (target ~2500)"
+elif [[ "$body_words" -gt 3500 ]]; then
+  warn "body is long — over 3500 words, consider splitting or trimming"
 fi
 
 # If the author declared a target, flag a large gap between declared and actual.
