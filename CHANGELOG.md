@@ -14,11 +14,14 @@ and this project uses date-based versioning (YYYY.MM).
 - `chapters/en/README.md` — chapter index with per-chapter status (`planned`/`draft`/`review`/`stable`)
 - `appendix/README.md` — appendix index, refresh cadences, tool-matrix schema
 - `templates/chapter-template.md` — front matter + required disclosure footer
-- `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
+- Chapters:
+  - `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
+  - `chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md` (draft)
 - Build tooling:
   - `scripts/check-chapter.sh` — lint a chapter file
   - `scripts/publish-chapter.sh` — branch → commit → push → PR for one chapter
   - `scripts/pr-create.sh` — open a PR through the GitHub REST API (idempotent)
+  - `scripts/pr-merge.sh` — mark a draft PR ready, merge it, clean up branches
   - `scripts/github-token.sh` — resolve/diagnose the PAT
   - `scripts/setup-ssh.sh` / `scripts/git-ssh.sh` — SSH key and push transport
   - `scripts/doctor.sh` — diagnose repo, ssh, token in one shot
@@ -48,7 +51,8 @@ and this project uses date-based versioning (YYYY.MM).
 - Changelog system
 
 ### Planned
-- [ ] Write Chapter 01: AI Is Not a Tool — It's a Species
+- [x] Write Chapter 01: AI Is Not a Tool — It's a Species
+- [x] Write Chapter 02: You're Anxious Because You're Using an Old Map
 - [ ] Write Chapter 03: What AI Can Never Do Well
 - [ ] Set up DeepSeek + Reasonix automation pipeline
 - [ ] First intel collection script (RSS → summary)
