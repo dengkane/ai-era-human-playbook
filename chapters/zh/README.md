@@ -19,8 +19,9 @@
 | 03 | AI永远做不好的事（以及为什么那是你的护城河） | [ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md](ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) | 草稿 |
 | 04 | 不同人群的真实处境 | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | 草稿 |
 | 05 | 上班族——从可替换的零件，到不可替代的节点 | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | 草稿 |
+| 06 | 创业者——为什么现在小能胜大 | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | 草稿 |
 
-其余章节（06–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（07–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
