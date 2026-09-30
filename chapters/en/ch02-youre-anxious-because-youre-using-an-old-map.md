@@ -8,7 +8,7 @@ created: 2026-09-30
 last_updated: 2026-09-30
 assisted_by: "DeepSeek + Reasonix"
 edited_by: "Ken Deng"
-word_target: 2500
+word_target: 1300
 tags: [anxiety, mental-models, career]
 ---
 
