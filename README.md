@@ -3,7 +3,7 @@
 > A living book on how ordinary people survive, thrive, and stay human in the age of artificial intelligence.
 > AI-assisted, human-edited, continuously updated.
 
-[中文](README_zh.md) | [Changelog](CHANGELOG.md) | [Support](#support)
+[中文](README_zh.md) | [Chapters](chapters/en/) | [How to Write](WORKFLOW.md) | [Changelog](CHANGELOG.md) | [Support](#support)
 
 ---
 
@@ -160,6 +160,33 @@ Every chapter footer discloses:
 ```
 
 **Transparency is a feature, not a bug.** If I'm writing a book about living well with AI, I should probably be using AI to do it.
+
+---
+
+## Repo Layout
+
+```
+chapters/en/          The book text. Source of truth — translations derive from here.
+  README.md           Chapter index + per-chapter status
+appendix/             Monthly-refreshed tool matrices and prompt library
+templates/            Chapter template (front matter + required footer)
+scripts/              Local tooling: lint, publish, SSH setup, gh bootstrap
+WORKFLOW.md           How a chapter gets written and shipped
+CHANGELOG.md          What changed, by date
+```
+
+**Start here if you want to write:** [WORKFLOW.md](WORKFLOW.md).
+
+Quick version:
+
+```bash
+cp templates/chapter-template.md chapters/en/ch02-your-slug.md
+# ...draft it...
+./scripts/check-chapter.sh  chapters/en/ch02-your-slug.md   # lint
+./scripts/publish-chapter.sh chapters/en/ch02-your-slug.md  # branch → commit → push → PR
+```
+
+One chapter per branch per PR, self-merged. Content is English-first.
 
 ---
 

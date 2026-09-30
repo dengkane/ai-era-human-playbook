@@ -7,6 +7,27 @@ and this project uses date-based versioning (YYYY.MM).
 
 ---
 
+## [Unreleased]
+
+### Added
+- `WORKFLOW.md` — writing and publishing manual: git flow, script reference, troubleshooting
+- `chapters/en/README.md` — chapter index with per-chapter status (`planned`/`draft`/`review`/`stable`)
+- `appendix/README.md` — appendix index, refresh cadences, tool-matrix schema
+- `templates/chapter-template.md` — front matter + required disclosure footer
+- `chapters/en/ch01-ai-is-not-a-tool-its-a-species.md` (draft)
+- Build tooling: `scripts/check-chapter.sh`, `scripts/publish-chapter.sh`, `scripts/setup-ssh.sh`,
+  `scripts/git-ssh.sh`, `scripts/install-gh.sh`, `scripts/gh.sh`
+
+### Changed
+- `origin` switched from HTTPS to SSH
+- `.gitignore` — ignore `.git-ssh/` (private key), `.tools/` (vendored binaries), `.scratch/`
+
+### Notes
+- Content is English-first. Translations derive from `chapters/en/`.
+- One chapter per branch per PR; self-merged.
+
+---
+
 ## [2026.09] - 2026-09-30
 
 ### Added

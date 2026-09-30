@@ -28,5 +28,15 @@ credentials.json
 *.pem
 *.key
 
+# SSH keys for pushing to this repo (see scripts/setup-ssh.sh)
+# NEVER commit this directory. It holds the private key.
+.git-ssh/
+
+# Locally installed binaries (gh, etc.) — not part of the book
+.tools/
+
+# Scratch space for drafts you don't want to commit yet
+.scratch/
+
 # Intel raw (optional, if you don't want raw intel in repo)
 # intel/raw/

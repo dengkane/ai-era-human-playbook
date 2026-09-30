@@ -3,7 +3,7 @@
 > 一本关于普通人在人工智能时代如何生存、繁荣、保持人性的"活书"。
 > AI辅助创作，人工审校，持续迭代更新。
 
-[English](README.md) | [更新日志](CHANGELOG.md) | [支持](#支持)
+[English](README.md) | [章节](chapters/en/) | [写作流程](WORKFLOW.md) | [更新日志](CHANGELOG.md) | [支持](#支持)
 
 ---
 
@@ -158,6 +158,33 @@ AI每周都在变。纸质书还没印出来就过时了。
 ```
 
 **透明是特性，不是缺陷。**
+
+---
+
+## 仓库结构
+
+```
+chapters/en/          书稿正文。唯一源文件——译本由此派生
+  README.md           章节索引 + 各章进度状态
+appendix/             月度更新的工具矩阵与提示词库
+templates/            章节模板（含元信息与必备页脚）
+scripts/              本地工具：校验、发布、SSH 配置、gh 引导安装
+WORKFLOW.md           一章如何写成、如何发布
+CHANGELOG.md          变更记录，按日期
+```
+
+**想动笔就从这里开始：** [WORKFLOW.md](WORKFLOW.md)。
+
+简要流程：
+
+```bash
+cp templates/chapter-template.md chapters/en/ch02-your-slug.md
+# ...开始写...
+./scripts/check-chapter.sh  chapters/en/ch02-your-slug.md   # 校验
+./scripts/publish-chapter.sh chapters/en/ch02-your-slug.md  # 开分支 → 提交 → 推送 → 开 PR
+```
+
+一章一个分支、一个 PR，自行合并。正文以英文为先，中文译本后续跟进。
 
 ---
 

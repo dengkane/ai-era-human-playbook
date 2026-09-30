@@ -24,6 +24,16 @@ For fixes and additions:
 - For factual corrections: link to a source if possible
 - Don't rewrite entire chapters without discussing in an Issue first
 
+For book chapters themselves, `scripts/check-chapter.sh` runs the checks a reviewer would: front
+matter fields, the disclosure footer, leftover template scaffolding, and stale-data markers. Run it
+before opening a PR:
+
+```bash
+./scripts/check-chapter.sh chapters/en/ch0X-your-chapter.md
+```
+
+See [WORKFLOW.md](WORKFLOW.md) for the full write-and-publish flow.
+
 ### 3. Share Your Story
 AI changed how you work? Send me an email (see README for contact). I anonymize and include the best ones in future editions. You'll be credited unless you request anonymity.
 
