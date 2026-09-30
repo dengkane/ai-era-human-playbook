@@ -75,14 +75,20 @@ and this project uses date-based versioning (YYYY.MM).
 - `check-chapter.sh` now **errors** on a `verified` marker with no `source:`, and on any
   `unverified` claim once `status` is `review` or `stable` — unsourced claims are a visible
   temporary state instead of a silently plausible sentence.
-- Rationale, and the two failure modes that prompted this, written up in
+- Rationale, and the three failure modes that prompted this, written up in
   `chapters/en/README.md#factual-claims`.
 
 ### Fixed — factual claims in published chapters
 - **Ch. 01** claimed the prompt-engineer title had "largely dissolved" and put the 2023 salary
   at "above $300,000 at some AI startups". Checked: the standalone title declined roughly 30%
-  from its 2024 peak and still exists, and the $335k posting was Anthropic's specifically, not
-  a general market rate. Rewritten and sourced.
+  from its 2024 peak and still exists, and the posting was Anthropic's specifically, not a
+  general market rate. Rewritten and sourced.
+- **Ch. 01, second pass.** Auditing the rewritten chapter against the new rule caught a
+  violation the first pass introduced: it cited Bloomberg's "$335,000" for that posting without
+  the source ever being opened (it sits behind a paywall). Opening accessible coverage instead
+  showed the reporting disagrees — Fortune: $175,000–$335,000; Business Insider: $280,000–$375,000.
+  The chapter now states the range and cites a source a reader can actually check. This is the
+  third failure mode documented in `chapters/en/README.md#factual-claims`.
 - **Ch. 02** claimed junior hiring "fell sharply from 2023 through 2025 **as** AI coding
   assistants moved from autocomplete to something closer to a colleague" — unsourced, and
   over-attributed. Sources are explicit that AI adoption and the post-ZIRP correction cannot be
