@@ -159,16 +159,16 @@ info "repo    : $slug"
 # --- 4. stage and commit ----------------------------------------------------
 step "4. Stage and commit"
 
-# A chapter is not shipped until three things agree with it: the index, the
-# changelog, and its research notes (see WORKFLOW.md step 1 and "Updating the
-# index and changelog"). Those edits have to travel in the same commit as the
-# chapter — staging only $file would silently leave them behind.
+# A chapter is not shipped until four things agree with it: the chapter index, the
+# changelog, its research notes, and the research index (see WORKFLOW.md step 1 and
+# "Updating the index and changelog"). Those edits have to travel in the same commit
+# as the chapter — staging only $file would silently leave them behind.
 #
 # The notes file is usually brand new, so it is untracked: `git diff` reports
 # nothing for it. `git status --porcelain` covers both modified and untracked.
 notes_rel="$(dirname "$file")/research/${chapter_tag}-notes.md"
 tracked_extras=()
-for extra in chapters/en/README.md CHANGELOG.md "$notes_rel"; do
+for extra in chapters/en/README.md CHANGELOG.md chapters/en/research/README.md "$notes_rel"; do
   if [[ -f "$extra" ]] && [[ -n "$(git status --porcelain -- "$extra" 2>/dev/null)" ]]; then
     tracked_extras+=("$extra")
   fi

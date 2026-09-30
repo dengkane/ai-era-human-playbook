@@ -228,11 +228,11 @@ A chapter is not shipped until three files agree:
 
 The `Last updated:` footer and the `last_updated:` field should match. If you change one, change both.
 
-`publish-chapter.sh` stages `chapters/en/README.md`, `CHANGELOG.md`, and the chapter's own
-`research/ch<NN>-notes.md` alongside the chapter, when they have uncommitted changes — so none of the
-three gets left behind. It will not guess at anything else: other modified files stay unstaged. For a
-**new** chapter it warns if `CHANGELOG.md` is untouched, since that entry is a judgement call it
-cannot write for you.
+`publish-chapter.sh` stages `chapters/en/README.md`, `CHANGELOG.md`, `chapters/en/research/README.md`,
+and the chapter's own `research/ch<NN>-notes.md` alongside the chapter, when they have uncommitted
+changes — so none of the four gets left behind. It will not guess at anything else: other modified
+files stay unstaged. For a **new** chapter it warns if `CHANGELOG.md` is untouched, since that entry
+is a judgement call it cannot write for you.
 
 ---
 
