@@ -18,7 +18,7 @@ This directory is the **source of truth** for the book text. Translations are de
 | # | Chapter | File | Status |
 |---|---------|------|--------|
 | 01 | AI Is Not a Tool — It's a Species | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | Draft |
-| 02 | You're Anxious Because You're Using an Old Map | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | Draft |
+| 02 | You're Anxious Because You're Using an Old Map | `ch02-youre-anxious-because-youre-using-an-old-map.md` | Planned |
 | 03 | What AI Can Never Do Well (and Why That's Your Moat) | `ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` | Planned |
 | 04 | Where Different People Actually Stand | `ch04-where-different-people-actually-stand.md` | Planned |
 
