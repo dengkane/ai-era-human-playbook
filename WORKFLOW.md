@@ -91,12 +91,25 @@ as the index — flip the chapter's status there when it moves.
 
 `.scratch/` is gitignored. Use it for fragments, outlines, and dead ends you are not ready to commit.
 
-### 3. Fill in the front matter
+### 3. Fill in the front matter, length, and structure
 
 The linter requires these fields: `chapter`, `title`, `part`, `status`, `language`, `created`,
 `last_updated`, `assisted_by`, `edited_by`.
 
 `status` is one of `planned` / `draft` / `review` / `stable`.
+
+Also fill in `word_target` (use `1300`) and `tags`. The linter cross-checks `word_target` against the
+actual body length and warns if they are more than 400 words apart — which is how the mismatch in
+Ch. 01 and Ch. 02 was caught.
+
+Target **~1300 words of body**. That is a deliberate constraint, not a rough guide:
+
+- short enough to finish in one sitting, long enough to land one argument with evidence;
+- two or three body sections, **named after their arguments**, not "Section 2";
+- finishes with `## The honest caveats` and `## Do this today`.
+
+The full spec lives in [`chapters/en/README.md`](chapters/en/README.md#writing-standards), and the
+template encodes it with worked examples. If the argument is done at 1100 words, stop at 1100.
 
 ### 4. Delete the HTML comments
 
@@ -113,7 +126,9 @@ stale — prices, model names, legal claims, salary figures. It tells the reader
 ```
 
 Errors block publishing. Warnings are judgement calls. The check covers filename, front matter,
-footer markers, leftover scaffolding, `TODO` markers, `Last verified` presence, and length.
+footer markers, leftover scaffolding, `TODO` markers, `Last verified` presence, and length
+(flags below 1000 and above 2000 words of body, and any large gap between the body and the declared
+`word_target`).
 
 ### 6. Publish
 

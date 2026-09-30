@@ -116,12 +116,26 @@ else
 fi
 
 # --- length -----------------------------------------------------------------
+# Target is ~1300 words of body (see the LENGTH note in templates/chapter-template.md).
+# Warn at both ends: too short is thin, too long is drifting away from the format.
 words="$(wc -w < "$file" | tr -d ' ')"
 body_words="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{inside=0;next} !inside' "$file" | wc -w | tr -d ' ')"
 echo
-echo "  Length: $words words total, $body_words words of body"
-if [[ "$body_words" -lt 1200 ]]; then
-  warn "body is short for a book chapter (target ~2500 words)"
+echo "  Length: $words words total, $body_words words of body (target ~1300)"
+if [[ "$body_words" -lt 1000 ]]; then
+  warn "body is short — under 1000 words is thin for a chapter"
+elif [[ "$body_words" -gt 2000 ]]; then
+  warn "body is long — over 2000 words, consider splitting or trimming"
+fi
+
+# If the author declared a target, flag a large gap between declared and actual.
+declared_target="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{exit} inside && /^word_target:/{sub(/^word_target: */,"");gsub(/[^0-9]/,"");print;exit}' "$file")"
+if [[ -n "$declared_target" && "$declared_target" -gt 0 ]]; then
+  delta=$(( body_words - declared_target ))
+  abs_delta=${delta#-}
+  if [[ "$abs_delta" -gt 400 ]]; then
+    warn "body is $body_words words but front matter declares word_target: $declared_target"
+  fi
 fi
 
 # --- verdict ----------------------------------------------------------------
