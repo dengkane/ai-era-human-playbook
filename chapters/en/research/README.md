@@ -55,4 +55,5 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 |-------|---------|---------|--------|
 | [ch01-notes.md](ch01-notes.md) | 01 — AI Is Not a Tool — It's a Species | 6 kept / 8 rejected | Complete |
 | [ch02-notes.md](ch02-notes.md) | 02 — You're Anxious Because You're Using an Old Map | 5 kept / 9 rejected | Complete |
-| `ch03-notes.md` | 03 — What AI Can Never Do Well | — | Planned |
+| [ch03-notes.md](ch03-notes.md) | 03 — What AI Can Never Do Well | 6 kept / 11 rejected | Complete |
+| `ch04-notes.md` | 04 — Where Different People Actually Stand | — | Planned |
