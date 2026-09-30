@@ -1,0 +1,130 @@
+# Project Instructions
+
+**Human in AI Era** — a living book on how ordinary people survive and thrive in the age of AI.
+21 chapters in 5 parts, English-first, co-authored with AI and human-edited. Published in public and
+continuously updated, so a printed-and-shipped mindset does not apply: chapters change after release.
+
+## Authoritative documents
+
+Read these rather than relying on this file. It is a pointer, deliberately thin, and does not restate
+them.
+
+| Document | Owns |
+|---|---|
+| [`WORKFLOW.md`](WORKFLOW.md) | The full 8-step write-and-ship flow, script reference, troubleshooting |
+| [`chapters/en/README.md`](chapters/en/README.md) | Chapter index, writing standards, **factual-claims rules**, chapter boundaries |
+| [`chapters/en/research/README.md`](chapters/en/research/README.md) | Research-note format, source tiers |
+| [`templates/chapter-template.md`](templates/chapter-template.md) | The chapter format. **Copy it; never hand-roll front matter** |
+
+## Defaults that are checked automatically
+
+`scripts/check-chapter.sh` enforces these. Get them wrong and it fails, so they are the cheapest
+things to know up front.
+
+- **~2500 words of body.** Warns below 2000 or above 3500. That is the low end of the non-fiction
+  convention, and what makes 21 chapters a book rather than a pamphlet — not a target to pad to.
+- **Two or three body sections of 700–900 words**, named after their arguments ("A species, not a
+  screwdriver"), never "Section 2".
+- **At least 5 independent sources per chapter.** Independent means separate origins, not one report
+  reprinted five times.
+- **Every source cited in a chapter must appear in its research notes**, and the notes' `sources_kept`
+  must not understate what the chapter cites. The check runs one way on purpose: notes may record
+  sources that were read and rejected.
+- Every chapter ends with `## The honest caveats` and `## Do this today`. The linter checks the
+  disclosure footer in this repo's exact format.
+
+## Research comes before drafting
+
+Not after. A chapter written first and sourced afterwards gets claims shaped by the prose, and the
+research becomes a hunt for support instead of a check on what is true. This has already caught two
+wrong claims in published chapters.
+
+Each chapter has `chapters/en/research/ch<NN>-notes.md`, committed alongside it, recording:
+
+- the search queries actually run (including dead ends),
+- sources kept, with tier: **primary** (original data, official reports, statistics, papers, law,
+  first-hand accounts) can carry a claim alone; **secondary** reporting is a lead only,
+- **sources rejected and why** — the part with the most value, and the first thing an AI-assisted
+  draft skips,
+- open questions, and claims downgraded or dropped.
+
+**Open every source before citing it.** A search snippet is a lead, not a source. If a page is
+paywalled or refuses extraction, say so in the notes and cite something a reader can check.
+
+## Claim markers
+
+```markdown
+<!-- verified YYYY-MM-DD — source: <URL> -->   the source was OPENED and says what you claim
+<!-- unverified -->                            not checked yet
+```
+
+`verified` never means "this sounds right", "this is widely known", or "the model was confident". It
+is a claim that you read the source — and that you noticed when sources contradicted each other.
+`unverified` is fine in `draft` and is an **error** at `review`/`stable`. A `verified` marker with no
+`source:` is an error at any status.
+
+Opinion, framing, and prediction need no marker. Mark only what could be falsified.
+
+## Chapter numbers are immutable
+
+Numbers live in filenames, in cross-references inside the book, and in public links. A chapter that
+changes scope changes its **title** and its **placement** — never its number. `ch21` is the newest
+chapter and sits in Part III because that is where it reads, not because it follows `ch20`.
+
+Parts are grouped by what the reader needs next, not by number:
+
+| Part | Chapters | Note |
+|---|---|---|
+| I — Face Reality | 01–03 | the cognition argument |
+| II — Secure the Baseline | 04–09 | 04 is the diagnostic; 05–07 already on a path, 08–09 choosing one |
+| III — Amplify Your Leverage | 10–14, 21 | includes the newest chapter |
+| IV — Beyond Survival | 15–17 | |
+| V — Live Happily | 18–20 | |
+
+Parts I–II are the free tier; III–V and the appendices are paid. See `README.md`.
+
+## Content judgement: machine-side vs human-side
+
+The book's test for any claim about AI's limits (Ch. 03): **if this limit disappeared, would it be
+because a model got better, or because people agreed to something?** Machine-side limits erode on a
+curve; human-side limits get decided. Prefer structural arguments over "AI is currently bad at X",
+which has an expiry date.
+
+## Workflow
+
+```bash
+scripts/check-chapter.sh  chapters/en/ch<NN>-<slug>.md   # lint; non-zero exit on errors
+scripts/publish-chapter.sh chapters/en/ch<NN>-<slug>.md  # branch → commit → push → draft PR
+scripts/pr-merge.sh draft/<slug>                         # mark ready → squash-merge → clean up
+scripts/doctor.sh                                        # when push or PR fails
+```
+
+`publish-chapter.sh` stages the chapter **plus** `chapters/en/README.md`, `CHANGELOG.md`,
+`chapters/en/research/README.md`, and the chapter's own notes, when they have uncommitted changes.
+Anything else you edited stays unstaged — it will not guess.
+
+A draft PR **cannot** be merged through the API (HTTP 405) and there is no REST endpoint to un-draft
+it. `pr-merge.sh` handles the GraphQL step; doing it by hand means marking the PR ready in the UI
+first.
+
+## Boundaries
+
+- **Chapter content ships via `draft/<slug>` branches and PRs, not commits to `main`.** One chapter
+  per branch per PR.
+- **Never commit `.git-ssh/` or `.secrets/`.** They hold a private key and a GitHub token and are
+  gitignored. If you ever see either appear in `git status`, stop and fix `.gitignore` before
+  committing anything.
+- **Do not hand-roll chapter front matter or the disclosure footer.** Copy the template.
+- Scripts avoid `jq` and `gh` as hard dependencies — `jq` is not installed on the machine this was
+  built on. `python3` is used for JSON.
+
+## The constraints are discipline, not machinery
+
+Stated plainly because it affects how much you can trust a green check: **there is no CI, no
+pre-commit hook, and no server-side branch protection.** `check-chapter.sh` only runs when it is
+invoked, and `publish-chapter.sh` only calls it on the file you name. Committing straight to `main`
+would succeed and nothing would complain.
+
+That makes the rules above a convention this repo holds itself to, not a fence. Verify rather than
+assume, and when you find the docs and the scripts disagreeing, the scripts are right — see the
+git history for how often the docs have needed correcting.

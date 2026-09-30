@@ -168,8 +168,9 @@ modes in Ch. 01 and Ch. 02 that made this rule necessary.
 ```
 
 Errors block publishing. Warnings are judgement calls. The check covers filename, front matter,
-footer markers, leftover scaffolding, `TODO` markers, source markers, and length (flags below 1000
-and above 2000 words of body, and any large gap between the body and the declared `word_target`).
+footer markers, leftover scaffolding, `TODO` markers, source markers, and length (warns below 2000
+or above 3500 words of body, and flags a gap over 400 words between the body and the declared
+`word_target`).
 
 Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any
 `unverified` claim once `status` is `review` or `stable`.
