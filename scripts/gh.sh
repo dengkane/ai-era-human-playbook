@@ -2,14 +2,32 @@
 # Run gh, preferring the copy vendored in .tools/ over whatever is on PATH.
 #
 #   ./scripts/gh.sh pr list
+#   ./scripts/gh.sh auth login
 #   ./scripts/gh.sh auth status
 #
-# gh is installed into .tools/ because this machine has no usable sudo and
-# /usr/local is not writable. .tools/ is gitignored, so it never reaches the repo.
+# Two environment quirks are handled here, both because $HOME is read-only on this
+# machine:
+#
+#   * gh is installed into .tools/ (no usable sudo, so no system package). .tools/
+#     is gitignored.
+#   * gh wants to write its config and auth token to ~/.config/gh. That write
+#     fails, and `gh auth login` dies with a confusing error. GH_CONFIG_DIR is
+#     redirected into .tools/gh-config/ instead.
+#
+# GH_CONFIG_DIR holds your auth token. .tools/ is gitignored — never commit it.
 
 set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
+
+# Redirect gh's state into the repo if the default location is not writable.
+if [[ -z "${GH_CONFIG_DIR:-}" ]]; then
+  default_cfg="${XDG_CONFIG_HOME:-$HOME/.config}/gh"
+  if [[ ! -d "$default_cfg" ]] || [[ ! -w "$default_cfg" ]]; then
+    export GH_CONFIG_DIR="$repo_root/.tools/gh-config"
+    mkdir -p "$GH_CONFIG_DIR"
+  fi
+fi
 
 if [[ -x "$repo_root/.tools/gh" ]]; then
   exec "$repo_root/.tools/gh" "$@"
