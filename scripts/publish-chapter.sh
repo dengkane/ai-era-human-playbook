@@ -137,6 +137,16 @@ else
 fi
 commit_type="${commit_type:-$default_type}"
 
+# --- CHANGELOG consistency ---------------------------------------------------
+# WORKFLOW.md requires the chapter, the index, and the changelog to agree before a
+# chapter ships. The index is staged automatically; the changelog is not, because
+# its wording is a judgement call. Warn rather than fail — a typo fix in an
+# existing chapter legitimately needs no changelog entry.
+if [[ "$default_type" == "draft" ]] && git diff --quiet -- CHANGELOG.md 2>/dev/null; then
+  info "note: CHANGELOG.md has no changes staged for this new chapter"
+  info "      WORKFLOW.md asks for an entry describing it (see the '[Unreleased]' section)"
+fi
+
 remote_url="$(git remote get-url origin)"
 slug="$(sed -E 's#^git@github\.com:##; s#^https://([^@]*@)?github\.com/##; s#\.git$##' <<<"$remote_url")"
 
