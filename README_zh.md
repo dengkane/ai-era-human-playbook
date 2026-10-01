@@ -51,9 +51,9 @@ AI没有身体。它没有痛过。它不知道失去一个人是什么感觉，
 
 | 章节 | 主题 |
 |------|------|
-| 01 | AI不是工具，是物种 |
-| 02 | 你焦虑，是因为你在用旧地图 |
-| 03 | AI永远做不好的事（以及为什么那是你的护城河） |
+| 01 | [AI不是工具，是物种](chapters/zh/ch01-ai-is-not-a-tool-its-a-species.md) |
+| 02 | [你焦虑，是因为你在用旧地图](chapters/zh/ch02-youre-anxious-because-youre-using-an-old-map.md) |
+| 03 | [AI永远做不好的事（以及为什么那是你的护城河）](chapters/zh/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) |
 
 ### 第二篇：保住底线
 
@@ -61,22 +61,22 @@ AI没有身体。它没有痛过。它不知道失去一个人是什么感觉，
 
 | 章节 | 主题 |
 |------|------|
-| 04 | 不同人群的真实处境 |
+| 04 | [不同人群的真实处境](chapters/zh/ch04-where-different-people-actually-stand.md) |
 
 *如果你已在这条路上——我怎么在这里变得更强？*
 
 | 章节 | 主题 |
 |------|------|
-| 05 | 上班族——从"可替代零件"到"不可替代节点" |
-| 06 | 创业者——为什么"小"现在打得过"大" |
-| 07 | 自由职业者——从"卖技能"到"卖人格" |
+| 05 | [上班族——从"可替代零件"到"不可替代节点"](chapters/zh/ch05-the-employee-from-replaceable-part-to-indispensable-node.md) |
+| 06 | [创业者——为什么"小"现在打得过"大"](chapters/zh/ch06-the-entrepreneur-why-small-beats-big-now.md) |
+| 07 | [自由职业者——从"卖技能"到"卖人格"](chapters/zh/ch07-the-freelancer-from-selling-skills-to-selling-personality.md) |
 
 *如果你正在选路——我该往哪走？*
 
 | 章节 | 主题 |
 |------|------|
-| 08 | 学生——AI时代的选路逻辑 |
-| 09 | 中年转型者——你的判断力就是资产 |
+| 08 | [学生——AI时代的选路逻辑](chapters/zh/ch08-the-student-choosing-a-path-in-the-age-of-ai.md) |
+| 09 | [中年转型者——你的判断力就是资产](chapters/zh/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md) |
 
 ### 第三篇：放大杠杆
 
@@ -84,28 +84,28 @@ AI没有身体。它没有痛过。它不知道失去一个人是什么感觉，
 
 | 章节 | 主题 |
 |------|------|
-| 10 | 找到你的人机协作点 |
-| 11 | 上下文工程（不只是写提示词） |
-| 12 | 一人公司实战手册 |
-| 13 | AI时代的元技能：品味、提问、整合、共情 |
-| 14 | 从"被雇佣"到"自我雇佣" |
-| 15 | 自己判断一个AI工具（因为本书的工具矩阵一定会过期） |
+| 10 | [找到你的人机协作点](chapters/zh/ch10-finding-your-human-ai-collaboration-point.md) |
+| 11 | [上下文工程（不只是写提示词）](chapters/zh/ch11-context-engineering-beyond-prompt-writing.md) |
+| 12 | [一人公司实战手册](chapters/zh/ch12-one-person-business-playbook.md) |
+| 13 | [AI时代的元技能：品味、提问、整合、共情](chapters/zh/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md) |
+| 14 | [从"被雇佣"到"自我雇佣"](chapters/zh/ch14-from-employed-to-self-employed.md) |
+| 15 | [自己判断一个AI工具（因为本书的工具矩阵一定会过期）](chapters/zh/ch15-judging-ai-tools-for-yourself.md) |
 
 ### 第四篇：超越生存
 
 | 章节 | 主题 |
 |------|------|
-| 16 | AI能生成一切之后的创造力 |
-| 17 | 数字世界中的关系与社群 |
-| 18 | 意义感重建 |
+| 16 | [AI能生成一切之后的创造力](chapters/zh/ch16-creativity-when-ai-can-generate-everything.md) |
+| 17 | [数字世界中的关系与社群](chapters/zh/ch17-relationships-and-community-in-a-digital-world.md) |
+| 18 | [意义感重建](chapters/zh/ch18-rebuilding-meaning.md) |
 
 ### 第五篇：快乐生活
 
 | 章节 | 主题 |
 |------|------|
-| 19 | 人之所以为人的最后堡垒：身体、自然、艺术 |
-| 20 | 慢下来的勇气 |
-| 21 | 设计你想要的生活 |
+| 19 | [人之所以为人的最后堡垒：身体、自然、艺术](chapters/zh/ch19-the-last-fortress-of-being-human-body-nature-art.md) |
+| 20 | [慢下来的勇气](chapters/zh/ch20-the-courage-to-slow-down.md) |
+| 21 | [设计你想要的生活](chapters/zh/ch21-designing-the-life-you-actually-want.md) |
 
 章节编号在章节发布后固定——编号在文件名里，也在每一处交叉引用里。第 15–21 章在一次改动中重新编号，
 当时它们都还没写完，所以顺序现在读起来是连贯的；详见更新日志。
@@ -129,7 +129,7 @@ AI没有身体。它没有痛过。它不知道失去一个人是什么感觉，
 | 过期 | 慢——是论证，不是产品 | 快——按月，有时按周 |
 | 免费 | 第一、二篇免费 | 付费层 |
 
-所以本书**不主张**自己的工具矩阵是权威的。它做不到，而 ch15 的存在就是把这件事说清楚：它教你
+所以本书**不主张**自己的工具矩阵是权威的。它做不到，而第 15 章的存在就是把这件事说清楚：它教你
 自己判断一个工具，这样当附录 A 过期时——它一定会过期——你不至于只能等别人来更新。
 **附录是便利，判断力才是产品。**
 

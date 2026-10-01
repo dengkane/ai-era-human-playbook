@@ -54,9 +54,9 @@ structural advantage actually sits.
 
 | Chapter | Topic |
 |---------|-------|
-| 01 | AI Is Not a Tool — It's a Species |
-| 02 | You're Anxious Because You're Using an Old Map |
-| 03 | What AI Can Never Do Well (and Why That's Your Moat) |
+| 01 | [AI Is Not a Tool — It's a Species](chapters/en/ch01-ai-is-not-a-tool-its-a-species.md) |
+| 02 | [You're Anxious Because You're Using an Old Map](chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md) |
+| 03 | [What AI Can Never Do Well (and Why That's Your Moat)](chapters/en/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) |
 
 ### Part II: Secure the Baseline
 
@@ -65,22 +65,22 @@ because they answer two different questions.
 
 | Chapter | Topic |
 |---------|-------|
-| 04 | Where Different People Actually Stand |
+| 04 | [Where Different People Actually Stand](chapters/en/ch04-where-different-people-actually-stand.md) |
 
 *If you are already on a path — how do I get stronger where I am?*
 
 | Chapter | Topic |
 |---------|-------|
-| 05 | The Employee — From Replaceable Part to Indispensable Node |
-| 06 | The Entrepreneur — Why Small Beats Big Now |
-| 07 | The Freelancer — From Selling Skills to Selling Personality |
+| 05 | [The Employee — From Replaceable Part to Indispensable Node](chapters/en/ch05-the-employee-from-replaceable-part-to-indispensable-node.md) |
+| 06 | [The Entrepreneur — Why Small Beats Big Now](chapters/en/ch06-the-entrepreneur-why-small-beats-big-now.md) |
+| 07 | [The Freelancer — From Selling Skills to Selling Personality](chapters/en/ch07-the-freelancer-from-selling-skills-to-selling-personality.md) |
 
 *If you are choosing a path — which way should I go?*
 
 | Chapter | Topic |
 |---------|-------|
-| 08 | The Student — Choosing a Path in the Age of AI |
-| 09 | The Mid-Career Switcher — Your Judgment Is the Asset |
+| 08 | [The Student — Choosing a Path in the Age of AI](chapters/en/ch08-the-student-choosing-a-path-in-the-age-of-ai.md) |
+| 09 | [The Mid-Career Switcher — Your Judgment Is the Asset](chapters/en/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md) |
 
 ### Part III: Amplify Your Leverage
 
@@ -88,28 +88,28 @@ The skills layer, then the decision to use it on your own, then how to keep your
 
 | Chapter | Topic |
 |---------|-------|
-| 10 | Finding Your Human-AI Collaboration Point |
-| 11 | Context Engineering (Beyond Prompt Writing) |
-| 12 | One-Person Business Playbook |
-| 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy |
-| 14 | From "Employed" to "Self-Employed" |
-| 15 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) |
+| 10 | [Finding Your Human-AI Collaboration Point](chapters/en/ch10-finding-your-human-ai-collaboration-point.md) |
+| 11 | [Context Engineering (Beyond Prompt Writing)](chapters/en/ch11-context-engineering-beyond-prompt-writing.md) |
+| 12 | [One-Person Business Playbook](chapters/en/ch12-one-person-business-playbook.md) |
+| 13 | [Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy](chapters/en/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md) |
+| 14 | [From "Employed" to "Self-Employed"](chapters/en/ch14-from-employed-to-self-employed.md) |
+| 15 | [Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong)](chapters/en/ch15-judging-ai-tools-for-yourself.md) |
 
 ### Part IV: Beyond Survival
 
 | Chapter | Topic |
 |---------|-------|
-| 16 | Creativity When AI Can Generate Everything |
-| 17 | Relationships & Community in a Digital World |
-| 18 | Rebuilding Meaning |
+| 16 | [Creativity When AI Can Generate Everything](chapters/en/ch16-creativity-when-ai-can-generate-everything.md) |
+| 17 | [Relationships & Community in a Digital World](chapters/en/ch17-relationships-and-community-in-a-digital-world.md) |
+| 18 | [Rebuilding Meaning](chapters/en/ch18-rebuilding-meaning.md) |
 
 ### Part V: Live Happily
 
 | Chapter | Topic |
 |---------|-------|
-| 19 | The Last Fortress of Being Human: Body, Nature, Art |
-| 20 | The Courage to Slow Down |
-| 21 | Designing the Life You Actually Want |
+| 19 | [The Last Fortress of Being Human: Body, Nature, Art](chapters/en/ch19-the-last-fortress-of-being-human-body-nature-art.md) |
+| 20 | [The Courage to Slow Down](chapters/en/ch20-the-courage-to-slow-down.md) |
+| 21 | [Designing the Life You Actually Want](chapters/en/ch21-designing-the-life-you-actually-want.md) |
 
 Chapter numbers are stable once a chapter is published — they are in filenames and in every
 cross-reference. Chapters 15–21 were renumbered in one pass before any of them shipped, so the sequence
@@ -135,7 +135,7 @@ completely different rates, and that is deliberate.
 | Ages | Slowly — arguments, not products | Fast — monthly, sometimes weekly |
 | Free? | Parts I–II are free | Paid layer |
 
-So the book does **not** claim its tool matrix is authoritative. It can't be, and Ch. 21 exists to make
+So the book does **not** claim its tool matrix is authoritative. It can't be, and Ch. 15 exists to make
 that explicit: it teaches you to judge a tool yourself, so that when Appendix A goes stale — and it
 will — you are not stuck waiting for someone else to update it. **The appendices are a convenience;
 the judgement is the product.**
