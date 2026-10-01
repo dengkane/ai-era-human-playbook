@@ -58,7 +58,7 @@ the new target, and nothing will flag them. They are legal, not wrong — the ba
 project's position is that length follows from the number of arguments a chapter carries — but a reader
 comparing the index to the new standard will notice the drift faster than any check will.
 
-### Changed — the translation step now targets native Chinese, and Ch. 01–07 are being rewritten to it
+### Changed — the translation step now targets native Chinese, and Ch. 01–07 were rewritten to it
 
 Translation was a step the workflow never described. `WORKFLOW.md` went from writing straight to
 publishing, and the only guidance for `chapters/zh/` was a short list of *mechanical* rules — keep the
@@ -96,7 +96,7 @@ thousand words and the old translations reproduced that rate in a language whose
 | 04 | 40 → 10 | 13 → 10 | 9.1 → 2.3 | merged |
 | 05 | 32 → 5 | 30 → 21 | 7.1 → 1.2 | merged |
 | 06 | 38 → 7 | 6 → 6 | 8.9 → 1.7 | merged |
-| 07 | 38 → 12 | 16 → 13 | 7.7 → 2.5 | this PR |
+| 07 | 38 → 12 | 16 → 13 | 7.7 → 2.5 | merged |
 
 Every chapter is now inside the standard's ceiling of three `——` per thousand characters, and the
 edition total moved 30,385 → 29,439 CJK characters — shorter because the English sentence structure
@@ -110,9 +110,8 @@ rule rather than a style preference.
 **That terminology drift was real, and it is now fixed edition-wide.** `verification` / `verify` /
 `verifiable` had split three ways — 验证 in Ch. 01, 核验 through Ch. 03 (12 occurrences), 核实 through
 Ch. 07 (14) — because each chapter was translated in isolation. The glossary pins it to **验证**, and
-every occurrence was swept in this PR: Ch. 02 and 03 as part of their rewrite, Ch. 04 and 07 as a
-word-level fix (they have not been rewritten yet). Terminology consistency is edition-wide, so it does
-not wait for each chapter's turn.
+every occurrence is now unified: Ch. 02 and 03 in their rewrites, Ch. 04 and 07 as a word-level fix
+ahead of theirs. Terminology consistency is edition-wide, so it did not wait for each chapter's turn.
 
 Every rewritten chapter lints at **0 errors, 2 warnings** — the same two whitespace artefacts every
 Chinese chapter produces, and the reason the standard's checklist does not rely on `check-chapter.sh`
