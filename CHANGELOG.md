@@ -99,7 +99,7 @@ thousand words and the old translations reproduced that rate in a language whose
 | 07 | 38 → 12 | 16 → 13 | 7.7 → 2.5 | this PR |
 
 Every chapter is now inside the standard's ceiling of three `——` per thousand characters, and the
-edition total moved 30,274 → 29,439 CJK characters — shorter because the English sentence structure
+edition total moved 30,385 → 29,439 CJK characters — shorter because the English sentence structure
 was padding, not because anything was cut.
 
 Two facts this entry is written from, both checkable and both found in the existing text: the same
