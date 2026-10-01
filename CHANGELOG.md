@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Thirteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Fourteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–13 | 01–13 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 words | 61,978 CJK characters, total |
-| Research notes | 13 | 13 |
+| Chapters | 01–14 | 01–14 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 words | 66,961 CJK characters, total |
+| Research notes | 14 | 14 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–13 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3517–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+Ch. 08–14 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3442–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining eight chapters (14–21) are outlined in [`README.md`](README.md) and
+The remaining seven chapters (15–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,39 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 14, *From "Employed" to "Self-Employed"*
+
+The decision chapter, and the close of Part III's arc: Ch. 06 argued small is viable, Ch. 07 described
+the change in the unit of sale, Ch. 12 is the operating manual. This one is the transition itself. Both
+editions and notes:
+
+- `chapters/en/ch14-from-employed-to-self-employed.md` (3442 words, `draft`)
+- `chapters/zh/ch14-from-employed-to-self-employed.md` (translation)
+- `chapters/en/research/ch14-notes.md` — 5 sources kept, 10 rejected (English)
+- `chapters/zh/research/ch14-notes.md` — the same notes, translated
+
+**The research inverted the chapter's premise.** The cultural script is the leap — give notice, then find
+clients. The best evidence on the question says the staged version is safer: Raffiee and Feng's study of
+thousands of Americans found staged exits were 33% less likely to fail than outright quits. The chapter
+opens by dismantling its own story rather than by dressing it up.
+
+**The second finding is the one the genre omits.** Moving to self-employment is not only a lost salary:
+25.7% of people who made the move had no health insurance a year later, against 8.1% of those who stayed
+employed, and they were significantly more likely to delay needed care. The chapter pairs that with
+KFF's current benchmark premium ($625/month for 2026, up from $497) so the recurring cost is visible
+rather than abstract.
+
+**Two citations need their provenance stated, and the notes state it.** The 33% figure rests on HBR's
+write-up rather than the original *Academy of Management Journal* paper, which returns 403 to this
+tooling; the notes record that HBR is **secondary** and names the authors and sample it reports. And the
+9.95-million self-employed figure comes via the Gig Economy Data Hub rather than directly from the CPS
+— also marked secondary. Neither is used to carry a finding the chapter cannot otherwise support.
+
+The chapter also adds a constraint most transition advice skips: non-compete and IP clauses, professional
+rules, and customer overlap can make the staged path unavailable. Ten rejected sources are mostly the
+"when to quit your job" genre; one is the source of the widely repeated "save six months of expenses"
+rule, dropped for having no basis in anything.
 
 ### Added — Ch. 13, *Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy*
 
