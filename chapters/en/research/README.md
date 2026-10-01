@@ -61,6 +61,7 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch06-notes.md](ch06-notes.md) | 06 — The Entrepreneur | 7 kept / 13 rejected | Complete |
 | [ch07-notes.md](ch07-notes.md) | 07 — The Freelancer | 13 kept / 12 rejected | Reconstructed¹ |
 | [ch08-notes.md](ch08-notes.md) | 08 — The Student | 10 kept / 11 rejected | Complete |
+| [ch09-notes.md](ch09-notes.md) | 09 — The Mid-Career Switcher | 8 kept / 12 rejected | Complete |
 
 ¹ Ch. 07's chapter was drafted before its notes existed, and the notes were rebuilt afterwards by
 re-opening every cited source. The file records that history rather than hiding it. See its framing

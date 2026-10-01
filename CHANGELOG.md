@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Eight of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Nine of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–08 | 01–08 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 words | 35,042 CJK characters, total |
-| Research notes | 8 | 8 |
+| Chapters | 01–09 | 01–09 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 words | 40,835 CJK characters, total |
+| Research notes | 9 | 9 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08 is the first chapter written to the raised ~3500-word target rather than under it, which is why
-it runs 3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: the chapter carries
-three arguments where Ch. 05–07 carry two, which is what the target is for.
+Ch. 08 and Ch. 09 are the first chapters written to the raised ~3500-word target rather than under it,
+which is why they run 3855–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there:
+each carries three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining thirteen chapters (09–21) are outlined in [`README.md`](README.md) and
+The remaining twelve chapters (10–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -71,7 +71,41 @@ The chapter's advice was also rebuilt. "Choose a major AI can't do" is Ch. 03's 
 uncheckable at eighteen, and stale by graduation. It is replaced by three questions the reader can run
 on any path this week, each tied to a mechanism in the evidence, each with a stated tell.
 
-### Changed — length rules raised to ~3500 words
+### Added — Ch. 09, *The Mid-Career Switcher — Your Judgment Is the Asset*
+
+The second of the two chapters written for people at a decision point, and the close of Part II. Both
+editions and the research notes:
+
+- `chapters/en/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` (3855 words, `draft`)
+- `chapters/zh/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` (translation)
+- `chapters/en/research/ch09-notes.md` — 8 sources kept, 12 rejected (English)
+- `chapters/zh/research/ch09-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws: *the same decision as Ch. 08, for someone with
+an accumulated position to lose*. The transition's sequencing is Ch. 14; the skills layer is Ch. 10–13.
+
+**The research found a contradiction rather than a thesis, and the chapter is built on it.** The IMF
+economists writing for Wharton find older workers *better positioned* than younger ones, because they
+sit in occupations where AI complements judgment. The Center for Retirement Research finds the same
+group leaving work *faster*, with the largest relative rise in exits in the highest-paying jobs —
+programmers +25% against painters +2%. Both are right: exposure is the same for both age groups, and the
+difference is the cost of re-adjusting. The chapter's synthesis is stated as the author's reading rather
+than as a finding either paper makes.
+
+The second reversal is the more uncomfortable one. The obvious advice is "retrain," and the largest
+randomised evaluation of US public training — 34,000 job seekers — found that intensive staff assistance
+paid off (7–20% earnings gains) while training showed no positive impact at 30 months. That finding is
+reported with its own limitations, including the dilution the evaluators flag, rather than dropped for
+being inconvenient.
+
+The strongest counter-evidence could not be opened: Economic Mobility Corporation's six-year follow-up
+on sectoral training, where earnings impacts *grew* from ~$2,300 to $5,080. It is recorded in the notes
+as the first thing a revision should chase, alongside the distinction that probably matters — sectoral,
+employer-linked training versus generic courses. The IMF blog and the FRBSF age-discrimination PDF were
+both blocked or unrenderable; the Wharton/PRC version by the same IMF authors and the Harvard Gender
+Action Portal summary of Lahey (2008) are cited instead.
+
+
 
 The rules and the linter now target **~3500 words of body**, up from ~2500, with the warning band moved
 from 2000–3500 to **2500–4500** and the body-section spec from 700–900 to **900–1200 words**.
