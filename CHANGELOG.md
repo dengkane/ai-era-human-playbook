@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Sixteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Seventeen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted. **Part III is complete; Part IV has begun.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–16 | 01–16 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 words | 76,971 CJK characters, total |
-| Research notes | 16 | 16 |
+| Chapters | 01–17 | 01–17 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 words | 81,846 CJK characters, total |
+| Research notes | 17 | 17 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–16 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–17 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3301–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining five chapters (17–21) are outlined in [`README.md`](README.md) and
+The remaining four chapters (18–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,37 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 17, *Relationships & Community in a Digital World*
+
+The chapter that has to resist becoming the essay it would be easiest to write. The evidence on AI
+companions and loneliness does not support a verdict in either direction, so the chapter reports what
+the research actually shows — including where it refuses to answer. Both editions and notes:
+
+- `chapters/en/ch17-relationships-and-community-in-a-digital-world.md` (3359 words, `draft`)
+- `chapters/zh/ch17-relationships-and-community-in-a-digital-world.md` (translation)
+- `chapters/en/research/ch17-notes.md` — 5 sources kept, 9 rejected (English)
+- `chapters/zh/research/ch17-notes.md` — the same notes, translated
+
+**The spine is an experiment that separates the tool from the user.** A four-week RCT randomised 981
+people across interaction modes and conversation types: the experimental conditions produced **no
+significant effects**, but participants who *voluntarily used the bot more* showed consistently worse
+outcomes on loneliness, dependence and real-world socialising. That is the honest finding — heavy use and
+poor outcomes travel together, and the assignment did not cause it — and it is uncomfortable for both
+the "AI is hurting us" and the "AI is fine" camps.
+
+Two other results shape the chapter. The 1,131-user study finds the association with well-being depends
+on the user's offline network and on how disclosive the use is, and its authors are explicit that the
+causal arrow is not established. And a face-to-face study found digital text contact still predicted
+mental health better than physical activity, while **video calls — the richest digital channel — were
+only negligibly associated with it**, which is the result that does the most work in the chapter and
+carries the largest caveat.
+
+**One counterweight could not be opened and is recorded rather than buried.** The HBS working paper *AI
+Companions Reduce Loneliness* reports the opposite direction; its PDF would not extract, so it sits in
+the notes as rejected and is flagged as the first thing a revision should open. The social-media-and-
+mental-health literature was left out deliberately, being contested in a way this chapter does not need
+to adjudicate.
 
 ### Added — Ch. 16, *Creativity When AI Can Generate Everything*, opening Part IV
 
