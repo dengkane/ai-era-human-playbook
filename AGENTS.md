@@ -1,6 +1,6 @@
 # Project Instructions
 
-**Human in AI Era** — a living book on how ordinary people survive and thrive in the age of AI.
+**AI Era Survival Playbook** — a living book on how ordinary people survive and thrive in the age of AI.
 21 chapters in 5 parts, English-first, co-authored with AI and human-edited. Published in public and
 continuously updated, so a printed-and-shipped mindset does not apply: chapters change after release.
 

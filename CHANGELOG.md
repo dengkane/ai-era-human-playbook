@@ -38,6 +38,17 @@ weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, 
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
 
+### Changed — the book has a new name
+
+The title is now **AI Era Survival Playbook** in English and **AI时代生存指南** in Chinese, replacing
+*Human in AI Era* / *AI时代的人*. Both READMEs carry the new titles. `AGENTS.md` was still describing
+the book by its old name and has been updated to match.
+
+The repository is deliberately not renamed: the GitHub slug stays `ai-era-human-playbook`, and so do the
+three references to it in `scripts/setup-ssh.sh`. Renaming the repo would be a separate and breaking
+change — the connection checks in `doctor.sh` and `setup-ssh.sh` compare against that slug — so the book's
+title and its repository name now differ on purpose.
+
 ### Added — Ch. 21, *Designing the Life You Actually Want*, completing the book
 
 The last chapter, and the only one that had to close the arc rather than extend it. All five parts are now
