@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Ten of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Eleven of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–10 | 01–10 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 words | 45,991 CJK characters, total |
-| Research notes | 10 | 10 |
+| Chapters | 01–11 | 01–11 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 words | 51,432 CJK characters, total |
+| Research notes | 11 | 11 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–10 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3599–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+Ch. 08–11 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3568–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining eleven chapters (11–21) are outlined in [`README.md`](README.md) and
+The remaining ten chapters (12–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,35 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 11, *Context Engineering (Beyond Prompt Writing)*
+
+The mechanics of Part III: Ch. 10 finds the reader's boundary, and this chapter is about the machine's
+side of it — what the model can actually see when it answers. Both editions and the notes:
+
+- `chapters/en/ch11-context-engineering-beyond-prompt-writing.md` (3568 words, `draft`)
+- `chapters/zh/ch11-context-engineering-beyond-prompt-writing.md` (translation)
+- `chapters/en/research/ch11-notes.md` — 5 sources kept, 12 rejected (English)
+- `chapters/zh/research/ch11-notes.md` — the same notes, translated
+
+**The research moved the chapter off the obvious frame.** The blogs say "prompt engineering is dead,
+context engineering replaced it." The evidence says something narrower: *more context is not better
+context*. Chroma's report tests eighteen models and finds performance degrading as input grows even on
+tasks too simple to blame difficulty; Liu et al. locate the weak spot in the middle of a long input;
+Shi et al. show irrelevant material actively misleads rather than merely slowing a model. Anthropic's
+engineering post supplies the mechanism — a finite "attention budget" — and the working definition.
+
+**Twelve rejected sources are mostly one genre: the "prompt engineering is dead" post.** The claim is
+asserted everywhere and evidenced nowhere, so the chapter states the defensible version and explicitly
+names the overclaim as something not to repeat. Vendor context-engineering guides from LangChain,
+LlamaIndex, Sourcegraph and Neo4j are rejected for the same reason one layer down: guides to context
+engineering written by companies selling context tooling.
+
+Two source decisions worth recording. The sourcing here is thinner than in Ch. 08–10 — one vendor
+engineering post and two peer-reviewed papers — and the notes say so rather than implying more
+independence than exists. Anthropic is both the origin of the definition and a seller of the thing being
+defined. And no context-window size is quoted anywhere in the chapter, because the sources' point is
+that the advertised number is the wrong number; naming one would have argued against the chapter.
 
 ### Added — Ch. 10, *Finding Your Human-AI Collaboration Point*
 

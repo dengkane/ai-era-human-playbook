@@ -62,7 +62,7 @@ The skills layer. Chapters 10–13 build the capability; 14 is the decision to u
 | # | Chapter | File | Status |
 |---|---------|------|--------|
 | 10 | Finding Your Human-AI Collaboration Point | [ch10-finding-your-human-ai-collaboration-point.md](ch10-finding-your-human-ai-collaboration-point.md) | Draft |
-| 11 | Context Engineering (Beyond Prompt Writing) | `ch11-context-engineering-beyond-prompt-writing.md` | Planned |
+| 11 | Context Engineering (Beyond Prompt Writing) | [ch11-context-engineering-beyond-prompt-writing.md](ch11-context-engineering-beyond-prompt-writing.md) | Draft |
 | 12 | One-Person Business Playbook | `ch12-one-person-business-playbook.md` | Planned |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy | `ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` | Planned |
 | 14 | From "Employed" to "Self-Employed" | `ch14-from-employed-to-self-employed.md` | Planned |
