@@ -11,21 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Seven of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Eight of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–07 | 01–07 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 29,439 CJK characters, total |
-| Research notes | 7 | 7 |
+| Chapters | 01–08 | 01–08 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 words | 35,042 CJK characters, total |
+| Research notes | 8 | 8 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-The remaining fourteen chapters (08–21) are outlined in [`README.md`](README.md) and
+Ch. 08 is the first chapter written to the raised ~3500-word target rather than under it, which is why
+it runs 3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: the chapter carries
+three arguments where Ch. 05–07 carry two, which is what the target is for.
+
+The remaining thirteen chapters (09–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -33,6 +37,39 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 08, *The Student — Choosing a Path in the Age of AI*
+
+The first of the two chapters written for people who have not started yet, and the first to hit the
+raised ~3500-word target. Both editions and the research notes:
+
+- `chapters/en/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (3928 words, `draft`)
+- `chapters/zh/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (translation)
+- `chapters/en/research/ch08-notes.md` — 10 sources kept, 11 rejected (English)
+- `chapters/zh/research/ch08-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws: *which way should I go*. Ch. 09 handles the
+same decision for someone who already has a career; the operating skills are Ch. 10–13.
+
+**The research overturned the chapter twice, and both reversals are the chapter.** The first draft was
+"The entry-level job is disappearing." It is not: entry-level postings are down 7.5% year over year and
+still 46% of all postings. What the evidence supports is narrower — employment of 22-to-25-year-olds in
+the most AI-exposed occupations sits 19% below where it would be if it had tracked less-exposed peers,
+up from 15% a year earlier, and the adjustment runs through reduced *hiring* rather than separations.
+
+The second reversal matters more. The Stanford paper everyone quotes does not claim causation, says so
+in its own abstract, and the New York Fed's competing finding — remote work explains 64% of the rise in
+young-graduate unemployment — is stronger on timing. The chapter reports both and refuses to pick a
+winner, because the number has already been revised once (13% → 15% → 19%).
+
+Two sources were on topic and could not be used: Ars Technica's counterweight piece and the EPI's
+`Class of 2026` analysis, both blocked at 403. Their figures exist only in search snippets, and a
+snippet is not a source — they are recorded in the notes as rejected with that reason, alongside the
+trade-school "47% out-earn graduates" claim that traces to nothing.
+
+The chapter's advice was also rebuilt. "Choose a major AI can't do" is Ch. 03's argument applied badly —
+uncheckable at eighteen, and stale by graduation. It is replaced by three questions the reader can run
+on any path this week, each tied to a mechanism in the evidence, each with a stated tell.
 
 ### Changed — length rules raised to ~3500 words
 
