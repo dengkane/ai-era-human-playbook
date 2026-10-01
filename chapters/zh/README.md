@@ -12,15 +12,19 @@
 
 ## 进度
 
-| # | 章节 | 文件 | 状态 |
-|---|---------|------|--------|
-| 01 | AI不是工具，是物种 | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | 草稿 |
-| 02 | 你焦虑，是因为你在用旧地图 | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | 草稿 |
-| 03 | AI永远做不好的事（以及为什么那是你的护城河） | [ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md](ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) | 草稿 |
-| 04 | 不同人群的真实处境 | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | 草稿 |
-| 05 | 上班族——从可替换的零件，到不可替代的节点 | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | 草稿 |
-| 06 | 创业者——为什么现在小能胜大 | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | 草稿 |
-| 07 | 自由职业者——从卖技能，到卖"你是谁" | [ch07-the-freelancer-from-selling-skills-to-selling-personality.md](ch07-the-freelancer-from-selling-skills-to-selling-personality.md) | 草稿 |
+| # | 章节 | 文件 | 状态 | 译文 |
+|---|---------|------|--------|------|
+| 01 | AI不是工具，是物种 | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | 草稿 | 已按规范重写 |
+| 02 | 你焦虑，是因为你在用旧地图 | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | 草稿 | 已按规范重写 |
+| 03 | AI永远做不好的事（以及为什么那是你的护城河） | [ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md](ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) | 草稿 | 待重写 |
+| 04 | 不同人群的真实处境 | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | 草稿 | 待重写 |
+| 05 | 上班族——从可替换的零件，到不可替代的节点 | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | 草稿 | 待重写 |
+| 06 | 创业者——为什么现在小能胜大 | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | 草稿 | 待重写 |
+| 07 | 自由职业者——从卖技能，到卖"你是谁" | [ch07-the-freelancer-from-selling-skills-to-selling-personality.md](ch07-the-freelancer-from-selling-skills-to-selling-personality.md) | 草稿 | 待重写 |
+
+「译文」列记录的是这一章的中文**表达**有没有按[翻译约定](#翻译约定)重做过一遍——它和「状态」是两回事：
+状态管的是审校和事实核查，译文管的是读起来像不像中文原创。重写不改动事实、标记和结构，所以两列互相
+独立。
 
 其余章节（08–21）尚未写出，见[英文版索引](../en/README.md)。
 
