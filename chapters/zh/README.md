@@ -16,7 +16,7 @@
 |---|---------|------|--------|------|
 | 01 | AI不是工具，是物种 | [ch01-ai-is-not-a-tool-its-a-species.md](ch01-ai-is-not-a-tool-its-a-species.md) | 草稿 | 已按规范重写 |
 | 02 | 你焦虑，是因为你在用旧地图 | [ch02-youre-anxious-because-youre-using-an-old-map.md](ch02-youre-anxious-because-youre-using-an-old-map.md) | 草稿 | 已按规范重写 |
-| 03 | AI永远做不好的事（以及为什么那是你的护城河） | [ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md](ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) | 草稿 | 待重写 |
+| 03 | AI永远做不好的事（以及为什么那是你的护城河） | [ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md](ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md) | 草稿 | 已按规范重写 |
 | 04 | 不同人群的真实处境 | [ch04-where-different-people-actually-stand.md](ch04-where-different-people-actually-stand.md) | 草稿 | 待重写 |
 | 05 | 上班族——从可替换的零件，到不可替代的节点 | [ch05-the-employee-from-replaceable-part-to-indispensable-node.md](ch05-the-employee-from-replaceable-part-to-indispensable-node.md) | 草稿 | 待重写 |
 | 06 | 创业者——为什么现在小能胜大 | [ch06-the-entrepreneur-why-small-beats-big-now.md](ch06-the-entrepreneur-why-small-beats-big-now.md) | 草稿 | 待重写 |
@@ -90,6 +90,7 @@
 | taste | 品味 | ch01、ch05、ch07 共用 |
 | leverage | 杠杆 | |
 | structural | 结构性 | 本书判断技术限制能否被"决定掉"的核心词，见 AGENTS.md |
+| verification / verify / verifiable | 验证 | ch03 的核心概念。曾散成三个译法（ch01「验证」、ch03「核验」、ch07「核实」），现在统一 |
 | honest caveats | 诚实的保留意见 | 小标题，见下 |
 | Do this today | 今天就开始 | 小标题，见下 |
 
