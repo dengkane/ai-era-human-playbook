@@ -1,4 +1,4 @@
-# Human in AI Era 🌱
+# AI Era Survival Playbook 🌱
 
 > A living book on how ordinary people survive, thrive, and stay human in the age of artificial intelligence.
 > AI-assisted, human-edited, continuously updated.
