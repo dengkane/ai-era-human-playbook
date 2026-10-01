@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Fifteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted. **Part III is complete.**
+Sixteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted. **Part III is complete; Part IV has begun.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–15 | 01–15 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 words | 71,976 CJK characters, total |
-| Research notes | 15 | 15 |
+| Chapters | 01–16 | 01–16 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 words | 76,971 CJK characters, total |
+| Research notes | 16 | 16 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–15 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–16 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3301–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining six chapters (16–21) are outlined in [`README.md`](README.md) and
+The remaining five chapters (17–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,34 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 16, *Creativity When AI Can Generate Everything*, opening Part IV
+
+The first chapter of Part IV, and the boundary with Ch. 19 is held deliberately: this chapter owns making
+things *with* the machine in the loop; Ch. 19 owns experience defined by the machine's absence. Nothing
+here argues for avoiding AI. Both editions and notes:
+
+- `chapters/en/ch16-creativity-when-ai-can-generate-everything.md` (3338 words, `draft`)
+- `chapters/zh/ch16-creativity-when-ai-can-generate-everything.md` (translation)
+- `chapters/en/research/ch16-notes.md` — 5 sources kept, 9 rejected (English)
+- `chapters/zh/research/ch16-notes.md` — the same notes, translated
+
+**The research supplied a social dilemma rather than a warning, and the chapter is built on it.** Doshi
+and Hauser's experiment found AI ideas made stories rated more creative, better written and more
+enjoyable — with the largest gains for the *least* creative writers — while making the AI-assisted
+stories more similar to each other. Individually better off, collectively narrower. The chapter refuses
+both the "machine is a muse" and the "machine is a thief" framings.
+
+Two further research lines carry the argument. Randomly labelling the same AI paintings "human" vs "AI"
+shifted judgements of liking, beauty, profundity and worth, moderated by **perceived effort** and
+**narrativity** — so what people buy is evidence that someone was there, not the artefact. And a 7,182-person
+UK study found arts and crafts predicted a sense of "life is worthwhile" as strongly as being employed,
+which is what makes the chapter about the maker and not only the output.
+
+Three sources were openable only in their open-access form — the Science Advances and Nature versions
+return 403 / JS challenges, so the PMC and Frontiers versions are cited. And the chapter deliberately
+does not introduce the copyright-law angle it considered, because the U.S. Copyright Office chapter PDF
+would not extract as text and the claim could not be checked.
 
 ### Added — Ch. 15, *Judging AI Tools for Yourself*, completing Part III
 

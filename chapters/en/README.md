@@ -72,7 +72,7 @@ The skills layer. Chapters 10–13 build the capability; 14 is the decision to u
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 16 | Creativity When AI Can Generate Everything | `ch16-creativity-when-ai-can-generate-everything.md` | Planned |
+| 16 | Creativity When AI Can Generate Everything | [ch16-creativity-when-ai-can-generate-everything.md](ch16-creativity-when-ai-can-generate-everything.md) | Draft |
 | 17 | Relationships & Community in a Digital World | `ch17-relationships-and-community-in-a-digital-world.md` | Planned |
 | 18 | Rebuilding Meaning | `ch18-rebuilding-meaning.md` | Planned |
 
