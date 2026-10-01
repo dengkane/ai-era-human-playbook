@@ -17,7 +17,7 @@ not reviewed, not fact-checked, not to be quoted.
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–07 | 01–07 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 29,513 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 29,439 CJK characters, total |
 | Research notes | 7 | 7 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -82,7 +82,7 @@ sentence became one long Chinese sentence, and the English em-dash cadence came 
 - `AGENTS.md` — points at `chapters/zh/README.md` as the authority on translation, and the workflow
   reference now says 9 steps.
 
-**The chapters are being rewritten to it one at a time**, each in its own PR. Meaning, structure,
+**All seven chapters have been rewritten to it**, one PR each. Meaning, structure,
 citations and numbers are held exactly — markers, URLs, heading count and paragraph structure stay
 identical to the English — and only the prose changes. The rewrite is mechanical to check: `——` is the
 clearest tell of a sentence that followed the English, because the source runs 12.7–16.3 em-dashes per
@@ -95,8 +95,12 @@ thousand words and the old translations reproduced that rate in a language whose
 | 03 | 35 → 1 | 16 → 10 | 9.0 → 0.3 | merged |
 | 04 | 40 → 10 | 13 → 10 | 9.1 → 2.3 | merged |
 | 05 | 32 → 5 | 30 → 21 | 7.1 → 1.2 | merged |
-| 06 | 38 → 7 | 6 → 6 | 8.9 → 1.7 | this PR |
-| 07 | 38 | 16 | 7.7 | pending |
+| 06 | 38 → 7 | 6 → 6 | 8.9 → 1.7 | merged |
+| 07 | 38 → 12 | 16 → 13 | 7.7 → 2.5 | this PR |
+
+Every chapter is now inside the standard's ceiling of three `——` per thousand characters, and the
+edition total moved 30,274 → 29,439 CJK characters — shorter because the English sentence structure
+was padding, not because anything was cut.
 
 Two facts this entry is written from, both checkable and both found in the existing text: the same
 English word `verifiable` was translated **可验证** in Ch. 01 and **可核实** in Ch. 07, which is why the
