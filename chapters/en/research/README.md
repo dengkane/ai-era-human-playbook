@@ -64,6 +64,7 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch09-notes.md](ch09-notes.md) | 09 — The Mid-Career Switcher | 8 kept / 12 rejected | Complete |
 | [ch10-notes.md](ch10-notes.md) | 10 — Finding Your Human-AI Collaboration Point | 6 kept / 11 rejected | Complete |
 | [ch11-notes.md](ch11-notes.md) | 11 — Context Engineering (Beyond Prompt Writing) | 5 kept / 12 rejected | Complete |
+| [ch12-notes.md](ch12-notes.md) | 12 — One-Person Business Playbook | 5 kept / 14 rejected | Complete |
 
 ¹ Ch. 07's chapter was drafted before its notes existed, and the notes were rebuilt afterwards by
 re-opening every cited source. The file records that history rather than hiding it. See its framing

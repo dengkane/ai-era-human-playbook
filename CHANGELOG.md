@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Eleven of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Twelve of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–11 | 01–11 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 words | 51,432 CJK characters, total |
-| Research notes | 11 | 11 |
+| Chapters | 01–12 | 01–12 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 words | 56,580 CJK characters, total |
+| Research notes | 12 | 12 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–11 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3568–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+Ch. 08–12 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3517–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining ten chapters (12–21) are outlined in [`README.md`](README.md) and
+The remaining nine chapters (13–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,33 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 12, *One-Person Business Playbook*
+
+The operating system for a team of one: what you sell, what you charge, how you deliver. Ch. 06 argued
+that small teams are newly viable; Ch. 14 handles whether to leave employment. Both editions and notes:
+
+- `chapters/en/ch12-one-person-business-playbook.md` (3517 words, `draft`)
+- `chapters/zh/ch12-one-person-business-playbook.md` (translation)
+- `chapters/en/research/ch12-notes.md` — 5 sources kept, 14 rejected (English)
+- `chapters/zh/research/ch12-notes.md` — the same notes, translated
+
+**The research refused the genre.** The chapter opens on the Census baseline — 29.8 million nonemployer
+businesses, $1.7 trillion in receipts, which divides to roughly $57,000 each — rather than on the top
+decile's success stories. The BLS survival tables (77.9% at one year, 56.3% at three) and the Federal
+Reserve's SBCS (46% of small firms use AI, only 7% fully integrated) supply the rest.
+
+**The most-quoted claim in this genre has no source, and the chapter says so.** The assertion that
+value-pricing freelancers out-earn hourly billers by a wide margin — usually with a specific-looking pair
+of dollar figures — traces to consultancy blogs and nothing else. Rather than repeat it, the chapter
+argues the mechanism (hourly billing couples income to capped hours, and AI compresses those hours) and
+states plainly that no study was found. That is recorded in the notes as a downgraded claim, not hidden.
+
+Fourteen sources were rejected, and most of them are one genre: the "solopreneur statistics" aggregator
+that quotes other aggregators. Two were frustrating rather than bad — the IRS Statistics of Income size
+tables are exactly the distribution this chapter wants and are `.xls` files the tooling cannot read, and
+Upwork's Future Workforce Index returns 403 on both its URLs. Both are recorded as the first things a
+revision should open.
 
 ### Added — Ch. 11, *Context Engineering (Beyond Prompt Writing)*
 
