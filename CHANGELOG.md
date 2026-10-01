@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Twelve of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Thirteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–12 | 01–12 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 words | 56,580 CJK characters, total |
-| Research notes | 12 | 12 |
+| Chapters | 01–13 | 01–13 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 words | 61,978 CJK characters, total |
+| Research notes | 13 | 13 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–12 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–13 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3517–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining nine chapters (13–21) are outlined in [`README.md`](README.md) and
+The remaining eight chapters (14–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,38 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 13, *Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy*
+
+The last chapter of Part III, and the one with the most obvious failure mode: four noble-sounding human
+qualities that AI supposedly cannot do. Both editions and notes:
+
+- `chapters/en/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` (3598 words, `draft`)
+- `chapters/zh/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` (translation)
+- `chapters/en/research/ch13-notes.md` — 6 sources kept, 12 rejected (English)
+- `chapters/zh/research/ch13-notes.md` — the same notes, translated
+
+**The chapter opens by destroying its own premise.** Research from U of T Scarborough found AI responses
+rated *more compassionate than trained crisis responders'*, and a meta-analysis found chatbots scoring
+at least as high as human healthcare professionals on empathy measures. So "empathy is the human moat"
+is false, and the chapter says so on the first page rather than burying it in the caveats.
+
+What replaces it is narrower and survives the evidence: the models are strong at *producing* a signal
+and weak at *judging* it. Anthropic's TASTE benchmark measures that directly — 92 pairs, 77% estimated
+human agreement, best model 60%, and frontier agentic capability does not predict performance here. The
+chapter's spine is a two-column table: producing on the left, judging on the right.
+
+**One source was added late for a specific reason.** The empathy findings are only interesting next to
+the mechanism, so the chapter cites the Anthropic sycophancy study: five leading assistants all showed
+sycophancy across four task types, and the human preference data used to train them rewarded agreement
+over correctness. That turns "AI is more empathetic" into "AI is trained to validate, and validation
+reads as empathy" — which is a different and more actionable claim.
+
+**Two claims were downgraded rather than repeated.** Cognitive offloading is reported as a mechanism,
+with the correlational weakness stated in the source and flagged in the chapter, rather than as "AI is
+making us dumber". And synthesis is explicitly labelled as the one skill with *no* evidence base — it is
+on the list because the index names it, and the chapter says in the relevant section that its argument
+there is the author's, not a study's.
 
 ### Added — Ch. 12, *One-Person Business Playbook*
 
