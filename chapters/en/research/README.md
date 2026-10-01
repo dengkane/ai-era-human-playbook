@@ -73,6 +73,7 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch18-notes.md](ch18-notes.md) | 18 — Rebuilding Meaning | 5 kept / 8 rejected | Complete |
 | [ch19-notes.md](ch19-notes.md) | 19 — The Last Fortress of Being Human | 5 kept / 8 rejected | Complete |
 | [ch20-notes.md](ch20-notes.md) | 20 — The Courage to Slow Down | 5 kept / 8 rejected | Complete |
+| [ch21-notes.md](ch21-notes.md) | 21 — Designing the Life You Actually Want | 5 kept / 8 rejected | Complete |
 
 ¹ Ch. 07's chapter was drafted before its notes existed, and the notes were rebuilt afterwards by
 re-opening every cited source. The file records that history rather than hiding it. See its framing

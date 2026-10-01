@@ -11,32 +11,62 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Twenty of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete; Part V is nearly done.**
+**All twenty-one chapters are written, each in English and Chinese. Everything is `draft`:** not
+reviewed, not fact-checked, not to be quoted. **All five parts are complete.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–20 | 01–20 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 words | 96,334 CJK characters, total |
-| Research notes | 20 | 20 |
+| Chapters | 01–21 | 01–21 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 / 3440 words | 101,383 CJK characters, total |
+| Research notes | 21 | 21 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–20 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–21 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3201–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining chapter (21) is outlined in [`README.md`](README.md) and
-[`chapters/en/README.md`](chapters/en/README.md) but not written.
+No chapter remains unwritten. Ch. 01–07 still run 2554–3300 against the raised target, and nothing flags
+them: that drift is described under "length rules raised to ~3500 words" below and is unchanged.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
 existed.** The notes were rebuilt afterwards by opening all thirteen cited sources again. That is a
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 21, *Designing the Life You Actually Want*, completing the book
+
+The last chapter, and the only one that had to close the arc rather than extend it. All five parts are now
+written in both editions. Both editions and notes:
+
+- `chapters/en/ch21-designing-the-life-you-actually-want.md` (3440 words, `draft`)
+- `chapters/zh/ch21-designing-the-life-you-actually-want.md` (translation)
+- `chapters/en/research/ch21-notes.md` — 5 sources kept, 8 rejected (English)
+- `chapters/zh/research/ch21-notes.md` — the same notes, translated
+
+**Two findings carry the chapter, and they are both about regret.** Gilovich and Medvec's pattern —
+replicated publicly in 2023 — is that recent regrets centre on actions while **long-term regrets involve
+inactions**, and the mechanism is that people romanticise the road not taken while forgetting what
+stopped them. Roese and Summerville's meta-analysis of 11 ranking studies supplies the content (the six
+biggest regrets are education, career, romance, parenting, the self and leisure) and the explanation: the
+**opportunity principle**, where foreclosed opportunity triggers rationalisation that dissolves the
+regret.
+
+**And the intervention is small, measured, and decays — all three, in the chapter.** A 476-person
+randomised trial of "activating values" (pick a valued area, affirm it, choose one concrete action,
+schedule it, do it within the week) produced significant gains in self-insight and sense of coherence at
+one and two weeks, against two control conditions — and **not at three weeks**. That last result is in the
+chapter rather than edited out, and it is why the recommendation is a repeating loop rather than a
+decision.
+
+The chapter also closes the book explicitly: a one-page summary of what the preceding twenty chapters add
+up to in the order a reader needs them, a three-scale structure (week, quarter, year) for running the
+loop, and a section on what the book deliberately could not do — tell the reader what to want, because
+that is the judgement this book has argued since Ch. 03 is the scarce thing and cannot be delegated.
 
 ### Added — Ch. 20, *The Courage to Slow Down*
 
