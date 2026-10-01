@@ -65,7 +65,7 @@ The skills layer. Chapters 10–13 build the capability; 14 is the decision to u
 | 11 | Context Engineering (Beyond Prompt Writing) | [ch11-context-engineering-beyond-prompt-writing.md](ch11-context-engineering-beyond-prompt-writing.md) | Draft |
 | 12 | One-Person Business Playbook | [ch12-one-person-business-playbook.md](ch12-one-person-business-playbook.md) | Draft |
 | 13 | Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy | [ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md](ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md) | Draft |
-| 14 | From "Employed" to "Self-Employed" | `ch14-from-employed-to-self-employed.md` | Planned |
+| 14 | From "Employed" to "Self-Employed" | [ch14-from-employed-to-self-employed.md](ch14-from-employed-to-self-employed.md) | Draft |
 | 15 | Judging AI Tools for Yourself (Because This Book's Matrix Will Be Wrong) | `ch15-judging-ai-tools-for-yourself.md` | Planned |
 
 ### Part IV — Beyond Survival

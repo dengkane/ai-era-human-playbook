@@ -66,6 +66,7 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch11-notes.md](ch11-notes.md) | 11 — Context Engineering (Beyond Prompt Writing) | 5 kept / 12 rejected | Complete |
 | [ch12-notes.md](ch12-notes.md) | 12 — One-Person Business Playbook | 5 kept / 14 rejected | Complete |
 | [ch13-notes.md](ch13-notes.md) | 13 — Meta-Skills for the AI Era | 6 kept / 12 rejected | Complete |
+| [ch14-notes.md](ch14-notes.md) | 14 — From "Employed" to "Self-Employed" | 5 kept / 10 rejected | Complete |
 
 ¹ Ch. 07's chapter was drafted before its notes existed, and the notes were rebuilt afterwards by
 re-opening every cited source. The file records that history rather than hiding it. See its framing
