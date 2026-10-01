@@ -17,7 +17,7 @@ not reviewed, not fact-checked, not to be quoted.
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–07 | 01–07 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,053 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 29,979 CJK characters, total |
 | Research notes | 7 | 7 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -92,8 +92,9 @@ thousand words and the old translations reproduced that rate in a language whose
 |---|---|---|---|---|
 | 01 | 24 → 1 | 23 → 9 | 6.1 → 0.3 | merged |
 | 02 | 30 → 7 | 23 → 9 | 6.9 → 1.7 | merged |
-| 03 | 35 → 1 | 16 → 10 | 9.0 → 0.3 | this PR |
-| 04–07 | 40 / 32 / 38 / 38 | 13 / 30 / 6 / 16 | 9.1 / 7.1 / 8.9 / 7.7 | pending |
+| 03 | 35 → 1 | 16 → 10 | 9.0 → 0.3 | merged |
+| 04 | 40 → 10 | 13 → 10 | 9.1 → 2.3 | this PR |
+| 05–07 | 32 / 38 / 38 | 30 / 6 / 16 | 7.1 / 8.9 / 7.7 | pending |
 
 Two facts this entry is written from, both checkable and both found in the existing text: the same
 English word `verifiable` was translated **可验证** in Ch. 01 and **可核实** in Ch. 07, which is why the
