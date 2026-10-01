@@ -11,8 +11,9 @@ them.
 
 | Document | Owns |
 |---|---|
-| [`WORKFLOW.md`](WORKFLOW.md) | The full 8-step write-and-ship flow, script reference, troubleshooting |
+| [`WORKFLOW.md`](WORKFLOW.md) | The full 9-step write-and-ship flow, script reference, troubleshooting |
 | [`chapters/en/README.md`](chapters/en/README.md) | Chapter index, writing standards, **factual-claims rules**, chapter boundaries |
+| [`chapters/zh/README.md`](chapters/zh/README.md) | Chinese translation standard — **write it as native Chinese, not word for word** |
 | [`chapters/en/research/README.md`](chapters/en/research/README.md) | Research-note format, source tiers |
 | [`templates/chapter-template.md`](templates/chapter-template.md) | The chapter format. **Copy it; never hand-roll front matter** |
 

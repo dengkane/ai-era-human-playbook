@@ -175,7 +175,55 @@ or above 4500 words of body, and flags a gap over 400 words between the body and
 Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any
 `unverified` claim once `status` is `review` or `stable`.
 
-### 7. Publish
+### 7. Translate
+
+The Chinese edition in `chapters/zh/` is not an afterthought — it is the edition most readers will
+actually read. But **English is always the source of truth**, and the rule is one-way: fix the
+English first, then update the translation. Never patch the Chinese to say something the English does
+not, and never let the two drift.
+
+```bash
+cp chapters/en/ch03-....md  chapters/zh/ch03-....md     # if the zh file does not exist yet
+# ...translate the body...
+./scripts/check-chapter.sh  chapters/zh/ch03-....md     # lint the translation too
+```
+
+**Do not translate word for word. Write it in Chinese.** A translation that keeps the English
+sentence structure is a translation nobody wants to read, and the reader paid for a Chinese book, not
+for fidelity to an English one. The full standard — sentence splitting, em-dash discipline, passive
+voice, the vocabulary to avoid, the term glossary, and a pre-handoff checklist — lives in
+[`chapters/zh/README.md`](chapters/zh/README.md#写译文的立场像中文原创不像译文). Read it before your
+first translation; the checklist at the end is what you run before handing the chapter off.
+
+The mechanical parts do not move, and `check-chapter.sh` will not catch it if they do:
+
+- `<!-- verified -->` markers and their URLs are copied **verbatim**, one for one with the English.
+  The translation does not re-verify anything — it carries the verification across. Dropping a marker
+  strands a claim.
+- The footer stays in English, character for character; the linter checks those four lines literally.
+- Table markup, English identifiers (`SWE-bench`, `MMLU`), and quoted search terms stay as they are.
+- The two fixed section headings have fixed Chinese forms: `The honest caveats` → `诚实的保留意见`,
+  `Do this today` → `今天就开始`.
+
+`check-chapter.sh` will always print two warnings for a Chinese chapter — `body is short` and a gap
+against `word_target` — because it counts words by whitespace and Chinese has none. That is a known
+limitation of the tool, not a sign the translation is thin; the standard in `chapters/zh/README.md`
+says what to check instead.
+
+To ship a translation, publish the Chinese file with the same script — the branch is derived from the
+filename, so `chapters/zh/ch03-....md` gets its own `draft/ch03-...` branch and PR:
+
+```bash
+./scripts/publish-chapter.sh chapters/zh/ch03-....md
+```
+
+Because `publish-chapter.sh` stages files by path, a translation PR carries the Chinese file, plus any
+of `CHANGELOG.md`, `chapters/zh/research/ch<NN>-notes.md`, and the two English index files that happen
+to have uncommitted changes. In a translation you should rarely be touching the English indexes — if
+they show up in the PR, you edited them and did not mean to. `chapters/zh/README.md`'s progress table
+is **not** staged by the script; update it by hand with the Chinese file.
+
+### 8. Publish
 
 ```bash
 ./scripts/publish-chapter.sh chapters/en/ch02-....md
@@ -199,7 +247,7 @@ It will **not** move you off a branch it did not create, and it never touches `m
 Re-running it on the same chapter pushes new commits to the same branch — if a PR is already open for
 that branch, `pr-create.sh` reports it rather than opening a second one.
 
-### 8. Merge, then reset
+### 9. Merge, then reset
 
 Single-author repo: read your own diff, then
 

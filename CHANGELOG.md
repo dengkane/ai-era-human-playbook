@@ -17,7 +17,7 @@ not reviewed, not fact-checked, not to be quoted.
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–07 | 01–07 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,245 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,274 CJK characters, total |
 | Research notes | 7 | 7 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -57,6 +57,44 @@ The open question this leaves is the one worth writing down: Ch. 01–06 run 255
 the new target, and nothing will flag them. They are legal, not wrong — the band starts at 2500 and the
 project's position is that length follows from the number of arguments a chapter carries — but a reader
 comparing the index to the new standard will notice the drift faster than any check will.
+
+### Changed — the translation step now targets native Chinese, and Ch. 01 is rewritten to show it
+
+Translation was a step the workflow never described. `WORKFLOW.md` went from writing straight to
+publishing, and the only guidance for `chapters/zh/` was a short list of *mechanical* rules — keep the
+markers, keep the footer, keep the search terms. Nothing said what the Chinese prose itself should
+read like, so the existing translations carried English sentence structure across: one English
+sentence became one long Chinese sentence, and the English em-dash cadence came with it.
+
+- `chapters/zh/README.md` — the `翻译约定` section is now the project's translation standard. It opens
+  with the position (**write the chapter in Chinese; a reader should not be able to tell it was
+  translated**), then the concrete rules that follow from it: split English sentences, cap `——` at
+  three per thousand characters, cut `被` and stacked `的`, avoid translationese words (`张力`, `内化`,
+  `行动化`, `预设`, `商品化`, `可核实`) while keeping the real terms, and do not translate English
+  imagery literally. It adds a **term glossary** (`trajectory` → 轨迹, `moat` → 护城河, `taste` → 品味,
+  `accountability` → 责任), the fixed Chinese forms of the two mandatory headings, the mechanical
+  rules as they were, and a **pre-handoff checklist**.
+- `WORKFLOW.md` — a new **step 7, Translate**, placed between linting and publishing. It states the
+  one-way rule (English is the source of truth; fix English first), links to the standard, lists the
+  mechanical invariants the linter will not catch, explains the two permanent `check-chapter.sh`
+  warnings on Chinese files, and shows how to publish a translation. Publishing and merging are
+  renumbered to 8 and 9.
+- `AGENTS.md` — points at `chapters/zh/README.md` as the authority on translation, and the workflow
+  reference now says 9 steps.
+
+**Ch. 01 is rewritten as the worked example.** `chapters/zh/ch01-...md` keeps its meaning, structure,
+citations and numbers exactly, and changes its prose: `——` from 24 down to 1 (and that one is in the
+front matter — `第一篇——认清现实`; the body has none left), `被` from 23 to 9, and the translationese
+vocabulary replaced. Markers (5), URLs, and the 62-block paragraph structure are identical to the
+English; the eight headings map one-to-one. It lints at **0 errors, 2 warnings** — the same two
+whitespace artefacts every Chinese chapter produces.
+
+Two facts this entry is written from, both checkable and both found in the existing text: the same
+English word `verifiable` was translated **可验证** in Ch. 01 and **可核实** in Ch. 07, which is why the
+glossary is now a rule; and the English source runs 12.7–16.3 em-dashes per thousand words, which the
+old translation reproduced at 6.1 per thousand characters — roughly twice the ceiling this change now
+sets. The six other Chinese chapters are not covered by this change and can still be judged against
+the new standard.
 
 ### Added — Ch. 07, *The Freelancer — From Selling Skills to Selling Personality*
 
