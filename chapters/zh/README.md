@@ -27,12 +27,13 @@
 | 11 | 上下文工程（不只是写提示词） | [ch11-context-engineering-beyond-prompt-writing.md](ch11-context-engineering-beyond-prompt-writing.md) | 草稿 | 已按规范撰写 |
 | 12 | 一人公司的操作手册 | [ch12-one-person-business-playbook.md](ch12-one-person-business-playbook.md) | 草稿 | 已按规范撰写 |
 | 13 | AI时代的元技能：品味、提问、综合、共情 | [ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md](ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md) | 草稿 | 已按规范撰写 |
+| 14 | 从"上班"到"自己干" | [ch14-from-employed-to-self-employed.md](ch14-from-employed-to-self-employed.md) | 草稿 | 已按规范撰写 |
 
 「译文」列记录的是这一章的中文**表达**有没有按[翻译约定](#翻译约定)重做过一遍——它和「状态」是两回事：
 状态管的是审校和事实核查，译文管的是读起来像不像中文原创。重写不改动事实、标记和结构，所以两列互相
 独立。
 
-其余章节（14–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（15–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
