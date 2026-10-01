@@ -17,7 +17,7 @@ not reviewed, not fact-checked, not to be quoted.
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–07 | 01–07 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,129 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 words | 30,053 CJK characters, total |
 | Research notes | 7 | 7 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -72,8 +72,8 @@ sentence became one long Chinese sentence, and the English em-dash cadence came 
   three per thousand characters, cut `被` and stacked `的`, avoid translationese words (`张力`, `内化`,
   `行动化`, `预设`, `商品化`, `可核实`) while keeping the real terms, and do not translate English
   imagery literally. It adds a **term glossary** (`trajectory` → 轨迹, `moat` → 护城河, `taste` → 品味,
-  `accountability` → 责任, `structural` → 结构性), the fixed Chinese forms of the two mandatory headings,
-  the mechanical rules as they were, and a **pre-handoff checklist**.
+  `accountability` → 责任, `structural` → 结构性, `verification` → 验证), the fixed Chinese forms of the
+  two mandatory headings, the mechanical rules as they were, and a **pre-handoff checklist**.
 - `WORKFLOW.md` — a new **step 7, Translate**, placed between linting and publishing. It states the
   one-way rule (English is the source of truth; fix English first), links to the standard, lists the
   mechanical invariants the linter will not catch, explains the two permanent `check-chapter.sh`
@@ -91,13 +91,21 @@ thousand words and the old translations reproduced that rate in a language whose
 | Ch. | `——` before → after | `被` before → after | `per 1k CJK` before → after | Status |
 |---|---|---|---|---|
 | 01 | 24 → 1 | 23 → 9 | 6.1 → 0.3 | merged |
-| 02 | 30 → 7 | 23 → 9 | 6.9 → 1.7 | this PR |
-| 03–07 | 35 / 40 / 32 / 38 / 38 | 16 / 13 / 30 / 6 / 16 | 9.0 / 9.1 / 7.1 / 8.9 / 7.7 | pending |
+| 02 | 30 → 7 | 23 → 9 | 6.9 → 1.7 | merged |
+| 03 | 35 → 1 | 16 → 10 | 9.0 → 0.3 | this PR |
+| 04–07 | 40 / 32 / 38 / 38 | 13 / 30 / 6 / 16 | 9.1 / 7.1 / 8.9 / 7.7 | pending |
 
 Two facts this entry is written from, both checkable and both found in the existing text: the same
 English word `verifiable` was translated **可验证** in Ch. 01 and **可核实** in Ch. 07, which is why the
 glossary is now a rule; and the em-dash rate above, which is what made "split the sentence" the first
 rule rather than a style preference.
+
+**That terminology drift was real, and it is now fixed edition-wide.** `verification` / `verify` /
+`verifiable` had split three ways — 验证 in Ch. 01, 核验 through Ch. 03 (12 occurrences), 核实 through
+Ch. 07 (14) — because each chapter was translated in isolation. The glossary pins it to **验证**, and
+every occurrence was swept in this PR: Ch. 02 and 03 as part of their rewrite, Ch. 04 and 07 as a
+word-level fix (they have not been rewritten yet). Terminology consistency is edition-wide, so it does
+not wait for each chapter's turn.
 
 Every rewritten chapter lints at **0 errors, 2 warnings** — the same two whitespace artefacts every
 Chinese chapter produces, and the reason the standard's checklist does not rely on `check-chapter.sh`
