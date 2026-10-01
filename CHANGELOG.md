@@ -38,6 +38,26 @@ weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, 
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
 
+### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
+
+`LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
+
+- **It contradicted the license it grants.** The "You are free to" block said the material may be used
+  *"for any purpose, even commercially"* — that wording belongs to CC **BY**, not CC **BY-NC-SA**. Three
+  lines below, the NonCommercial clause says the opposite. Replaced with the CC BY-NC-SA 4.0 deed's own
+  third item, *"The licensor cannot revoke these freedoms as long as you follow the license terms"*, which
+  grants no commercial right. The text was checked against the deed at
+  <https://creativecommons.org/licenses/by-nc-sa/4.0/> rather than reconstructed from memory.
+- **It pointed at a directory that does not exist.** The scope line read "all files under `book/`". There
+  is no `book/` directory; the prose lives in `chapters/`. Corrected to `chapters/`, which matches how
+  `README.md` describes the licensed layer.
+- **It pointed at contact details that do not exist.** Commercial inquiries were directed to "the contact
+  information in `README.md`", but `README.md` carries no address — its Contact section offers "Open an
+  Issue". Now points to GitHub Issues alone.
+
+Both license files also still carried the unfilled placeholder `Copyright (c) 2026 [Your Name]`. Both now
+name Ken Deng.
+
 ### Changed — the book has a new name
 
 The title is now **AI Era Survival Playbook** in English and **AI时代生存指南** in Chinese, replacing

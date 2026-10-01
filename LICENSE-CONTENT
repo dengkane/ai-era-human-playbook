@@ -1,14 +1,14 @@
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 (CC BY-NC-SA 4.0)
 
-This book content (all files under book/, CHANGELOG.md, appendices, and all prose
+This book content (all files under chapters/, CHANGELOG.md, appendices, and all prose
 in this repository unless explicitly stated otherwise) is licensed under CC BY-NC-SA 4.0.
 
 You are free to:
   Share — copy and redistribute the material in any medium or format
   Adapt  — remix, transform, and build upon the material
 
-  for any purpose, even commercially, as long as you comply with the license terms.
+  The licensor cannot revoke these freedoms as long as you follow the license terms.
 
 Under the following terms:
   Attribution — You must give appropriate credit, provide a link to the license,
@@ -36,7 +36,6 @@ Commercial use includes, but is not limited to:
 - Incorporating content into commercial products or services
 - Using content for advertising or promotional purposes
 
-For commercial licensing inquiries, contact the author via GitHub Issues
-or the contact information in README.md.
+For commercial licensing inquiries, contact the author via GitHub Issues.
 
-Copyright (c) 2026 [Your Name]. All rights reserved except as stated above.
+Copyright (c) 2026 Ken Deng. All rights reserved except as stated above.
