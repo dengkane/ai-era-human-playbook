@@ -51,7 +51,7 @@ groups, because they answer two different questions.
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 08 | The Student — Choosing a Path in the Age of AI | `ch08-the-student-choosing-a-path-in-the-age-of-ai.md` | Planned |
+| 08 | The Student — Choosing a Path in the Age of AI | [ch08-the-student-choosing-a-path-in-the-age-of-ai.md](ch08-the-student-choosing-a-path-in-the-age-of-ai.md) | Draft |
 | 09 | The Mid-Career Switcher — Your Judgment Is the Asset | `ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` | Planned |
 
 ### Part III — Amplify Your Leverage
