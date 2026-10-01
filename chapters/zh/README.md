@@ -29,12 +29,13 @@
 | 13 | AI时代的元技能：品味、提问、综合、共情 | [ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md](ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md) | 草稿 | 已按规范撰写 |
 | 14 | 从"上班"到"自己干" | [ch14-from-employed-to-self-employed.md](ch14-from-employed-to-self-employed.md) | 草稿 | 已按规范撰写 |
 | 15 | 自己判断AI工具（因为本书的工具矩阵迟早会错） | [ch15-judging-ai-tools-for-yourself.md](ch15-judging-ai-tools-for-yourself.md) | 草稿 | 已按规范撰写 |
+| 16 | 当AI能生成一切，创造力是什么 | [ch16-creativity-when-ai-can-generate-everything.md](ch16-creativity-when-ai-can-generate-everything.md) | 草稿 | 已按规范撰写 |
 
 「译文」列记录的是这一章的中文**表达**有没有按[翻译约定](#翻译约定)重做过一遍——它和「状态」是两回事：
 状态管的是审校和事实核查，译文管的是读起来像不像中文原创。重写不改动事实、标记和结构，所以两列互相
 独立。
 
-其余章节（16–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（17–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
