@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Nineteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete; Part V has begun.**
+Twenty of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete; Part V is nearly done.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–19 | 01–19 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 words | 91,563 CJK characters, total |
-| Research notes | 19 | 19 |
+| Chapters | 01–20 | 01–20 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 words | 96,334 CJK characters, total |
+| Research notes | 20 | 20 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–19 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–20 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3201–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining two chapters (20–21) are outlined in [`README.md`](README.md) and
+The remaining chapter (21) is outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,36 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 20, *The Courage to Slow Down*
+
+The chapter about the thing that stops people having the experiences Ch. 19 argued for — which is not
+technology, but the optimisation reflex the rest of the book spent fourteen chapters installing. Both
+editions and notes:
+
+- `chapters/en/ch20-the-courage-to-slow-down.md` (3292 words, `draft`)
+- `chapters/zh/ch20-the-courage-to-slow-down.md` (translation)
+- `chapters/en/research/ch20-notes.md` — 5 sources kept, 8 rejected (English)
+- `chapters/zh/research/ch20-notes.md` — the same notes, translated
+
+**The chapter opens on a body count rather than a sentiment.** WHO and the ILO estimated that long working
+hours caused 745,000 deaths from stroke and heart disease in 2016, a 29% rise since 2000, with 55+ hour
+weeks carrying a 35% higher stroke risk. It also reports the finding that reframes the whole trade —
+time poverty having a stronger negative effect on well-being than unemployment in an analysis of 2.5
+million Americans — while flagging in the same breath that the paper is a Perspective and the design is
+cross-sectional.
+
+**It corrects the money advice rather than repeating it.** The "$75,000 and happiness flattens" rule has
+been superseded by an adversarial collaboration between Kahneman and Killingsworth: the plateau is real
+but restricted to the least happy 20%, and for everyone else happiness keeps rising with income. The
+chapter reports the resolution because the folk version is routinely used to justify advice the data does
+not support.
+
+**And one finding stops it becoming a rest-and-you-will-be-fine essay.** The vacation literature shows
+benefits peaking around day eight and returning to baseline within a week of going back to work — which
+means the answer cannot be more time off, and has to be a structural change. That is also why the chapter
+argues the tools will not fix this either, quoting the WHO's own observation that remote work "blurred the
+boundaries between home and work" and that those still employed ended up working longer hours.
 
 ### Added — Ch. 19, *The Last Fortress of Being Human: Body, Nature, Art*, opening Part V
 
