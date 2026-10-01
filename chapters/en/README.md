@@ -80,7 +80,7 @@ The skills layer. Chapters 10–13 build the capability; 14 is the decision to u
 
 | # | Chapter | File | Status |
 |---|---------|------|--------|
-| 19 | The Last Fortress of Being Human: Body, Nature, Art | `ch19-the-last-fortress-of-being-human-body-nature-art.md` | Planned |
+| 19 | The Last Fortress of Being Human: Body, Nature, Art | [ch19-the-last-fortress-of-being-human-body-nature-art.md](ch19-the-last-fortress-of-being-human-body-nature-art.md) | Draft |
 | 20 | The Courage to Slow Down | `ch20-the-courage-to-slow-down.md` | Planned |
 | 21 | Designing the Life You Actually Want | `ch21-designing-the-life-you-actually-want.md` | Planned |
 
