@@ -17,7 +17,7 @@ reviewed, not fact-checked, not to be quoted. **All five parts are complete.**
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–21 | 01–21 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 / 3440 words | 101,383 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3298 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 / 3440 words | 101,383 CJK characters, total |
 | Research notes | 21 | 21 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -562,7 +562,7 @@ alone for a translation.
 The third of the Part II advice arc, and the one covering the third way of earning: selling yourself
 into other people's problems. Both editions and the research notes:
 
-- `chapters/en/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` (3300 words, `draft`)
+- `chapters/en/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` (3298 words, `draft`)
 - `chapters/zh/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` (translation)
 - `chapters/en/research/ch07-notes.md` — 13 sources kept, 12 rejected (English)
 - `chapters/zh/research/ch07-notes.md` — the same notes, translated
