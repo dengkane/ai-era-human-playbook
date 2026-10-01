@@ -24,12 +24,13 @@
 | 08 | 学生——在AI时代选一条路 | [ch08-the-student-choosing-a-path-in-the-age-of-ai.md](ch08-the-student-choosing-a-path-in-the-age-of-ai.md) | 草稿 | 已按规范撰写 |
 | 09 | 中途换赛道的人——你的判断力就是资产 | [ch09-the-mid-career-switcher-your-judgment-is-the-asset.md](ch09-the-mid-career-switcher-your-judgment-is-the-asset.md) | 草稿 | 已按规范撰写 |
 | 10 | 找到你和AI各自该站的位置 | [ch10-finding-your-human-ai-collaboration-point.md](ch10-finding-your-human-ai-collaboration-point.md) | 草稿 | 已按规范撰写 |
+| 11 | 上下文工程（不只是写提示词） | [ch11-context-engineering-beyond-prompt-writing.md](ch11-context-engineering-beyond-prompt-writing.md) | 草稿 | 已按规范撰写 |
 
 「译文」列记录的是这一章的中文**表达**有没有按[翻译约定](#翻译约定)重做过一遍——它和「状态」是两回事：
 状态管的是审校和事实核查，译文管的是读起来像不像中文原创。重写不改动事实、标记和结构，所以两列互相
 独立。
 
-其余章节（11–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（12–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
