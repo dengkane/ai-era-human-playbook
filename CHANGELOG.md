@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Eighteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete.**
+Nineteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete; Part V has begun.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–18 | 01–18 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 words | 86,810 CJK characters, total |
-| Research notes | 18 | 18 |
+| Chapters | 01–19 | 01–19 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 words | 91,563 CJK characters, total |
+| Research notes | 19 | 19 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–18 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3301–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+Ch. 08–19 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3201–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining three chapters (19–21) are outlined in [`README.md`](README.md) and
+The remaining two chapters (20–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,37 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 19, *The Last Fortress of Being Human: Body, Nature, Art*, opening Part V
+
+The boundary with Ch. 16 is the whole point of this chapter: Ch. 16 owns making things *with* the machine
+in the loop, and this one owns experience defined by the machine's *absence* — the class of experience
+where mediation itself is the loss. Both editions and notes:
+
+- `chapters/en/ch19-the-last-fortress-of-being-human-body-nature-art.md` (3201 words, `draft`)
+- `chapters/zh/ch19-the-last-fortress-of-being-human-body-nature-art.md` (translation)
+- `chapters/en/research/ch19-notes.md` — 5 sources kept, 8 rejected (English)
+- `chapters/zh/research/ch19-notes.md` — the same notes, translated
+
+**The chapter is built on an almost lab-clean result.** Participants walked for 15 minutes indoors and
+outdoors; only the outdoor walk produced improved performance and increased P300 amplitude, and the
+authors conclude the environment may matter *more than the exercise itself*. Same duration, same
+activity, same body — the only variable was the room. The arts evidence runs the same way at scale: a
+14-year follow-up of 6,710 adults found a 31% lower mortality risk for frequent arts engagement, and a
+2026 study found weekly engagement linked to ~4% slower biological ageing, comparable to weekly exercise.
+
+Two things this chapter does deliberately. It gives the body its own section, because the habit of
+treating it as transport is what makes people expect an informational substitute to work — the
+codified/tacit split from Ch. 05 pushed to the point where the tacit end is *absolute*. And it argues
+that this gets *harder* rather than easier in an AI era, because the evaluation reflex the rest of the
+book installs is exactly the wrong habit to bring to a forest.
+
+**One source could not be opened and is prominent enough to flag.** A global analysis of 3,800+ studies
+covering over 10 million people found nature contact reduces anxiety and depression — the citation this
+chapter most wants. `nature.com` returns a JavaScript challenge and no open-access mirror was found, so
+it sits in the notes as rejected and is recorded as the first thing a revision should open. The chapter's
+own evidence is also flagged as overwhelmingly observational, with the one experimental result resting
+on 30 participants.
 
 ### Added — Ch. 18, *Rebuilding Meaning*, completing Part IV
 
