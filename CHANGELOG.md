@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Seventeen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted. **Part III is complete; Part IV has begun.**
+Eighteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted. **Parts III and IV are complete.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–17 | 01–17 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 words | 81,846 CJK characters, total |
-| Research notes | 17 | 17 |
+| Chapters | 01–18 | 01–18 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 words | 86,810 CJK characters, total |
+| Research notes | 18 | 18 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–17 are the chapters written to the raised ~3500-word target rather than under it, which is why
+Ch. 08–18 are the chapters written to the raised ~3500-word target rather than under it, which is why
 they run 3301–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining four chapters (18–21) are outlined in [`README.md`](README.md) and
+The remaining three chapters (19–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,38 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 18, *Rebuilding Meaning*, completing Part IV
+
+The chapter that had to turn an unfalsifiable-sounding topic into a measured one, and got lucky: the
+research contains an experiment that is almost too useful. Both editions and notes:
+
+- `chapters/en/ch18-rebuilding-meaning.md` (3470 words, `draft`)
+- `chapters/zh/ch18-rebuilding-meaning.md` (translation)
+- `chapters/en/research/ch18-notes.md` — 5 sources kept, 8 rejected (English)
+- `chapters/zh/research/ch18-notes.md` — the same notes, translated
+
+**The spine is a field experiment about the meaning of work.** 140 workers did a half-day task and were
+randomly told either that it still mattered, that the project was cancelled and it was now pointless, or
+that it had turned out to serve a *different* purpose nobody had mentioned. The "pointless" group put in
+markedly less subsequent effort. The alternative-meaning group recovered **completely** — and the
+authors' conclusion is the chapter's thesis: it did not matter that the original meaning was lost; what
+counted was that the work had had a meaning at all.
+
+That turns "rebuilding meaning" into something mechanical rather than romantic: you do not restore the
+old structure, you establish that there is one.
+
+Two surveys frame it. Pew's 17-economy study of ~19,000 adults gives the actual distribution of meaning
+sources — family first at a median of 38%, with South Korea, Spain and Taiwan as real exceptions to that
+— and Pew's 2026 36-country survey gives the stakes: in 34 of 37 publics people expect AI to mean fewer
+jobs, and US concern among 18–34s rose from 40% to 55% in two years. A purpose-and-mortality study
+(15.2% vs 36.5% over eight years) and the Harvard Study of Adult Development supply the health side.
+
+**Two of the five citations are institutional reports of primary research, and the notes say so.** The
+meaning experiment is cited through the LSE Business Review post written by its own authors, and the
+purpose–mortality work through Boston University's write-up, because both original papers were paywalled
+or blocked. Neither is presented as primary. The purpose–mortality finding is also explicitly flagged as
+observational rather than causal.
 
 ### Added — Ch. 17, *Relationships & Community in a Digital World*
 
