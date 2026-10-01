@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Nine of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+Ten of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
 not reviewed, not fact-checked, not to be quoted.
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–09 | 01–09 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 words | 40,835 CJK characters, total |
-| Research notes | 9 | 9 |
+| Chapters | 01–10 | 01–10 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 words | 45,991 CJK characters, total |
+| Research notes | 10 | 10 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08 and Ch. 09 are the first chapters written to the raised ~3500-word target rather than under it,
-which is why they run 3855–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there:
-each carries three arguments where Ch. 05–07 carry two, which is what the target is for.
+Ch. 08–10 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3599–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining twelve chapters (10–21) are outlined in [`README.md`](README.md) and
+The remaining eleven chapters (11–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -38,38 +38,38 @@ weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, 
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
 
-### Added — Ch. 08, *The Student — Choosing a Path in the Age of AI*
+### Added — Ch. 10, *Finding Your Human-AI Collaboration Point*
 
-The first of the two chapters written for people who have not started yet, and the first to hit the
-raised ~3500-word target. Both editions and the research notes:
+The first chapter of Part III and the hinge of the book: Parts I–II established where the boundary sits
+and where the reader stands; this one is about the reader's own boundary. Both editions and the notes:
 
-- `chapters/en/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (3928 words, `draft`)
-- `chapters/zh/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (translation)
-- `chapters/en/research/ch08-notes.md` — 10 sources kept, 11 rejected (English)
-- `chapters/zh/research/ch08-notes.md` — the same notes, translated
+- `chapters/en/ch10-finding-your-human-ai-collaboration-point.md` (3599 words, `draft`)
+- `chapters/zh/ch10-finding-your-human-ai-collaboration-point.md` (translation)
+- `chapters/en/research/ch10-notes.md` — 6 sources kept, 11 rejected (English)
+- `chapters/zh/research/ch10-notes.md` — the same notes, translated
 
-Scope is held to the line `chapters/en/README.md` draws: *which way should I go*. Ch. 09 handles the
-same decision for someone who already has a career; the operating skills are Ch. 10–13.
+Scope is held to the line the index draws: *the reader's own collaboration point*. The mechanics belong
+to Ch. 11, tool selection to Ch. 15 and Appendix A.
 
-**The research overturned the chapter twice, and both reversals are the chapter.** The first draft was
-"The entry-level job is disappearing." It is not: entry-level postings are down 7.5% year over year and
-still 46% of all postings. What the evidence supports is narrower — employment of 22-to-25-year-olds in
-the most AI-exposed occupations sits 19% below where it would be if it had tracked less-exposed peers,
-up from 15% a year earlier, and the adjustment runs through reduced *hiring* rather than separations.
+**The chapter is built on the jagged frontier, and every figure in it was opened and checked.** The BCG
+experiment (758 consultants; +12.2% tasks, 25.1% faster, 40% higher quality) and its mirror image — the
+deliberately outside-frontier task where AI users dropped to 60–70% against 84% without it — come from
+HBS Working Knowledge and from co-author Ethan Mollick's own write-up. METR supplies the time-horizon
+curve (near-100% under four minutes, under 10% beyond four hours) and the developer RCT (16 developers,
+246 issues, 19% slower while believing they were 20% faster). Anthropic's Economic Index supplies the
+52/45 augmentation split and the deskilling-versus-upskilling analysis.
 
-The second reversal matters more. The Stanford paper everyone quotes does not claim causation, says so
-in its own abstract, and the New York Fed's competing finding — remote work explains 64% of the rise in
-young-graduate unemployment — is stronger on timing. The chapter reports both and refuses to pick a
-winner, because the number has already been revised once (13% → 15% → 19%).
+Three citations are worth flagging. HBS Working Knowledge is marked **secondary** in the notes — it is a
+journalist's account written with the authors, and the notes say so rather than inflating it; Mollick's
+post is the primary account by a co-author, and it carries the 84% → 60–70% figure. The arXiv
+homogeneity paper (Wenger & Kenett) is cited instead of the widely-linked single-model studies because
+it rules out "it was just GPT". And the strongest counterweight — Cui, Demirer et al.'s three Copilot
+RCTs — is named in the chapter's caveats *as evidence that could not be opened*, with the reason.
 
-Two sources were on topic and could not be used: Ars Technica's counterweight piece and the EPI's
-`Class of 2026` analysis, both blocked at 403. Their figures exist only in search snippets, and a
-snippet is not a source — they are recorded in the notes as rejected with that reason, alongside the
-trade-school "47% out-earn graduates" claim that traces to nothing.
-
-The chapter's advice was also rebuilt. "Choose a major AI can't do" is Ch. 03's argument applied badly —
-uncheckable at eighteen, and stale by graduation. It is replaced by three questions the reader can run
-on any path this week, each tied to a mechanism in the evidence, each with a stated tell.
+One rejected source is instructive: the MIT Sloan SSRN export of the jagged-frontier paper is a
+scan-style PDF whose text does not extract, so the two readable accounts are cited and the PDF is
+recorded as rejected. The chapter deliberately contains no number a reader is meant to copy down and
+keep, because METR now marks its own headline figures as stale inside a year.
 
 ### Added — Ch. 09, *The Mid-Career Switcher — Your Judgment Is the Asset*
 
@@ -105,7 +105,40 @@ employer-linked training versus generic courses. The IMF blog and the FRBSF age-
 both blocked or unrenderable; the Wharton/PRC version by the same IMF authors and the Harvard Gender
 Action Portal summary of Lahey (2008) are cited instead.
 
+### Added — Ch. 08, *The Student — Choosing a Path in the Age of AI*
 
+The first of the two chapters written for people who have not started yet, and the first to hit the
+raised ~3500-word target. Both editions and the research notes:
+
+- `chapters/en/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (3928 words, `draft`)
+- `chapters/zh/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` (translation)
+- `chapters/en/research/ch08-notes.md` — 10 sources kept, 11 rejected (English)
+- `chapters/zh/research/ch08-notes.md` — the same notes, translated
+
+Scope is held to the line `chapters/en/README.md` draws: *which way should I go*. Ch. 09 handles the
+same decision for someone who already has a career; the operating skills are Ch. 10–13.
+
+**The research overturned the chapter twice, and both reversals are the chapter.** The first draft was
+"The entry-level job is disappearing." It is not: entry-level postings are down 7.5% year over year and
+still 46% of all postings. What the evidence supports is narrower — employment of 22-to-25-year-olds in
+the most AI-exposed occupations sits 19% below where it would be if it had tracked less-exposed peers,
+up from 15% a year earlier, and the adjustment runs through reduced *hiring* rather than separations.
+
+The second reversal matters more. The Stanford paper everyone quotes does not claim causation, says so
+in its own abstract, and the New York Fed's competing finding — remote work explains 64% of the rise in
+young-graduate unemployment — is stronger on timing. The chapter reports both and refuses to pick a
+winner, because the number has already been revised once (13% → 15% → 19%).
+
+Two sources were on topic and could not be used: Ars Technica's counterweight piece and the EPI's
+`Class of 2026` analysis, both blocked at 403. Their figures exist only in search snippets, and a
+snippet is not a source — they are recorded in the notes as rejected with that reason, alongside the
+trade-school "47% out-earn graduates" claim that traces to nothing.
+
+The chapter's advice was also rebuilt. "Choose a major AI can't do" is Ch. 03's argument applied badly —
+uncheckable at eighteen, and stale by graduation. It is replaced by three questions the reader can run
+on any path this week, each tied to a mechanism in the evidence, each with a stated tell.
+
+### Changed — length rules raised to ~3500 words
 
 The rules and the linter now target **~3500 words of body**, up from ~2500, with the warning band moved
 from 2000–3500 to **2500–4500** and the body-section spec from 700–900 to **900–1200 words**.
