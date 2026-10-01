@@ -11,25 +11,25 @@ and this project uses date-based versioning (YYYY.MM).
 
 ### Current state
 
-Fourteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
-not reviewed, not fact-checked, not to be quoted.
+Fifteen of the twenty-one chapters are written, each in English and Chinese. Everything is `draft`:
+not reviewed, not fact-checked, not to be quoted. **Part III is complete.**
 
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
-| Chapters | 01–14 | 01–14 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 words | 66,961 CJK characters, total |
-| Research notes | 14 | 14 |
+| Chapters | 01–15 | 01–15 |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3300 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 words | 71,976 CJK characters, total |
+| Research notes | 15 | 15 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
 ¹ Two warnings per chapter, both artefacts of counting whitespace-separated words in a language that
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–14 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3442–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
+Ch. 08–15 are the chapters written to the raised ~3500-word target rather than under it, which is why
+they run 3301–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
 three arguments where Ch. 05–07 carry two, which is what the target is for.
 
-The remaining seven chapters (15–21) are outlined in [`README.md`](README.md) and
+The remaining six chapters (16–21) are outlined in [`README.md`](README.md) and
 [`chapters/en/README.md`](chapters/en/README.md) but not written.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
@@ -37,6 +37,39 @@ existed.** The notes were rebuilt afterwards by opening all thirteen cited sourc
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Added — Ch. 15, *Judging AI Tools for Yourself*, completing Part III
+
+The chapter that keeps a promise the book has to keep: its appendix lists tools, and that list will be
+partly wrong by the time anyone reads it. So this chapter teaches the reader to evaluate a tool on their
+own work instead. Both editions and notes:
+
+- `chapters/en/ch15-judging-ai-tools-for-yourself.md` (3301 words, `draft`)
+- `chapters/zh/ch15-judging-ai-tools-for-yourself.md` (translation)
+- `chapters/en/research/ch15-notes.md` — 5 sources kept, 9 rejected (English)
+- `chapters/zh/research/ch15-notes.md` — the same notes, translated
+
+**The case against trusting public rankings turned out to be well-evidenced rather than merely prudent.**
+Four independent findings stack up: Chatbot Arena has documented structural distortions (undisclosed
+private testing, providers retracting scores, 27 private Llama-4 variants, two providers taking ~19–20%
+of all arena data against 29.7% for 83 open models); public benchmarks leak into training data;
+automated judging inherits a measurable self-preference bias driven by familiarity; and on MIT's data,
+95% of enterprise generative-AI pilots produced no measurable return because the failure is integration,
+not model quality.
+
+Together they say something more useful than "evaluation is hard": the only evaluation that is both
+cheap and trustworthy is one you build from your own work — which cannot be contaminated, cannot be
+gamed, and measures the thing you actually care about. The chapter's method comes from the 5 D's
+framework (defined scope, demonstrative of production usage, diverse, decontaminated, dynamic).
+
+**Two sources could not be opened and the chapter says so.** RAND's widely-cited "more than 80% of AI
+projects fail" returns 403 on both its landing page and its PDF, so it is recorded as rejected rather
+than folded in. And the MIT NANDA report's own PDF does not extract, so the 95% figure is cited via
+Fortune's write-up with the **secondary** status stated and the origin (150 interviews, 350 surveys, 300
+deployments) carried across. Neither is used to carry a claim the chapter cannot otherwise support.
+
+The chapter also deliberately contains no leaderboard, no model comparison table and no tool
+recommendation — printing any of them would undercut the argument that they mislead.
 
 ### Added — Ch. 14, *From "Employed" to "Self-Employed"*
 
