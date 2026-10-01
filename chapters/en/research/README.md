@@ -72,6 +72,7 @@ Same number as the chapter. Never renamed — see the immutability rule in the c
 | [ch17-notes.md](ch17-notes.md) | 17 — Relationships & Community in a Digital World | 5 kept / 9 rejected | Complete |
 | [ch18-notes.md](ch18-notes.md) | 18 — Rebuilding Meaning | 5 kept / 8 rejected | Complete |
 | [ch19-notes.md](ch19-notes.md) | 19 — The Last Fortress of Being Human | 5 kept / 8 rejected | Complete |
+| [ch20-notes.md](ch20-notes.md) | 20 — The Courage to Slow Down | 5 kept / 8 rejected | Complete |
 
 ¹ Ch. 07's chapter was drafted before its notes existed, and the notes were rebuilt afterwards by
 re-opening every cited source. The file records that history rather than hiding it. See its framing
