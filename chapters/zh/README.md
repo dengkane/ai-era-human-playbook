@@ -32,12 +32,13 @@
 | 16 | 当AI能生成一切，创造力是什么 | [ch16-creativity-when-ai-can-generate-everything.md](ch16-creativity-when-ai-can-generate-everything.md) | 草稿 | 已按规范撰写 |
 | 17 | 数字世界里的关系与社区 | [ch17-relationships-and-community-in-a-digital-world.md](ch17-relationships-and-community-in-a-digital-world.md) | 草稿 | 已按规范撰写 |
 | 18 | 重建意义 | [ch18-rebuilding-meaning.md](ch18-rebuilding-meaning.md) | 草稿 | 已按规范撰写 |
+| 19 | 作为人最后的堡垒：身体、自然、艺术 | [ch19-the-last-fortress-of-being-human-body-nature-art.md](ch19-the-last-fortress-of-being-human-body-nature-art.md) | 草稿 | 已按规范撰写 |
 
 「译文」列记录的是这一章的中文**表达**有没有按[翻译约定](#翻译约定)重做过一遍——它和「状态」是两回事：
 状态管的是审校和事实核查，译文管的是读起来像不像中文原创。重写不改动事实、标记和结构，所以两列互相
 独立。
 
-其余章节（19–21）尚未写出，见[英文版索引](../en/README.md)。
+其余章节（20–21）尚未写出，见[英文版索引](../en/README.md)。
 
 ## 状态图例
 
