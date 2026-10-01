@@ -34,6 +34,30 @@ weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, 
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
 
+### Changed — length rules raised to ~3500 words
+
+The rules and the linter now target **~3500 words of body**, up from ~2500, with the warning band moved
+from 2000–3500 to **2500–4500** and the body-section spec from 700–900 to **900–1200 words**.
+
+- `scripts/check-chapter.sh` — warns below 2500 or above 4500 words of body; the target line it prints
+  now reads `(target ~3500)`.
+- `AGENTS.md`, `WORKFLOW.md`, `chapters/en/README.md`, `CONTRIBUTING.md` — the target, the band, the
+  section range, and the book arithmetic (21 chapters × 3500 = ~73,000 words, was ~52,000), in the
+  places each of them states it.
+- `templates/chapter-template.md` — `word_target: 3500`, the section guidance, and the `LENGTH` note,
+  which now argues from the middle of the 2,500–5,000 convention rather than from its low end.
+
+**No completed chapter was touched.** Ch. 01–07 keep their bodies and their front matter as merged,
+including `word_target: 2500` on Ch. 01–06, which no longer matches the template's number. That is
+deliberate and it happens to be safe: the linter only flags a declared `word_target` that is more than
+400 words from the body, and every chapter's declared value is within that of its own text. All seven
+still lint at **0 errors, 0 warnings** under the new band.
+
+The open question this leaves is the one worth writing down: Ch. 01–06 run 2554–2900 words, i.e. below
+the new target, and nothing will flag them. They are legal, not wrong — the band starts at 2500 and the
+project's position is that length follows from the number of arguments a chapter carries — but a reader
+comparing the index to the new standard will notice the drift faster than any check will.
+
 ### Added — Ch. 07, *The Freelancer — From Selling Skills to Selling Personality*
 
 The third of the Part II advice arc, and the one covering the third way of earning: selling yourself

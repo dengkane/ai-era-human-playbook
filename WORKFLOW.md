@@ -128,14 +128,14 @@ The linter requires these fields: `chapter`, `title`, `part`, `status`, `languag
 
 `status` is one of `planned` / `draft` / `review` / `stable`.
 
-Also fill in `word_target` (use `2500`) and `tags`. The linter cross-checks `word_target` against the
+Also fill in `word_target` (use `3500`) and `tags`. The linter cross-checks `word_target` against the
 actual body length and warns if they are more than 400 words apart — which is how the mismatch in
 Ch. 01 and Ch. 02 was caught.
 
-Target **~2500 words of body**, which is the low end of the 2,500–5,000-word range non-fiction
-chapters normally run. Twenty-one chapters at 2500 is a 52,000-word book.
+Target **~3500 words of body**, inside the 2,500–5,000-word range non-fiction chapters normally run.
+Twenty-one chapters at 3500 is a 73,000-word book.
 
-- two or three body sections of roughly 700–900 words each, each with its own argument and example;
+- two or three body sections of roughly 900–1200 words each, each with its own argument and example;
 - **named after their arguments**, not "Section 2";
 - finishes with `## The honest caveats` and `## Do this today`.
 
@@ -168,8 +168,8 @@ modes in Ch. 01 and Ch. 02 that made this rule necessary.
 ```
 
 Errors block publishing. Warnings are judgement calls. The check covers filename, front matter,
-footer markers, leftover scaffolding, `TODO` markers, source markers, and length (warns below 2000
-or above 3500 words of body, and flags a gap over 400 words between the body and the declared
+footer markers, leftover scaffolding, `TODO` markers, source markers, and length (warns below 2500
+or above 4500 words of body, and flags a gap over 400 words between the body and the declared
 `word_target`).
 
 Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any

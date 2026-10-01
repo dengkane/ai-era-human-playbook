@@ -134,11 +134,11 @@ ch<NN>-<kebab-case-slug>.md
 
 Pulled from [CONTRIBUTING.md](../../CONTRIBUTING.md) — the short version:
 
-- **Length: ~2500 words.** Low end of the non-fiction convention (2,500–5,000
-  words per chapter), and what makes 21 chapters add up to a ~52,000-word book.
-  `check-chapter.sh` warns below 2000 and above 3500.
+- **Length: ~3500 words.** Inside the non-fiction convention (2,500–5,000
+  words per chapter), and what makes 21 chapters add up to a ~73,000-word book.
+  `check-chapter.sh` warns below 2500 and above 4500.
 - **Structure:** an opening that makes the reader feel the problem, then **two or three body sections
-  of roughly 700–900 words each**, named after their arguments, not their position. Each section
+  of roughly 900–1200 words each**, named after their arguments, not their position. Each section
   carries its own argument and its own example — two sections making the same point is one section.
 - **Tone:** professional but conversational, like a smart friend explaining something.
 - **No fluff.** No "with the development of AI" openings, no filler paragraphs, no restating the heading.

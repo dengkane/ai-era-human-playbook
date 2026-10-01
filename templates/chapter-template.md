@@ -8,7 +8,7 @@ created: YYYY-MM-DD
 last_updated: YYYY-MM-DD
 assisted_by: "DeepSeek + Reasonix"
 edited_by: "Ken Deng"
-word_target: 2500
+word_target: 3500
 tags: []
 ---
 
@@ -17,10 +17,10 @@ tags: []
   Delete every HTML comment (including this one) before opening the PR.
   See WORKFLOW.md for the drafting → review → publish flow.
 
-  Target length: ~2500 words. That is the low end of what non-fiction
-  chapters normally run (2,500–5,000), and it is what makes 21 chapters add
-  up to a book rather than a pamphlet. See "Length" at the bottom of this
-  file for the arithmetic.
+  Target length: ~3500 words, inside the middle of what non-fiction chapters
+  normally run (2,500–5,000), and it is what makes 21 chapters add up to a book
+  rather than a pamphlet. See "Length" at the bottom of this file for the
+  arithmetic.
 
   This comment sits AFTER the front matter on purpose. check-chapter.sh
   requires the file to start with '---', so anything above it breaks the
@@ -52,7 +52,7 @@ tags: []
 ## <Body section — name it after the idea, not "Section 2">
 
 <!--
-  TWO OR THREE body sections, each roughly 700–900 words. Every section carries
+  TWO OR THREE body sections, each roughly 900–1200 words. Every section carries
   its own argument and its own example. If two sections are making the same
   point, that is one section, not two.
 
@@ -140,21 +140,22 @@ tags: []
 ---
 
 <!--
-  LENGTH — why ~2500 words
+  LENGTH — why ~3500 words
 
   Non-fiction chapters normally run 2,500–5,000 words, averaging around
-  4,000. 2500 sits at the low end of that convention, not below it. At roughly
-  230 words a minute, it is a ten-minute read.
+  4,000. 3500 sits in the middle of that convention. At roughly 230 words a
+  minute, it is a fifteen-minute read.
 
   The other half of the reason is the book as a whole. Twenty-one chapters at
-  2500 words is 52,000 words — a real book, and one that can carry a price. At
-  1300 it would be 26,000, which is a long essay collection.
+  3500 words is 73,000 words — a real book, and one that can carry a price. At
+  2500 it would be 52,000, which is still a book, but a thin one for 21
+  distinct arguments.
 
   What not to do to reach the target: restate the heading, open with "with the
   development of AI", or pad the caveats. Length is not the goal. A chapter
   carrying two or three distinct arguments, each with its own example and its
   own honest limits, lands here on its own. If you find yourself stretching a
-  single idea to 2500 words, the chapter is missing an argument, not words.
+  single idea to 3500 words, the chapter is missing an argument, not words.
 
-  check-chapter.sh warns below 2000 and above 3500 words of body text.
+  check-chapter.sh warns below 2500 and above 4500 words of body text.
 -->

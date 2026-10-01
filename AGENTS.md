@@ -21,9 +21,9 @@ them.
 `scripts/check-chapter.sh` enforces these. Get them wrong and it fails, so they are the cheapest
 things to know up front.
 
-- **~2500 words of body.** Warns below 2000 or above 3500. That is the low end of the non-fiction
+- **~3500 words of body.** Warns below 2500 or above 4500. That is the middle of the non-fiction
   convention, and what makes 21 chapters a book rather than a pamphlet — not a target to pad to.
-- **Two or three body sections of 700–900 words**, named after their arguments ("A species, not a
+- **Two or three body sections of 900–1200 words**, named after their arguments ("A species, not a
   screwdriver"), never "Section 2".
 - **At least 5 independent sources per chapter.** Independent means separate origins, not one report
   reprinted five times.
