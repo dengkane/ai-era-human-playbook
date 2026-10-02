@@ -137,6 +137,30 @@ the deliberate ranking of lived experience third and weakest.
 Unchanged: all seven `verified` markers and their URLs verbatim, the same research notes, the same
 section structure, the same figures, and all three cross-references (Ch. 01, Ch. 02, Ch. 04).
 
+### Rewritten — Ch. 04, *Where Different People Actually Stand*
+
+The first chapter of Part II, rewritten to the new voice, in both editions.
+
+The chapter used to open by asking the reader to name an exposed job, then delivering the answer in the
+same paragraph. It now makes the guess explicit and holds it: "Before you read on, guess." The reader's
+instinct is the chapter's subject — the exposure map is upside down — so inviting the wrong guess first
+does work the old opening skipped.
+
+- `chapters/en/ch04-where-different-people-actually-stand.md` — English body 2951 words.
+- `chapters/zh/ch04-where-different-people-actually-stand.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+This is the densest chapter in the book for figures, and all of them are unchanged: observed-exposure
+coverage (programmer 75%, customer service, data entry keyer 67%, 30% at zero), the 47% pay gap, the
+Census 56% and its 46%/15% education split, the 14% hiring fall, the Dallas Fed employment and wage
+figures, the experience-premium regression, Stanford's 19% gap, and Klarna's 2.3 million conversations.
+The four positions keep their `###` subsections, their *what it is / what the data shows / the tell*
+shape, and their order.
+
+Unchanged: all ten `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all the cross-references (Ch. 02, Ch. 03, Ch. 05–07, Ch. 08–09, plus the
+two data sources linked in Further reading).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
