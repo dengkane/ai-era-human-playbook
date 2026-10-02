@@ -458,6 +458,30 @@ three linked papers).
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–15.
 
+### Rewritten — Ch. 17, *Relationships & Community in a Digital World*
+
+The relationships chapter of Part IV, rewritten to the new voice in both editions.
+
+The chapter used to open by reporting the survey's rates and then explaining the contradiction. It now
+stages the contradiction as a sequence — 27% have AI interactions, 31% call it a friend, 59% feel supported,
+and then 59% would still rather talk to a person — before naming why the honest chapter is neither loud
+position. The same-people-holding-both-ideas beat is the chapter's hinge, so the opening now builds to it.
+
+- `chapters/en/ch17-relationships-and-community-in-a-digital-world.md` — English body 3358 words.
+- `chapters/zh/ch17-relationships-and-community-in-a-digital-world.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+Every figure is unchanged: the 148-study / 308,849-person meta-analysis and its OR 1.50, the 1.91-versus-1.19
+integration gap, the 1,131-person companion study, the 981-person randomised trial, and the 9,791 survey /
+411-person face-to-face study. The three community properties, the supplement-versus-substitute framing, and
+the three tests keep their structure and order.
+
+Unchanged: all thirteen `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 13, Ch. 16, Ch. 19, plus the three linked
+papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–16.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
