@@ -88,10 +88,34 @@ to get there.
 
 What did not move, in either edition: all five `<!-- verified -->` markers, their URLs verbatim, the
 same research notes, the same section structure, and the same arguments. This is a change of voice, not
-of claims. The remaining twenty chapters are unchanged and keep their existing text.
+of claims.
 
 Because Ch. 01 is now 2,554 words against a declared `word_target` of 2600, the 400-word gap warning the
 linter raises for the other chapters does not fire for it.
+
+The remaining twenty chapters are being rewritten to the same standard one at a time, each in its own
+draft PR, and each entry below records what that chapter looked like before and after.
+
+### Rewritten — Ch. 02, *You're Anxious Because You're Using an Old Map*
+
+The second chapter rewritten to the new voice, in both editions.
+
+The chapter used to open on the abstraction — "A map is not the territory" — and reach the human case
+three paragraphs later. It now opens on the person: the teenager told to learn to code in 2016, and
+where she was ten years on. The "learn to code" argument, the New York Fed chart and its unusable
+confidence interval, and the Stanford payroll study all remain, in the same order, with the same
+figures and the same five `verified` markers.
+
+- `chapters/en/ch02-youre-anxious-because-youre-using-an-old-map.md` — English body 2554 → 2832 words.
+- `chapters/zh/ch02-youre-anxious-because-youre-using-an-old-map.md` — Chinese body, rewritten as
+  native Chinese rather than word for word.
+
+The three stale maps (career ladder, skill stack, credential) keep their `###` subsections and their
+*model / why it's failing / the tell* shape, because that structure is doing real work. What changed is
+the front: a scene, then the argument, instead of the argument alone.
+
+Unchanged: all five `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and both cross-references (Ch. 01 and Ch. 03).
 
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
