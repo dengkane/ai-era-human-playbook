@@ -305,6 +305,33 @@ Unchanged: all sixteen `verified` markers and their URLs verbatim, the same rese
 section structure, the same figures, and all four cross-references (Ch. 03, Ch. 11, Ch. 15, plus
 Appendix A).
 
+### Rewritten — Ch. 11, *Context Engineering (Beyond Prompt Writing)*
+
+The first technical chapter of Part III, rewritten to the new voice in both editions.
+
+The chapter used to open on a description of the experiment. It now opens with the instruction for
+running it — *here is an experiment you have probably run without noticing* — and lands "It usually gets
+worse" as a one-line paragraph. That reversal is the chapter's premise, so the opening now makes the
+reader picture doing it before explaining why it fails.
+
+- `chapters/en/ch11-context-engineering-beyond-prompt-writing.md` — English body 3563 words.
+- `chapters/zh/ch11-context-engineering-beyond-prompt-writing.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+This is the first chapter with technical identifiers, and they are carried across untranslated as the
+translation standard requires: `token`, `misc`, `transformer`, and the tool names (`Chroma`, `Liu`, `Shi`,
+`Philipp Schmid`, `Anthropic`). All twelve source URLs and the chapter's structure survive intact.
+
+Every figure is unchanged: the eighteen models Chroma tested, Liu's beginning-or-end result, Shi's
+distractor finding, and the four-move method with its summary table and worked contract example.
+
+Unchanged: all twelve `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all six cross-references (Ch. 03, Ch. 10, Ch. 15, plus the three
+linked papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch.
+08–10.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
