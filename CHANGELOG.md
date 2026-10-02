@@ -185,6 +185,27 @@ Unchanged: all twelve `verified` markers and their URLs verbatim, the same resea
 section structure, the same figures, and all five cross-references (Ch. 03, Ch. 04, Ch. 06–07, Ch.
 08–09, Ch. 13).
 
+### Rewritten — Ch. 06, *The Entrepreneur — Why Small Beats Big Now*
+
+The third chapter of Part II rewritten to the new voice, in both editions.
+
+The chapter used to open by stacking four figures into two dense sentences — the 531,728 applications,
+the 28,501 that become employers, and the framing of decisions-versus-constraints. It now leads with the
+single number and lets the reader sit in it, then delivers the contrast as its own line. That pair is the
+chapter's whole argument in miniature, so the opening gives it room instead of burying it.
+
+- `chapters/en/ch06-the-entrepreneur-why-small-beats-big-now.md` — English body 2843 words.
+- `chapters/zh/ch06-the-entrepreneur-why-small-beats-big-now.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+The Coase argument, the fixed-to-variable mechanism, and the section where the data refuses to cooperate
+keep their structure, their order, and their headings. Every figure is unchanged, including the ones
+that make the chapter honest: 18% adoption, the 66%/2% pair, the four-employee and 250-employee
+contrast, the U-shape that stopped holding, and the BIS count of 1,246 AI-producing firms.
+
+Unchanged: all nine `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all four cross-references (Ch. 05, Ch. 07, and Ch. 12 / Ch. 14).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
