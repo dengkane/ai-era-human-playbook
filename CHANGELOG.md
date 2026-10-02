@@ -508,6 +508,32 @@ This completes Part IV (Ch. 16–18) in the new voice, in both editions.
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–17.
 
+### Rewritten — Ch. 19, *The Last Fortress of Being Human: Body, Nature, Art*
+
+The opening chapter of Part V, rewritten to the new voice in both editions.
+
+The chapter used to open by reporting the walking experiment and its brain measure in one stretch. It now
+sets the scene first — two groups, fifteen minutes, one indoors — and then breaks the measurement into a
+line of its own. The room being the only variable is the chapter's whole premise, so the opening now lets
+that land.
+
+- `chapters/en/ch19-the-last-fortress-of-being-human-body-nature-art.md` — English body 3200 words.
+- `chapters/zh/ch19-the-last-fortress-of-being-human-body-nature-art.md` — Chinese body, rewritten as
+  native Chinese rather than word for word.
+
+Every figure is unchanged: the P300 walking result, the WHO reviews and their gold-standard caveat, the
+6,710-person / 14-year mortality study and its 14%/31% split, the 3,556-person epigenetic study and its 4%
+/ one-year figures, the 30-participant experimental core, and the unopened 3,800-study / 10-million-person
+review. The three properties and the scheduling consequences keep their structure and order.
+
+Unchanged: all fourteen `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all six cross-references (Ch. 03, Ch. 05, Ch. 10, Ch. 11, Ch. 12,
+Ch. 15, Ch. 16, Ch. 17, Ch. 20, plus the three linked sources).
+
+Ch. 20 and Ch. 21 are the last two chapters still to be rewritten.
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–18.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
