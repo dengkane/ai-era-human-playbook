@@ -408,6 +408,32 @@ the three linked papers).
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–13.
 
+### Rewritten — Ch. 15, *Judging AI Tools for Yourself*
+
+The final chapter of Part III, rewritten to the new voice in both editions.
+
+The chapter used to open by describing the appendix and its staleness in one long paragraph. It now opens
+on the admission as a single line — *it is partly wrong already* — then gives the reasons their own beats
+before naming itself as the reason the chapter exists. The self-undermining is the hook, so the opening now
+lands it cleanly.
+
+- `chapters/en/ch15-judging-ai-tools-for-yourself.md` — English body 3300 words.
+- `chapters/zh/ch15-judging-ai-tools-for-yourself.md` — Chinese body, rewritten as native Chinese rather
+  than word for word.
+
+Every figure is unchanged: the Chatbot Arena distortions (27 private variants, 19.2%/20.4%, 83 models at
+29.7%), the MIT adoption numbers (150 interviews, 350 surveys, 300 deployments, ~5% success, 67% vendor
+versus ~a third internal), the five-property framework, and the 68-page / 300-deployment provenance notes
+in the caveats. The five `###` sub-steps and the two method tables keep their structure and order.
+
+Unchanged: all eleven `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 06, Ch. 10, Ch. 11, Appendix A, plus the
+three linked papers).
+
+This completes Part III (Ch. 10–15) in the new voice, in both editions.
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–14.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
