@@ -384,6 +384,30 @@ linked papers).
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–12.
 
+### Rewritten — Ch. 14, *From "Employed" to "Self-Employed"*
+
+The transition chapter that closes Part III's run, rewritten to the new voice in both editions.
+
+The chapter used to open by describing "the story you have been told" in one sentence and then pivoting.
+It now stages that story as three short lines — hand in the notice, walk out, find clients — and lands the
+reversal as its own paragraph. The bad script is the chapter's foil, so the opening now plays it out
+before dismissing it.
+
+- `chapters/en/ch14-from-employed-to-self-employed.md` — English body 3440 words.
+- `chapters/zh/ch14-from-employed-to-self-employed.md` — Chinese body, rewritten as native Chinese rather
+  than word for word.
+
+Every figure is unchanged: the 33% staged-versus-leap finding, the 9.95 million / 5.9% self-employment
+base, the 25.7%-versus-8.1% insurance gap and its 18-point adjusted version, the $625-versus-$497 premium
+figures, the $1,299/$401 state range, and the 42%/58% German and Swedish hybrid-founder shares. The
+quit-versus-stage table and the three pre-commitment signals keep their structure and order.
+
+Unchanged: all nine `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all seven cross-references (Ch. 06, Ch. 09, Ch. 10, Ch. 12, Ch. 20, plus
+the three linked papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–13.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
