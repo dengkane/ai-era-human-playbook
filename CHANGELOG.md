@@ -17,7 +17,7 @@ reviewed, not fact-checked, not to be quoted. **All five parts are complete.**
 | | `chapters/en/` (source) | `chapters/zh/` (translation) |
 |---|---|---|
 | Chapters | 01–21 | 01–21 |
-| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3298 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 / 3440 words | 101,383 CJK characters, total |
+| Body length | 2554 / 2812 / 2550 / 2899 / 2900 / 2849 / 3298 / 3928 / 3855 / 3599 / 3568 / 3517 / 3598 / 3442 / 3301 / 3338 / 3359 / 3470 / 3201 / 3292 / 3440 words | 101,396 CJK characters, total² |
 | Research notes | 21 | 21 |
 | `check-chapter.sh` | 0 errors, 0 warnings | 0 errors, 2 warnings¹ |
 
@@ -25,18 +25,73 @@ reviewed, not fact-checked, not to be quoted. **All five parts are complete.**
 has no spaces: `body is short`, and the gap between that count and the declared `word_target`. Neither
 means the translation is short. See "Known limitation" below.
 
-Ch. 08–21 are the chapters written to the raised ~3500-word target rather than under it, which is why
-they run 3201–3928 words against Ch. 01–07's 2554–3300. Nothing was padded to get there: each carries
-three arguments where Ch. 05–07 carry two, which is what the target is for.
+² The previous figure was 101,383 by whatever counting rule produced it. Ch. 01 gained 13 characters of
+the kind that rule counts, so it carries forward as 101,396 rather than being silently recomputed under
+a different rule — re-counting the other twenty chapters to match a new method is a separate change.
 
-No chapter remains unwritten. Ch. 01–07 still run 2554–3300 against the raised target, and nothing flags
-them: that drift is described under "length rules raised to ~3500 words" below and is unchanged.
+Ch. 08–21 were written when the target was ~3500 words, which is why they run 3201–3928 against
+Ch. 01–07's 2554–3300. Nothing was padded: each carries three arguments where Ch. 05–07 carry two. The
+target has since become a band — see "writing style moved from argument to story" below.
 
 **One chapter breaks the rule `WORKFLOW.md` opens with: Ch. 07 was drafted before its research notes
 existed.** The notes were rebuilt afterwards by opening all thirteen cited sources again. That is a
 weaker guarantee than Ch. 01–06 carry — reconstruction can confirm a claim, but it cannot show the
 claim was shaped by the evidence — and the notes say so at the top rather than hiding it. See the Ch. 07
 entry below.
+
+### Changed — writing style moved from argument to story, and length became a band
+
+The chapters were accurate and a little dull. They argued *at* the reader — a claim, then evidence, then
+the next claim — which is a structure that reads well on paper and gets skimmed on a phone, which is
+where most of this book is read.
+
+The standard now leads with storytelling:
+
+- **Tell a story, don't make an argument.** Open inside a specific moment — a date, a number, a person.
+  Show the scene first, draw the lesson second.
+- **Short paragraphs**, two or three sentences, one idea each. A four-line paragraph gets skimmed; a
+  two-line one gets read.
+- **Make it visual.** Abstract arguments get pinned to an image the reader can hold — a rising floor, a
+  ladder with a rung pulled out, a map that stopped matching the ground.
+- **Plain words**, the way you would say it to a friend who is smart, busy, and not in your field.
+
+**Length is now 2,000–4,000 words** — a band, not a target. The old rule was "~3500 words", and it
+produced the failure it was meant to prevent: chapters restating their own headings to reach the number.
+The body-section spec also loses its word count: a section ends when its argument is finished, not at
+900–1200 words.
+
+**One new rule came out of the change, because storytelling introduces a risk the old voice did not.**
+A vivid scene reads as a true story. So a real, checkable scene carries a `verified` marker like any
+other claim, and an invented one is labelled in the sentence where the reader sees it — "Imagine you're
+a support lead at a 200-person company", never "Meet Sarah, a product manager…", which reads as
+reporting. There is no marker for an invented scene: a `verified` comment would be a lie and
+`unverified` is reserved for a real claim not yet checked. See
+[Invented scenes are labelled](chapters/en/README.md#invented-scenes-are-labelled).
+
+Changed:
+
+- `chapters/en/README.md` — the writing standard rewritten around storytelling; a new
+  **"Invented scenes are labelled"** section; the length and structure rules restated as a band.
+- `templates/chapter-template.md` — `word_target: 3000` (was `3500`), and the section guidance,
+  opening guidance, and `LENGTH` note rewritten to match.
+- `scripts/check-chapter.sh` — warns below 2000 or above 4000 words of body (was 2500 / 4500); the
+  length line now reads `(band 2000–4000)`.
+- `AGENTS.md`, `WORKFLOW.md`, `CONTRIBUTING.md` — the same rules, restated.
+- `chapters/zh/README.md` — a new **"写法：讲故事，不要讲道理"** section, plus the note that Chinese
+  and English need not match in length (Chinese carries more information per character, so a shorter
+  Chinese chapter is normal, not an abridgement).
+
+**One chapter is rewritten as the pilot for the new voice: Ch. 01, in both editions.** It is the
+chapter a reader meets first, so it is the one where the opening has to work. The English body came out
+at 2554 words and the Chinese at 3,849 characters — both inside the band, and neither padded or trimmed
+to get there.
+
+What did not move, in either edition: all five `<!-- verified -->` markers, their URLs verbatim, the
+same research notes, the same section structure, and the same arguments. This is a change of voice, not
+of claims. The remaining twenty chapters are unchanged and keep their existing text.
+
+Because Ch. 01 is now 2,554 words against a declared `word_target` of 2600, the 400-word gap warning the
+linter raises for the other chapters does not fire for it.
 
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 

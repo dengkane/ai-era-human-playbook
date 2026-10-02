@@ -22,10 +22,15 @@ them.
 `scripts/check-chapter.sh` enforces these. Get them wrong and it fails, so they are the cheapest
 things to know up front.
 
-- **~3500 words of body.** Warns below 2500 or above 4500. That is the middle of the non-fiction
-  convention, and what makes 21 chapters a book rather than a pamphlet — not a target to pad to.
-- **Two or three body sections of 900–1200 words**, named after their arguments ("A species, not a
-  screwdriver"), never "Section 2".
+- **2,000–4,000 words of body, as a band and not a target.** Warns outside that range, and flags a body
+  more than 400 words off the declared `word_target`. Length follows the argument; padding for a number
+  is the thing this rule replaced.
+- **Tell stories, not arguments.** Open inside a specific moment, then show first and explain second.
+  Short paragraphs, two or three sentences, one idea each. Name each of the two or three body sections
+  after its argument ("A species, not a screwdriver"), never "Section 2".
+- **An invented scene is labelled in the sentence** — "Imagine you're a support lead…", not "Meet
+  Sarah…". A real one gets a `verified` marker. See
+  [`chapters/en/README.md`](chapters/en/README.md#invented-scenes-are-labelled).
 - **At least 5 independent sources per chapter.** Independent means separate origins, not one report
   reprinted five times.
 - **Every source cited in a chapter must appear in its research notes**, and the notes' `sources_kept`

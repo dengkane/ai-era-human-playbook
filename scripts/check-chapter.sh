@@ -207,17 +207,17 @@ else
 fi
 
 # --- length -----------------------------------------------------------------
-# Target is ~3500 words of body, inside the 2,500–5,000 range non-fiction
-# chapters normally run. Warn below 2500 and above 4500 — the target is a
-# landing zone, not a quota (see the LENGTH note in templates/chapter-template.md).
+# A band, not a target: 2,000–4,000 words of body. Warn outside it — the length
+# of an argument is a consequence of the argument, and padding for a number is
+# how a chapter gets dull (see the LENGTH note in templates/chapter-template.md).
 words="$(wc -w < "$file" | tr -d ' ')"
 body_words="$(awk 'NR==1 && $0=="---"{inside=1;next} inside && $0=="---"{inside=0;next} !inside' "$file" | wc -w | tr -d ' ')"
 echo
-echo "  Length: $words words total, $body_words words of body (target ~3500)"
-if [[ "$body_words" -lt 2500 ]]; then
-  warn "body is short — under 2500 words is thin for a book chapter (target ~3500)"
-elif [[ "$body_words" -gt 4500 ]]; then
-  warn "body is long — over 4500 words, consider splitting or trimming"
+echo "  Length: $words words total, $body_words words of body (band 2000–4000)"
+if [[ "$body_words" -lt 2000 ]]; then
+  warn "body is short — under 2000 words, this is thin for a chapter making a real argument"
+elif [[ "$body_words" -gt 4000 ]]; then
+  warn "body is long — over 4000 words, consider splitting or trimming"
 fi
 
 # If the author declared a target, flag a large gap between declared and actual.

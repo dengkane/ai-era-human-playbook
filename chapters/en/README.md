@@ -132,28 +132,104 @@ ch<NN>-<kebab-case-slug>.md
 
 ## Writing standards
 
-Pulled from [CONTRIBUTING.md](../../CONTRIBUTING.md) — the short version:
+The short version is in [CONTRIBUTING.md](../../CONTRIBUTING.md). This is the version with the
+reasoning — and it changed after twenty-one chapters came out accurate and a little dull.
 
-- **Length: ~3500 words.** Inside the non-fiction convention (2,500–5,000
-  words per chapter), and what makes 21 chapters add up to a ~73,000-word book.
-  `check-chapter.sh` warns below 2500 and above 4500.
-- **Structure:** an opening that makes the reader feel the problem, then **two or three body sections
-  of roughly 900–1200 words each**, named after their arguments, not their position. Each section
-  carries its own argument and its own example — two sections making the same point is one section.
-- **Tone:** professional but conversational, like a smart friend explaining something.
-- **No fluff.** No "with the development of AI" openings, no filler paragraphs, no restating the heading.
-- **Concrete.** Specific tools, prices, dates, numbers. "A $20/month tool" beats "affordable AI solutions".
+The problem was never the subject. It was that they argued *at* the reader instead of showing them
+something first.
+
+### Tell a story, don't make an argument
+
+A reader on a phone gives a chapter about two seconds. A paragraph that opens with a claim asks them
+to accept a conclusion before they have any reason to care. A scene earns the next paragraph.
+
+**Don't:** "AI adoption has created significant uncertainty for knowledge workers."
+
+**Do:** "In March 2023, someone at Anthropic posted a job with a $175,000 floor and a title almost
+nobody had heard of. Two years later the title was gone. The people who held it had done nothing
+wrong."
+
+The second one has a date, a number, and a person in it — and it is still fully checkable. Concrete
+storytelling and sourced claims are not in tension. Vagueness is what a nervous writer reaches for,
+not what a clear one needs.
+
+Show the scene first, draw the lesson second. Once the reader has watched the thing happen, the
+sentence that explains it lands as a realisation instead of a lecture.
+
+### Short paragraphs, one idea each
+
+Two or three sentences, then a blank line. A four-line paragraph gets skimmed. A two-line paragraph
+gets read, because the reader can see the end of it.
+
+- One idea per paragraph. If you reach for "and also," that is two paragraphs.
+- Vary the rhythm — a short one after two longer ones.
+- A single-sentence paragraph is a legitimate tool for landing a point. Use it on purpose, a couple of
+  times a chapter, not on every line.
+- Anything procedural belongs in a list or a table. Prose is for scenes and reasoning, not for steps.
+
+### Make it visual
+
+Write what a person would see, hold, or do. "You watch the model draft your afternoon's work in forty
+seconds" stays with a reader; "tasks are increasingly automatable" does not.
+
+Anchor every abstraction to an image: a ladder with a rung pulled out, a floor that rises, a map that
+stopped matching the ground. The book runs on a handful of these — *trajectory*, *moat*, *floor*,
+*verification* — and a chapter should leave at least one behind.
+
+### Plain words
+
+Write it the way you would say it to a friend who is smart, busy, and not in your field.
+
+- Short words, active voice, second person.
+- Cut the throat-clearing: "It is important to note that", "In today's rapidly changing landscape",
+  "When we consider the implications of".
+- No jargon without an immediate plain-language translation.
+- Never open with "With the development of AI." It signals that nothing has happened yet.
+
+### Length: 2,000–4,000 words of body. No target to hit
+
+There is no single number. A chapter making three sharp arguments can be finished at 2,000 words. One
+that needs a story, a mechanism, and a counter-argument to land may need 3,800.
+
+`check-chapter.sh` warns below 2,000 words and above 4,000, and flags a body more than 400 words away
+from the `word_target` you declared in the front matter. That band is a fence, not a goal. **Do not pad
+to reach a number.** If you are a few hundred words short of a target you invented, the chapter is
+missing an argument, not words — find the argument, or accept the shorter chapter.
+
+The previous rule was "~3500 words", and it produced the failure it was meant to prevent: chapters
+restating their own headings to get there.
+
+### Structure
+
+An opening that puts the reader inside a specific moment — a date, a number, a person, something that
+actually happened. Then **two or three body sections**, each named after its argument rather than its
+position. Then the two fixed closing sections.
+
+A section has no word count. It ends when its argument is finished.
+
+- **Name sections after their arguments** — "A species, not a screwdriver", never "Section 2." A
+  reader skimming only the headings should come away with the argument.
+- **Two sections making the same point is one section.**
+- **If you find yourself writing a neighbouring chapter, cross-reference it instead.** See
+  [Chapter boundaries](#chapter-boundaries) — that is a contract, not a suggestion.
+
+### The invariants that did not change
+
+- **Concrete.** Specific tools, prices, dates, numbers. "A $20/month tool" beats "affordable AI
+  solutions" — and where a vivid scene would otherwise have to be invented, see
+  [Invented scenes are labelled](#invented-scenes-are-labelled).
 - **Honest.** If something is uncertain, say so. Don't oversell AI, don't fearmonger. Every chapter has
   an explicit **"The honest caveats"** section covering where the advice breaks down and who it does
   not apply to.
-- **Ends with action.** "Do this today" gives three things to do: one under 30 minutes, one this week,
-  one this quarter.
+- **Ends with action.** `## Do this today` gives three things: one under 30 minutes, one this week, one
+  this quarter.
 - **Cross-references other chapters.** It's a book, not a collection of posts.
 - **Every concrete claim is sourced.** See [Factual claims](#factual-claims) below.
 
 The template in [`templates/chapter-template.md`](../../templates/chapter-template.md) encodes all of
 this, including a worked example of the taxonomy shape (`###` subsections with a repeated
-*model / why it's failing / the tell* structure) that Ch. 02 uses.
+*model / why it's failing / the tell* structure) that Ch. 02 uses — still the right shape when a
+section is built from parallel cases rather than one continuous story.
 
 ## Research notes
 
@@ -231,6 +307,33 @@ did not happen. The rule exists so that "we checked" is a claim the repo can act
   "$300k at some AI startups" is not.
 - Opinion, framing, and prediction need no marker. They are not claims about the world; they are your
   argument about it. Mark only what could be falsified.
+
+## Invented scenes are labelled
+
+Storytelling raises one real risk: a vivid scene reads as a true story. This book is published in
+public and people quote it, so a fictional anecdote that looks like a real one is a fabricated
+citation with better prose.
+
+The rule that makes storytelling safe here:
+
+| The scene is… | What you do |
+|---|---|
+| **Real and checkable** — a layoff, a launch, a price change, a study | Tell it, and put a `verified` marker under it like any other claim. |
+| **A composite or an invented illustration** — a typical morning, a made-up manager, "a designer in Lisbon" | Write it so no reader could mistake it for a specific real case, **and** label it. |
+
+Label an invented scene in the text itself, not only in a comment. The honest phrasings are short:
+
+- "Imagine you're a support lead at a 200-person company."
+- "Say you run a two-person studio."
+- "Picture the first Monday back."
+
+A name attached to an invented person ("Meet Sarah, a product manager…") is the form to avoid — it
+reads as reporting. Second person, or "say you…", makes the invention obvious without breaking the
+scene.
+
+There is no marker for this, because a `<!-- verified -->` comment would be a lie and an
+`<!-- unverified -->` one is reserved for a real claim you have not checked yet. The label is in the
+sentence, where the reader sees it.
 
 ## Front matter and footer
 

@@ -128,15 +128,22 @@ The linter requires these fields: `chapter`, `title`, `part`, `status`, `languag
 
 `status` is one of `planned` / `draft` / `review` / `stable`.
 
-Also fill in `word_target` (use `3500`) and `tags`. The linter cross-checks `word_target` against the
-actual body length and warns if they are more than 400 words apart — which is how the mismatch in
-Ch. 01 and Ch. 02 was caught.
+Also fill in `word_target` (your honest estimate — `3000` is a reasonable default) and `tags`. The
+linter cross-checks `word_target` against the actual body length and warns if they are more than 400
+words apart — which is how the mismatch in Ch. 01 and Ch. 02 was caught.
 
-Target **~3500 words of body**, inside the 2,500–5,000-word range non-fiction chapters normally run.
-Twenty-one chapters at 3500 is a 73,000-word book.
+**Length is a band, not a target: 2,000–4,000 words of body.** There is no number to hit. A chapter
+making three sharp arguments can be finished at 2,000; one that needs a story, a mechanism, and a
+counter-argument to land may need 3,800. Padding to reach a number is the failure this rule replaced.
 
-- two or three body sections of roughly 900–1200 words each, each with its own argument and example;
-- **named after their arguments**, not "Section 2";
+- **Tell a story, don't make an argument.** Open inside a specific moment — a date, a number, a person.
+  Show the scene first, draw the lesson second.
+- **Short paragraphs**, two or three sentences, one idea each. Anything procedural goes in a list or a
+  table.
+- **Two or three body sections, no word count each**, named after their arguments rather than their
+  position; a section ends when its argument is finished;
+- **An invented scene is labelled in the sentence** ("Imagine you're a support lead…", never "Meet
+  Sarah…"). A real, checkable scene carries a `verified` marker like any other claim.
 - finishes with `## The honest caveats` and `## Do this today`.
 
 The full spec lives in [`chapters/en/README.md`](chapters/en/README.md#writing-standards), and the
@@ -168,8 +175,8 @@ modes in Ch. 01 and Ch. 02 that made this rule necessary.
 ```
 
 Errors block publishing. Warnings are judgement calls. The check covers filename, front matter,
-footer markers, leftover scaffolding, `TODO` markers, source markers, and length (warns below 2500
-or above 4500 words of body, and flags a gap over 400 words between the body and the declared
+footer markers, leftover scaffolding, `TODO` markers, source markers, and length (warns below 2000
+or above 4000 words of body, and flags a gap over 400 words between the body and the declared
 `word_target`).
 
 Two of the source checks are **errors**, not warnings: a `verified` marker with no `source:`, and any

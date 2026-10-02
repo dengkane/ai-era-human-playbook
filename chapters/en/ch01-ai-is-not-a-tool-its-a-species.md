@@ -5,43 +5,52 @@ part: "Part I — Face Reality"
 status: draft
 language: en
 created: 2026-09-30
-last_updated: 2026-09-30
+last_updated: 2026-10-02
 assisted_by: "DeepSeek + Reasonix"
 edited_by: "Ken Deng"
-word_target: 2500
+word_target: 2600
 tags: [mental-models, capability, framing]
 ---
 
 # 01. AI Is Not a Tool — It's a Species
 
-In November 2022, a spreadsheet tool could not write a poem. It could not pass a bar exam, diagnose a
-rash from a photo, or draft the resignation letter you were too angry to write well. Tools do the one
-thing they were built for and stop.
+In November 2022, a spreadsheet could not write a poem.
 
-In 2026, the same class of software writes production code, argues cases, reads X-rays, and gets
-better every few months without anyone shipping a new version to you. Nothing in the history of
-"tools" behaves like that.
+It could not pass a bar exam, look at a photo and tell you what the rash was, or draft the resignation
+letter you were too angry to write well.
 
-That difference is not a matter of degree. It's a matter of category. And if you keep using the old
-category, every decision you make about your career will be slightly wrong — in a direction that
-hurts.
+It did the one thing it was built for, then it stopped. That is what a tool does. It is the whole
+definition.
+
+Four years later, the same class of software writes production code, argues cases, and reads X-rays.
+Nobody ships it a new version. It gets better anyway.
+
+That difference is not a matter of degree. It's a matter of category.
 
 > **The one thing to take away:** A tool waits for instructions. A species has its own trajectory. You
 > cannot plan a life around something that has a trajectory by pretending it doesn't.
 
 ## Why this matters now
 
-Consider what happened to the "prompt engineer" job title. In March 2023, Anthropic posted a
-"prompt engineer and librarian" role with a salary range of $175,000 to $335,000, and the title
-briefly became shorthand for the new safe career. By 2026 the standalone title had shrunk by roughly
-a third from its peak — the work didn't vanish, but it stopped being a job title of its own. What
-used to be a specialized skill became a sentence in a job description for other roles.
+Watch what happened to the "prompt engineer," because it is the cleanest small experiment we have.
+
+In March 2023, Anthropic posted a role titled "Prompt Engineer and Librarian," with a salary range of
+$175,000 to $335,000. Within days it was being screenshotted and forwarded as proof that there was
+finally a safe new job — new enough that nobody was ahead of you, paid enough to matter.
+
+By 2026, the standalone title had shrunk by roughly a third from its peak.
+
+The work didn't vanish. It became a sentence inside somebody else's job description. What had been a
+career became a line item.
 
 <!-- verified 2026-09-30 — source: https://fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants/ ; https://4geeks.com/en/blog/ai-powered-learning/ai-prompt-engineer -->
 
-Here is the uncomfortable part: the people who lost that title did nothing wrong. They learned the
-current tool extremely well. Their mistake was assuming the tool would hold still long enough for
-expertise to compound.
+Here is the uncomfortable part. The people who lost that title did nothing wrong.
+
+They learned the current tool as well as anyone alive. Their mistake was smaller and stranger than it
+looks: they assumed the tool would hold still long enough for expertise to compound.
+
+It didn't. It never does.
 
 The same tension shows up in the aggregate numbers. In Stack Overflow's 2025 developer survey, 84% of
 respondents said they use or plan to use AI tools in their work, up from 76% the year before, and 51%
@@ -52,13 +61,14 @@ period — from above 70% in 2023 and 2024 to 60%.
 
 Read those two numbers together. Nearly everyone uses it. A growing share doesn't like it.
 
-That is not what adopting a tool looks like. When a tool works, sentiment doesn't fall; nobody has
-strong feelings about their spreadsheet software, and the few who do aren't moving an average of
-tens of thousands of people. A falling sentiment curve attached to a rising usage curve is what a
-*relationship* looks like — and an uneasy one. People are working with something they can't fully
-predict and don't quite trust, and they keep doing it because the alternative is worse.
+That is not what adopting a tool looks like. Nobody has strong feelings about their spreadsheet
+software, and the handful who do are not moving an average of tens of thousands of people.
 
-That is the pattern you need to internalize, and it repeats across every field:
+A falling sentiment curve attached to a rising usage curve is what a *relationship* looks like — and
+an uneasy one. People are working with something they can't fully predict and don't quite trust, and
+they keep doing it because the alternative is worse.
+
+That pattern repeats across every field:
 
 | What you learned | Why it felt safe | What actually happened |
 |---|---|---|
@@ -71,36 +81,51 @@ That is the pattern you need to internalize, and it repeats across every field:
 
 The tool framing assumes three things. All three are now false.
 
-**1. Tools have a fixed capability.** A hammer hammers today and hammers in five years. When you buy
-a hammer you know what you bought, and you can plan around it for a decade.
+**1. Tools have a fixed capability.**
+
+A hammer hammers today and hammers in five years. Buy one and you know what you bought. You can plan
+around it for a decade.
 
 AI capability doesn't hold still. SWE-bench asks a model to fix real bugs in real codebases; models
-solved 4.4% of those problems in 2023 and 71.7% in 2024. On GPQA — graduate-level science questions
-written to be hard for non-experts — performance rose 48.9 percentage points in a single year. The
-smallest model that cleared 60% on MMLU in 2022 had 540 billion parameters; by 2024, a
-3.8-billion-parameter model managed the same score. Capability improved and grew dramatically cheaper
-at the same time, which is not how any prior technology curve behaved.
+solved 4.4% of those problems in 2023 and 71.7% in 2024.
+
+On GPQA — graduate-level science questions written to be hard for non-experts — performance rose 48.9
+percentage points in a single year.
+
+The smallest model that cleared 60% on MMLU in 2022 had 540 billion parameters. By 2024, one with 3.8
+billion managed the same score.
+
+Capability improved and grew dramatically cheaper at the same time. No prior technology curve behaves
+like that.
 
 <!-- verified 2026-09-30 — source: https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance -->
 
 This is the part that breaks planning. You learn a tool's limits once and design around them
 permanently. A moving system offers you no such footing.
 
-**2. Tools don't compete with you.** A drill doesn't want your job. It doesn't get better at carpentry
-while you sleep, and it doesn't turn up on Monday able to do what your apprentice did on Friday.
+**2. Tools don't compete with you.**
 
-An AI system that drafts, summarizes, codes, and reasons is doing work that used to be somebody's
-paid afternoon — and that somebody is a person with rent due. The system isn't hostile; it has no
-intentions at all. But it occupies the same space you do, and the space keeps widening. A tool is
-something you hold. This is something you sit next to.
+A drill doesn't want your job. It doesn't get better at carpentry while you sleep, and it doesn't turn
+up on Monday able to do what your apprentice did on Friday.
 
-**3. Tools are predictable.** You can plan around a tool's limits because the limits are stable. You
-know a screwdriver won't drive a nail, and that fact will still be true next quarter.
+An AI system that drafts, summarizes, codes, and reasons is doing work that used to be somebody's paid
+afternoon — and that somebody is a person with rent due.
+
+The system isn't hostile. It has no intentions at all. But it occupies the same space you do, and the
+space keeps widening.
+
+A tool is something you hold. This is something you sit next to.
+
+**3. Tools are predictable.**
+
+You can plan around a tool's limits because the limits are stable. You know a screwdriver won't drive
+a nail, and that fact will still be true next quarter.
 
 With a moving system, a limit is a temporary condition. "AI can't do that" is a sentence with an
-expiry date, and the expiry date usually arrives sooner than the person saying it expects. It was said
-about translation, then summarization, then writing code, then reading scans, then legal research.
-Each time it was true when spoken and false within a couple of years.
+expiry date, and the expiry date usually arrives sooner than the person saying it expects.
+
+It was said about translation, then summarization, then writing code, then reading scans, then legal
+research. Each time it was true when spoken, and false within a couple of years.
 
 Translation is the cleanest case, because it has been studied rather than merely observed. Research on
 the rollout of the Google Translate mobile app found that US labour markets which adopted machine
@@ -121,41 +146,58 @@ matters for planning.
 Rejecting the tool metaphor is easy. Answering the question it raises is harder, so people find ways
 to put it off. Three are especially common, and each one costs something.
 
-**"It's a revolution."** This sounds like the safest frame, because it's the one historians use. But a
-revolution is an *event*: it has a before and an after, and the after is stable. The Industrial
-Revolution disrupted things for a generation and then produced a settled world that people could plan
-inside. Hold that frame and the sensible strategy is to wait for the dust to settle, then adapt once.
+**"It's a revolution."**
+
+This sounds like the safest frame, because it's the one historians use. But a revolution is an
+*event*: it has a before and an after, and the after is stable.
+
+The Industrial Revolution disrupted things for a generation and then produced a settled world that
+people could plan inside. Hold that frame and the sensible strategy is to wait for the dust to settle,
+then adapt once.
 
 The dust isn't settling. This does not look like a transition between two stable states; it looks like
-a rate of change with no finish line in sight. Waiting for normal to return is itself a career
-decision — and it is a bet that has been losing for a while now.
+a rate of change with no finish line in sight.
 
-**"It's superintelligence."** This turns the subject into science fiction, which is satisfying and
-useless. Once the question is whether a system is truly conscious, or will one day want things, you
-have left the terrain where decisions get made. The frame produces exactly two reactions, awe and
-dread, and neither one tells you what to do on Monday.
+Waiting for normal to return is itself a career decision — and it is a bet that has been losing for a
+while now.
+
+**"It's superintelligence."**
+
+This turns the subject into science fiction, which is satisfying and useless.
+
+Once the question is whether a system is truly conscious, or will one day want things, you have left
+the terrain where decisions get made. The frame produces exactly two reactions, awe and dread, and
+neither one tells you what to do on Monday.
 
 It's also unfalsifiable in practice. No test would settle it, so the argument can run forever without
-ever touching your actual life. That is precisely what makes it comfortable: it feels like thinking
-hard about the future while guaranteeing you never have to act on it.
+ever touching your actual life.
 
-**"I'll just not use it."** This is the most personal of the three, and it sounds like autonomy. It
-isn't, for the same reason that "I'll just not use email" stopped being a real option around 2005.
+That is precisely what makes it comfortable: it feels like thinking hard about the future while
+guaranteeing you never have to act on it.
+
+**"I'll just not use it."**
+
+This is the most personal of the three, and it sounds like autonomy. It isn't, for the same reason
+that "I'll just not use email" stopped being a real option around 2005.
 
 The decision isn't yours alone. It's made by the market you sell into, the employer you report to, and
-the client who now expects a draft tomorrow instead of next week. If a competitor delivers in two days
-what takes you two weeks, customers do not experience that as your principled restraint. They
-experience it as slowness, and they leave.
+the client who now expects a draft tomorrow instead of next week.
+
+If a competitor delivers in two days what takes you two weeks, customers do not experience that as
+your principled restraint. They experience it as slowness, and they leave.
 
 What you do get to choose is *how* you relate to it — which work you hand over, what you refuse to
 hand over, and where you spend the time you get back. That is a real and consequential set of
 decisions. "I won't participate" is not one of them.
 
 **The species frame is the useful one precisely because it's modest.** It makes exactly one claim:
-this thing has its own trajectory, and that trajectory is not yours. That claim is checkable — you can
-watch capability move, see prices shift, notice a skill losing its premium. And it is actionable,
-because a trajectory can be estimated, tracked, and positioned against. You don't need to know whether
-the system is conscious. You need to know which way it is moving, and how fast.
+this thing has its own trajectory, and that trajectory is not yours.
+
+That claim is checkable — you can watch capability move, see prices shift, notice a skill losing its
+premium. And it is actionable, because a trajectory can be estimated, tracked, and positioned against.
+
+You don't need to know whether the system is conscious. You need to know which way it is moving, and
+how fast.
 
 ## What this changes about your decisions
 
@@ -164,14 +206,21 @@ Done.
 
 If AI is a species, the rational move is different in three specific ways.
 
-**Stop investing in the interface; invest in the judgment.** Every hour you spend mastering a specific
-button layout is an hour with a shrinking half-life. Every hour you spend getting better at knowing
-*which* output is right, *what* problem is worth solving, and *when* the confident answer is wrong —
-that compounds, because the model's ability to generate makes that judgment rarer, not more common.
+**Stop investing in the interface; invest in the judgment.**
 
-**Track the direction, not the snapshot.** When someone tells you "AI can't do X," that is data about
-today. The useful question is whether X is the kind of thing that gets cheaper every six months. You
-can answer that yourself, without a research team. Take a task you do at work and ask three questions:
+Every hour you spend mastering a specific button layout is an hour with a shrinking half-life.
+
+Every hour you spend getting better at knowing *which* output is right, *what* problem is worth
+solving, and *when* the confident answer is wrong — that compounds, because the model's ability to
+generate makes that judgment rarer, not more common.
+
+**Track the direction, not the snapshot.**
+
+When someone tells you "AI can't do X," that is data about today. The useful question is whether X is
+the kind of thing that gets cheaper every six months.
+
+You can answer that yourself, without a research team. Take a task you do at work and ask three
+questions:
 
 - **Is it verifiable?** Can a machine tell whether the output is right — cheaply, at scale, without a
   human in the loop? Code that either passes its tests or doesn't is verifiable. A memo that "feels
@@ -184,37 +233,44 @@ can answer that yourself, without a research team. Take a task you do at work an
 Three yeses means the floor is coming for it. Two means it's already on the slope. One means you have
 some time — and knowing which of the three questions is the "no" tells you what to protect.
 
-**Assume the floor rises, and position above it.** Whatever is commoditized this year will be free
-next year. Your value has to sit somewhere that free doesn't reach: relationships you built,
-consequences you've lived through, accountability you can carry, and taste you've earned by being
-wrong in public a few times.
+**Assume the floor rises, and position above it.**
+
+Whatever is commoditized this year will be free next year.
+
+Your value has to sit somewhere that free doesn't reach: relationships you built, consequences you've
+lived through, accountability you can carry, and taste you've earned by being wrong in public a few
+times.
 
 ## The honest caveats
 
 The species framing gets used to sell two things you should not buy.
 
 **It gets used to sell doom.** "It's a species, so it will replace you." That does not follow. Species
-coexist and specialize. Horses did not disappear; they stopped being transportation. The honest
-version is: the *specific tasks* you do will get repriced, and some of those repricings will be
-brutal.
+coexist and specialize. Horses did not disappear; they stopped being transportation.
+
+The honest version is narrower and harder to sell: the *specific tasks* you do will get repriced, and
+some of those repricings will be brutal.
 
 **It gets used to sell hype.** "It's a species, so it's basically alive and you should feel awe." Also
 doesn't follow. There is no evidence of subjective experience, and the ethics of how we treat these
 systems is a separate, genuinely hard question — not a marketing asset.
 
-There's also a real limit to the metaphor, and it has practical consequences. A species evolves over
-generations, shaped by an environment nobody controls. AI systems are updated, restricted, and
-sometimes shut off by the companies that run them. They are closer to a *population under management*
-than to a wild species, and that distinction has teeth:
+There's also a real limit to the metaphor, and it has practical consequences.
+
+A species evolves over generations, shaped by an environment nobody controls. AI systems are updated,
+restricted, and sometimes shut off by the companies that run them.
+
+They are closer to a *population under management* than to a wild species, and that distinction has
+teeth:
 
 - **The capabilities are chosen.** Someone decides what the next version can and cannot do. What looks
   like natural evolution is a series of product decisions — some made for legal reasons, some for
   competitive ones, and some you would disagree with if you knew about them.
 - **The direction can reverse.** In April 2026, OpenAI emailed developers that a batch of models would
-  be shut down that July — among them several `codex` coding models and two `o3`/`o4` research
-  models, all of them recent. Software built on top of them stopped working on a date the developer
-  did not choose. Terms of service change the same way, so that work which was fine last month is a
-  violation this month. A trajectory is not a guarantee.
+  be shut down that July — among them several `codex` coding models and two `o3`/`o4` research models,
+  all of them recent. Software built on top of them stopped working on a date the developer did not
+  choose. Terms of service change the same way, so that work which was fine last month is a violation
+  this month. A trajectory is not a guarantee.
 - **Your dependency is somebody's leverage.** If your work runs on one provider's model, your costs,
   your capabilities, and your continuity are all set by a company you have no relationship with and no
   vote in.
@@ -222,8 +278,10 @@ than to a wild species, and that distinction has teeth:
 <!-- verified 2026-09-30 — source: https://community.openai.com/t/deprecation-notice-upcoming-model-shutdowns-in-2026/1379553 -->
 
 The unpredictability is real. The agency is not — or rather, the agency belongs to the vendors, not to
-the technology. That's worth remembering the next time someone describes AI as an unstoppable natural
-force. Natural forces don't have pricing pages.
+the technology.
+
+That's worth remembering the next time someone describes AI as an unstoppable natural force. Natural
+forces don't have pricing pages.
 
 ## Do this today
 
@@ -247,7 +305,7 @@ force. Natural forces don't have pricing pages.
 
 ---
 
-📅 Last updated: 2026-09-30
+📅 Last updated: 2026-10-02
 🤖 Assisted by: DeepSeek + Reasonix
 ✍️  Edited by: Human (that's me)
 ⚠️  Verify critical facts yourself — AI moves fast, I do my best.

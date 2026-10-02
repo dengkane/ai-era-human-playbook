@@ -42,14 +42,17 @@ Want to translate a chapter into another language? Open an Issue first to coordi
 
 ## Content Standards
 
-- **Length:** ~3500 words per chapter. Inside the 2,500–5,000-word non-fiction convention,
-  and what makes 21 chapters add up to a ~73,000-word book
-- **Structure:** two or three body sections of roughly 900–1200 words each, named after their
-  arguments, then explicit "The honest caveats" and "Do this today" sections
-- **Tone:** Professional but conversational, like a smart friend explaining something
-- **No fluff:** No "with the development of AI" openings, no filler
+- **Length:** 2,000–4,000 words per chapter — a band, not a target. Length follows the argument;
+  padding to reach a number is the failure this rule replaced
+- **Story, not lecture:** open inside a specific moment — a date, a number, a person — then show first
+  and explain second. Short paragraphs, two or three sentences, one idea each
+- **Structure:** two or three body sections, named after their arguments, then explicit "The honest
+  caveats" and "Do this today" sections
+- **Plain words:** the way you'd say it to a friend who is smart, busy, and not in your field
+- **No fluff:** No "with the development of AI" openings, no filler, no restating the heading
 - **Concrete:** Specific tools, prices, scenarios, numbers
-- **Honest:** If something is uncertain, say so. Don't oversell AI or fearmonger.
+- **Honest:** If something is uncertain, say so. Don't oversell AI or fearmonger. An invented scene is
+  labelled as one ("Imagine you're…"), never dressed up as a real case
 
 ## Code of Conduct
 
