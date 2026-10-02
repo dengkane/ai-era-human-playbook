@@ -279,6 +279,32 @@ Unchanged: all thirteen `verified` markers and their URLs verbatim, the same res
 section structure, the same figures, and all six cross-references (Ch. 03, Ch. 05, Ch. 08, Ch. 14, plus
 the three linked papers).
 
+### Rewritten — Ch. 10, *Finding Your Human-AI Collaboration Point*
+
+The first chapter of Part III, rewritten to the new voice in both editions.
+
+The chapter used to open with the BCG study's three headline numbers in one sentence. It now opens on the
+experiment as a scene — 758 consultants, half of them given GPT-4 — and then delivers the reversal
+(wrong-and-convincing, 84% versus 60–70%) as its own beat. That reversal is the chapter's whole engine, so
+the opening now stages it instead of summarising it.
+
+- `chapters/en/ch10-finding-your-human-ai-collaboration-point.md` — English body 3598 words.
+- `chapters/zh/ch10-finding-your-human-ai-collaboration-point.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+The jagged-frontier metaphor, the four-step loop, and the four-cell task table keep their structure,
+their order, and their headings. Every figure is unchanged: the 12.2%/25.1%/40% headline set, the
+84%-versus-60–70% reversal, the four-minute and four-hour boundaries, the 19%/24%/20% developer set, the
+43%/17% skill-levelling split, the 52%/45% augmentation split, and the deskilling/upskilling pair.
+
+**One factual fix in the Chinese edition.** It said the 758 consultants were "约占该公司顾问队伍的一成"
+(about 10% of BCG's consulting workforce). The English, and the study, say about **7%**. Corrected to
+7% so the two editions agree.
+
+Unchanged: all sixteen `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all four cross-references (Ch. 03, Ch. 11, Ch. 15, plus
+Appendix A).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
