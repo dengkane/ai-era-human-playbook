@@ -482,6 +482,32 @@ papers).
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–16.
 
+### Rewritten — Ch. 18, *Rebuilding Meaning*
+
+The closing chapter of Part IV, rewritten to the new voice in both editions.
+
+The chapter used to open by reporting the Pew result and then explaining it in the same paragraph. It now
+gives the intensity its own beat — seven in ten adults, a 7-point rise in two years, 40% to 55% among the
+young — before landing the unasked question. The two-clause "AI will take your job and therefore your
+meaning" setup is now staged so the second clause reads as the open one.
+
+- `chapters/en/ch18-rebuilding-meaning.md` — English body 3469 words.
+- `chapters/zh/ch18-rebuilding-meaning.md` — Chinese body, rewritten as native Chinese rather than word for
+  word.
+
+Every figure is unchanged: the 42,151-person / 36-country survey and its 34-of-37 result, the 19,000-person
+meaning survey and its 38%/4%/28%/3–4% distribution, the 13,000-person purpose-mortality study and its
+15.2%-versus-36.5% gap, the 140-worker meaning experiment, and the Harvard study's cholesterol comparison.
+The income/structure/being-needed split and the three substitute properties keep their structure and order.
+
+Unchanged: all fifteen `verified` markers and their URLs verbatim (the most heavily sourced chapter in Part
+IV), the same research notes, the same section structure, the same figures, and all six cross-references
+(Ch. 03, Ch. 09, Ch. 12, Ch. 14, Ch. 15, Ch. 16, Ch. 17, Ch. 21, plus the three linked sources).
+
+This completes Part IV (Ch. 16–18) in the new voice, in both editions.
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–17.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
