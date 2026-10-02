@@ -332,6 +332,33 @@ linked papers).
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch.
 08–10.
 
+### Rewritten — Ch. 12, *One-Person Business Playbook*
+
+The operating chapter of Part III, rewritten to the new voice in both editions.
+
+The chapter used to open by naming the number and then explaining it in the same breath. It now opens on
+the number as a bare fact — 29.8 million businesses, $1.7 trillion — gives the division its own line, and
+lands "$57,000 before expenses and before tax" as a separate paragraph. The point is that the arithmetic
+is unwelcome, so the opening now lets it land before reassuring the reader.
+
+- `chapters/en/ch12-one-person-business-playbook.md` — English body 3516 words.
+- `chapters/zh/ch12-one-person-business-playbook.md` — Chinese body, rewritten as native Chinese rather
+  than word for word.
+
+Every figure is unchanged: the 29.8 million / $1.7 trillion / $57,000 baseline, the $96,000-versus-$58,000
+claim quoted only to be rejected as unsourced, the four-row unit table, the Fed's 83%/61%/51% and
+46%/43% and 54%/37% sets, the 7% full-integration figure, the 74%/65%/60% ZipRecruiter ranking, and the
+77.9%/56.3% BLS survival rates.
+
+**One factual fix in the Chinese edition.** It described the survey as coming from "美联储的十二家地区储备
+银行" (the Fed's twelve regional reserve banks). The English — and the source — say only "the Federal
+Reserve Banks"; the number twelve was an addition. Removed, so the two editions agree.
+
+Unchanged: all seven `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 03, Ch. 06, Ch. 07, Ch. 10, Ch. 11, Ch. 14).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–11.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
