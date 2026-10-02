@@ -117,6 +117,26 @@ the front: a scene, then the argument, instead of the argument alone.
 Unchanged: all five `verified` markers and their URLs verbatim, the same research notes, the same
 section structure, the same figures, and both cross-references (Ch. 01 and Ch. 03).
 
+### Rewritten — Ch. 03, *What AI Can Never Do Well (and Why That's Your Moat)*
+
+The third chapter rewritten to the new voice, in both editions.
+
+The chapter used to open on its own abstraction — "The title of this chapter is a trap" — and reach the
+evidence second. It now opens on the METR trial as a scene: sixteen maintainers agreeing to be measured,
+then the result going soft. That turnaround is the point of the chapter, so it is now the opening rather
+than a section further down.
+
+- `chapters/en/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` — English body 2541 words.
+- `chapters/zh/ch03-what-ai-can-never-do-well-and-why-thats-your-moat.md` — Chinese body, rewritten as
+  native Chinese rather than word for word.
+
+The test — *machine-side or human-side?* — keeps its place and its framing, and the three ranked limits
+(verification, accountability, lived experience) keep their `###` sections and their order, including
+the deliberate ranking of lived experience third and weakest.
+
+Unchanged: all seven `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all three cross-references (Ch. 01, Ch. 02, Ch. 04).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
