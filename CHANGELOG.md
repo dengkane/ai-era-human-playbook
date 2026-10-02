@@ -229,6 +229,33 @@ Unchanged: all thirteen `verified` markers and their URLs verbatim (the most hea
 Part II), the same research notes, the same section structure, the same figures, and all four
 cross-references (Ch. 01, Ch. 04, Ch. 05, Ch. 06, plus Ch. 12 / Ch. 14 / Ch. 15 in Further reading).
 
+### Rewritten — Ch. 08, *The Student — Choosing a Path in the Age of AI*
+
+The first chapter written for someone who has not started yet, rewritten to the new voice in both
+editions.
+
+The chapter used to open with the two enrolment numbers, then a paragraph explaining what they show.
+It now opens on the two numbers as a bare contrast and gives the 19%-versus-15% comparison its own
+beat, so the widening gap is felt before it is interpreted. The two-warring-headlines framing is split
+into separate paragraphs, because the reader has met both of them.
+
+- `chapters/en/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` — English body 3927 words.
+- `chapters/zh/ch08-the-student-choosing-a-path-in-the-age-of-ai.md` — Chinese body, rewritten as
+  native Chinese rather than word for word.
+
+This is the most heavily sourced chapter in the book, and every figure survives unchanged: the 8.4% and
+6.0–7.1% enrolment moves, the 19%/15%/11%/10% Stanford set, the 64% remote-work estimate, the 38%/31%
+employer pair, the 10.5%→16.5% posting shift, the 70%/81%/73%→42% skills-based hiring numbers, the
+"1 in 700", the 5.6%/42% graduate figures, and the 65%/60%/60% critical-thinking ranking.
+
+The three questions keep their `###` subsections, their *why it matters / how to ask it / the tell*
+shape, their order, and the summary table. A stray doubled `---` before the disclosure footer was
+removed in both editions.
+
+Unchanged: all seventeen `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and the same cross-references (Ch. 03, Ch. 05, Ch. 07, Ch. 09, plus
+the two linked papers).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
