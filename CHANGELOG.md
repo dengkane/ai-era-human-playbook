@@ -559,6 +559,45 @@ Ch. 21 is the last chapter still to be rewritten.
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–19.
 
+### Rewritten — Ch. 21, *Designing the Life You Actually Want*
+
+The book's final chapter, rewritten to the new voice in both editions.
+
+The chapter used to open by summarising the regret finding in one paragraph. It now stages the temporal
+pattern first — short period, regrets of action; a life, regrets of inaction — then names the mechanism as
+unflattering. The romanticising of the road not taken is the chapter's whole hook, so the opening now builds
+to it.
+
+- `chapters/en/ch21-designing-the-life-you-actually-want.md` — English body 3439 words.
+- `chapters/zh/ch21-designing-the-life-you-actually-want.md` — Chinese body, rewritten as native Chinese
+  rather than word for word.
+
+Every figure is unchanged: the 11-study regret ranking and its six domains, the opportunity principle, the
+activation barrier, the 138-country / 82% Gallup finding, and the 476-participant values intervention with
+its one-and-two-week gains and three-week decay. The book summary, the three scales, and the "what this book
+could not do" section keep their structure and order.
+
+Unchanged: all twelve `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 01–20 throughout the summary, plus Ch. 04, Ch.
+09, Ch. 10, Ch. 15, Ch. 18, Ch. 20 and the three linked papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–20.
+
+### The whole book is now in the new voice
+
+**All twenty-one chapters are rewritten in both editions.** Every chapter was shipped as its own draft PR and
+merged, with the English and Chinese editions travelling together on one branch and a per-chapter entry in
+this file.
+
+What did not change in any chapter: the `verified` markers and their source URLs, verbatim and one for one
+between editions; the research notes; the section structure; and every figure. The rewrite changed voice,
+pacing, and paragraph length. It did not change claims — and where the Chinese edition carried a factual
+error the English did not (§ Ch. 10's 一成 for 7%, § Ch. 12's 十二家), that is recorded in the chapter's entry
+above rather than fixed silently.
+
+Across the twenty-one chapters, the edits found and corrected two factual errors in the Chinese edition, and
+removed a duplicated `---` separator that had accumulated before each disclosure footer.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
