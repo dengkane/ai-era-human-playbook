@@ -161,6 +161,30 @@ Unchanged: all ten `verified` markers and their URLs verbatim, the same research
 structure, the same figures, and all the cross-references (Ch. 02, Ch. 03, Ch. 05–07, Ch. 08–09, plus the
 two data sources linked in Further reading).
 
+### Rewritten — Ch. 05, *The Employee — From Replaceable Part to Indispensable Node*
+
+The second chapter of Part II rewritten to the new voice, in both editions. This opens the run of
+persona chapters (05–07), and it is the one that has to hold the reader who is currently employed.
+
+The chapter used to open on a dense three-sentence paragraph carrying the Salesforce numbers, the
+Benioff quote, the statement, and the "half the interactions" line all at once. It now opens on the
+bare fact — 9,000 support staff became 5,000 — and lands each piece separately, ending on the line
+that actually stings: *half the support interactions are now with agents.*
+
+- `chapters/en/ch05-the-employee-from-replaceable-part-to-indispensable-node.md` — English body 2886
+  words.
+- `chapters/zh/ch05-the-employee-from-replaceable-part-to-indispensable-node.md` — Chinese body,
+  rewritten as native Chinese rather than word for word.
+
+The three body sections keep their arguments, their order, and their headings: the tool helps the
+newest people most (the NBER 34% finding and the codified/tacit split), the squeeze from the middle of
+the chart (Gallup's span of control, BambooHR's internal mobility, the Dallas Fed inflow data, Gartner's
+22%), and part-versus-node (the three-part migration audit). Every figure is unchanged.
+
+Unchanged: all twelve `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all five cross-references (Ch. 03, Ch. 04, Ch. 06–07, Ch.
+08–09, Ch. 13).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
