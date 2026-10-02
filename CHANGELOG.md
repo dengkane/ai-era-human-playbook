@@ -534,6 +534,31 @@ Ch. 20 and Ch. 21 are the last two chapters still to be rewritten.
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–18.
 
+### Rewritten — Ch. 20, *The Courage to Slow Down*
+
+The overwork chapter of Part V, rewritten to the new voice in both editions.
+
+The chapter used to open by reporting the WHO/ILO figures in one paragraph. It now sets the accounting up as
+its own line — the first global count — then delivers the 2016 figure, then names it as a body count rather
+than a burnout metaphor. The scale is the chapter's whole premise, so the opening now builds to it.
+
+- `chapters/en/ch20-the-courage-to-slow-down.md` — English body 3291 words.
+- `chapters/zh/ch20-the-courage-to-slow-down.md` — Chinese body, rewritten as native Chinese rather than word
+  for word.
+
+Every figure is unchanged: the 745,000 deaths and 29% rise, the 35%/17% risk increases, the 9% global share,
+the 37- and 22-study bases, the 2.5-million time-poverty comparison, the $75,000/$100,000 income resolution
+and its 20%/80% split, and the 54-employee holiday study and its day-eight/week-one fade-out. The
+controlled/uncontrolled/boundary division keeps its structure and order.
+
+Unchanged: all fourteen `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 14, Ch. 17, Ch. 19, Ch. 21, plus the three
+linked sources).
+
+Ch. 21 is the last chapter still to be rewritten.
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–19.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
