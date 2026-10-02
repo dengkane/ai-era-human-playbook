@@ -434,6 +434,30 @@ This completes Part III (Ch. 10–15) in the new voice, in both editions.
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–14.
 
+### Rewritten — Ch. 16, *Creativity When AI Can Generate Everything*
+
+The opening chapter of Part IV, rewritten to the new voice in both editions.
+
+The chapter used to open by summarising the experiment in one sentence. It now sets the scene first —
+hundreds of people, some with no help, some with one idea, some choosing from five — and delivers the
+diversity result as its own beat. That twist is the chapter's engine, so the opening stages it rather than
+pre-announcing it.
+
+- `chapters/en/ch16-creativity-when-ai-can-generate-everything.md` — English body 3337 words.
+- `chapters/zh/ch16-creativity-when-ai-can-generate-everything.md` — Chinese body, rewritten as native
+  Chinese rather than word for word.
+
+Every figure is unchanged: the creativity-experiment results, the labelling study's perceived-effort and
+narrativity findings, the 7,182-person UK wellbeing study and its employment-sized effect, and the
+handmade effect. The three-way commodity / reputation-bearing / personal split and its "who would pay more
+because they knew this was mine" test keep their structure and order.
+
+Unchanged: all twelve `verified` markers and their URLs verbatim, the same research notes, the same section
+structure, the same figures, and all six cross-references (Ch. 03, Ch. 10, Ch. 11, Ch. 15, Ch. 19, plus the
+three linked papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–15.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
