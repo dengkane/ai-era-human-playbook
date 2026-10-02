@@ -256,6 +256,29 @@ Unchanged: all seventeen `verified` markers and their URLs verbatim, the same re
 section structure, the same figures, and the same cross-references (Ch. 03, Ch. 05, Ch. 07, Ch. 09, plus
 the two linked papers).
 
+### Rewritten — Ch. 09, *The Mid-Career Switcher — Your Judgment Is the Asset*
+
+The chapter that closes Part II's persona run, rewritten to the new voice in both editions.
+
+The chapter used to open with both papers compressed into one paragraph split by a semicolon. It now
+opens on the two papers as a deliberate contrast — the IMF finding older workers better positioned, the
+Boston College finding them leaving faster — and gives each its own beat before naming the gap between
+them as the chapter. That gap is the whole chapter, so the opening now stages it.
+
+- `chapters/en/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` — English body 3853 words.
+- `chapters/zh/ch09-the-mid-career-switcher-your-judgment-is-the-asset.md` — Chinese body, rewritten as
+  native Chinese rather than word for word.
+
+The three costs keep their `###` subsections, their order, and their summary table, as does the
+transfer-versus-leap distinction. Every figure is unchanged: the 25%/2% programmer-versus-painter split,
+the 11.7%/14.1% baseline, the 3,996-company audit study and its 42–46%, the 34,000-person WIA evaluation
+and its $3,300–$7,100, the 23%/73%/49%/12% ASA set, the 13.5→1.6 point LinkedIn Learning gap, the
+49.4%/42.2% insulation split, the 19.5%→26.6% learning shift, and the 14.7%/7.5%/14%/40% posting mix.
+
+Unchanged: all thirteen `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all six cross-references (Ch. 03, Ch. 05, Ch. 08, Ch. 14, plus
+the three linked papers).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
