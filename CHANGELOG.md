@@ -359,6 +359,31 @@ structure, the same figures, and all six cross-references (Ch. 03, Ch. 06, Ch. 0
 
 A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–11.
 
+### Rewritten — Ch. 13, *Meta-Skills for the AI Era: Taste, Questioning, Synthesis, Empathy*
+
+The closing chapter of Part III, rewritten to the new voice in both editions.
+
+The chapter used to open by stating that it is *supposed* to be about four human qualities, then reporting
+the check. It now opens on that framing as its own line and lands the reversal — the Toronto experiments,
+where the AI's responses were preferred — as a separate beat. The premise-breaking is the chapter's whole
+move, so the opening stages it rather than narrating it.
+
+- `chapters/en/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` — English body
+  3597 words.
+- `chapters/zh/ch13-meta-skills-for-the-ai-era-taste-questioning-synthesis-empathy.md` — Chinese body,
+  rewritten as native Chinese rather than word for word.
+
+Every figure is unchanged: the four Toronto experiments, the TASTE benchmark's 92 pairs / 77% / 60% /
+random, the 53%-to-68% agreement revision, the sycophancy finding across five assistants, the ±10-point
+confidence interval, and the 65%/60% employer ranking. The four-row produce-versus-judge table and the
+worked customer-complaint sequence keep their structure and order.
+
+Unchanged: all thirteen `verified` markers and their URLs verbatim, the same research notes, the same
+section structure, the same figures, and all six cross-references (Ch. 03, Ch. 10, Ch. 11, plus the three
+linked papers).
+
+A stray doubled `---` before the disclosure footer was also removed, matching the fix applied to Ch. 08–12.
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
