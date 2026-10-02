@@ -206,6 +206,29 @@ contrast, the U-shape that stopped holding, and the BIS count of 1,246 AI-produc
 Unchanged: all nine `verified` markers and their URLs verbatim, the same research notes, the same
 section structure, the same figures, and all four cross-references (Ch. 05, Ch. 07, and Ch. 12 / Ch. 14).
 
+### Rewritten — Ch. 07, *The Freelancer — From Selling Skills to Selling Personality*
+
+The third and last of the Part II persona chapters, rewritten to the new voice in both editions.
+
+The chapter used to open with all four Fiverr figures in a single sentence. It now opens on the single
+strangest pair — buyers down 21.9%, spend per buyer up 15.6% — and holds the platform-revenue paradox
+for its own line. That contradiction is the chapter's whole hook, so the opening now lets the reader
+feel it before explaining it.
+
+- `chapters/en/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` — English body 3296
+  words.
+- `chapters/zh/ch07-the-freelancer-from-selling-skills-to-selling-personality.md` — Chinese body,
+  rewritten as native Chinese rather than word for word.
+
+The three sections keep their arguments and headings: the hour as the broken unit (the 21% and 17%
+demand falls, then Upwork and Fiverr's own reports), reputation as the failed moat (the 47-study
+disclosure review, the verified-track-record paper, the low-bid field experiment), and the two-question
+test with its four-cell table. Every figure is unchanged.
+
+Unchanged: all thirteen `verified` markers and their URLs verbatim (the most heavily sourced chapter in
+Part II), the same research notes, the same section structure, the same figures, and all four
+cross-references (Ch. 01, Ch. 04, Ch. 05, Ch. 06, plus Ch. 12 / Ch. 14 / Ch. 15 in Further reading).
+
 ### Fixed — LICENSE-CONTENT contradicted its own license, and two other lines were wrong
 
 `LICENSE-CONTENT` described itself incorrectly in three ways. All three are fixed:
